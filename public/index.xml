@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>My New Hugo Site</title>
+        <title>Jiwon KANG</title>
         <link>http://localhost:1313/</link>
-        <description>Recent content on My New Hugo Site</description>
+        <description>Recent content on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 27 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -41,12 +41,12 @@
         <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/affordance/affordance/</guid>
-        <description>&lt;img src="http://localhost:1313/affordance.jpeg" alt="Featured image of post Lecture 1 - Affordances" /&gt;&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/affordance.jpeg" alt="Featured image of post Lecture 1 - Affordances" /&gt;&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
 &lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
 &lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
 &lt;p&gt;In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.&lt;/p&gt;
 &lt;h2 id=&#34;bad-case&#34;&gt;Bad case
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/keyboard.jpg&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/keyboard.jpg&#34;
 	
 	
 	

@@ -2,9 +2,9 @@
 
 title = "Lecture 1 - Affordances"
 date = 2024-09-19
-categories =["HCI-HW"]
+categories =["HCI"]
 author = "jiwon"
-image = "affordance.jpeg"
+image = "images/affordance.jpeg"
 +++
 
 Affordance gives users a visual hint on what actions they can take.
@@ -16,7 +16,7 @@ Thus, affordance is a crucial element of visual user interfaces. The clearer the
 In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.
 
 ## Bad case
-![Keyboard](keyboard.jpg)
+![Keyboard](images/keyboard.jpg)
 
 The placement of a power button above the delete key on a keyboard is a bad example of affordance. 
 
