@@ -1,10 +1,10 @@
 +++
-
 title = "Lecture 1 - Affordances"
 date = 2024-09-19
 categories =["HCI"]
 author = "jiwon"
 image = "images/affordance.jpg"
+draft = false
 +++
 
 Affordance gives users a visual hint on what actions they can take.
