@@ -1,75 +1,105 @@
 +++
 title = 'Lecture 2 - Gestalt Law'
-date = 2024-09-27
+date = 2024-09-19
 categories =["HCI"]
 author = "jiwon"
 image = "images/gestalt.jpg"
 +++
+<p style="font-size: 12px; color: gray;">Image Source: <a href="https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc" style="color: gray;">Gestalt Principles</a></p>
 
 **Gestalt** is a German word meaning 'form' or 'shape. 
 
 It refers to how people perceive visual elements in a given situation. Generally, we compare visual patterns and past experiences to make sense of what we see. We often perceive these elements as a single whole, rather than as separate parts. By connecting the elements, recognizing familiar shapes, sharing information, and filling in the gaps, we make sense of the overall picture.
 
+---
+
 ### 1. Law of Proximity 
 
-![proximity](images/proximity.jpg)
+
+<div style="text-align: center;">
+  <img src="/images/proximity.jpg" alt="proximity" width="70%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.toptal.com/designers/ui/gestalt-principles-of-design" style="color: gray;">By Cameron Chapman</a></p>
+</div>
 
 The **Law of Proximity** descrives the phenomenon in which element that are close to each other are perceived and felt as a group. 
 
 For example, in the left image, the dots don't appear to be grouped. However, in the right image, the dots are closer together making them appear as three distinct groups. This **proximity** can help in organizing related content by placing them close to each other. 
 
-
+---
 ### 2. Law of Similarity
 
-![similarity](images/similarity.jpg)
+<div style="text-align: center;">
+  <img src="/images/similarity.jpg" alt="similarity" width="60%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.toptal.com/designers/ui/gestalt-principles-of-design" style="color: gray;">By Cameron Chapman</a></p>
+</div>
 
 The **Law of Similarity** means that objects with similar shpes, sizes, colors, or other attributes are perceived as part of the same group.
 
 In this example, all shapes are squares, but the difference in color causes our brain to group the green squares together and the gray squares together, even though they share the same shape. This shows how color similarity plays a key role in organizing visual elements into groups.
 
+---
 
 ### 3. Law of Closure
 
-
-![closure](images/closure.jpg)
+<div style="text-align: center;">
+  <img src="/images/closure.jpg" alt="closure" width="60%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.toptal.com/designers/ui/gestalt-principles-of-design" style="color: gray;">By Cameron Chapman</a></p>
+</div>
 
 The **Law of Closure** refers to the tendency to perceive incomplete shapes as whole or complete. Our brain fills in the missing parts, allowing us to recognize an entire form even when elements are missing. 
 
 
 In the image, some parts of the shapes are missing, but our brain automatically fills in the gaps, making us perceive the incomplete shapes as a complete form. This principle is commonly seen in logos or icons where parts of the design are missing, yet we still recognize the full shape.
 
+---
 
 ### 4. Law of Figure-Ground
 
-![figure-ground](images/figureground.jpg)
+<div style="text-align: center;">
+  <img src="/images/figureground.jpg" alt="figure-ground" width="60%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.toptal.com/designers/ui/gestalt-principles-of-design" style="color: gray;">By Cameron Chapman</a></p>
+</div>
 
 The **Law of Figure-Ground** describes how we distinguish an object (the figure) from its surrounding background (the ground). Our focus shifts between the object and the background, depending on what we are focusing on at any given moment.
 
 In this image, depending on where we focus, we may see either the foreground shapes as the figure or the background. This principle is often used in visual illusions, where the brain toggles between seeing two different images depending on whether it focuses on the figure or the ground.
 
+---
 
 ### 5. Law of Continuity 
 
-![continutiy](images/continuity.jpg)
+<div style="text-align: center;">
+  <img src="/images/continuity.jpg" alt="continutiy" width="60%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.toptal.com/designers/ui/gestalt-principles-of-design" style="color: gray;">By Cameron Chapman</a></p>
+</div>
+
 
 The **Law of Continuity** states that elements arranged on a line or curve are perceived as related or continuous. This principle explains how our eyes follow the smoothest path when interpreting visual elements.
 
 In this image, the red and gray dots form continuous curves. Even though they are separate dots, our brain perceives the curves as a single continuous path, demonstrating how continuity helps us organize visual elements in a flowing pattern.
 
+---
 
 ### 6. Law of Common-region
 
-![common-region](images/commonregion.jpg)
+<div style="text-align: center;">
+  <img src="/images/commonregion.jpg" alt="common-region" width="60%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://app.uxcel.com/lessons/law-of-common-region-899" style="color: gray;">Uxcel</a></p>
+</div>
 
 The **Law of Common-region** states that elements located within the same boundary are perceived as part of a group. A visual boundary such as a box or a color background can create this perception of grouping, even if the elements are not physically close.
 
 In this image, the circles inside the box are perceived as a group because they share a common region (the box). Even though the circles outside the box are the same size, shape, and color, they are seen as separate because they are not within the same boundary.
 
+---
 
 # Applications of Gestalt laws in daily life
 ## *1. Confusing stairs*
 
-![confusingstairs](images/gl_ex1.jpg)
+<div style="text-align: center;">
+  <img src="/images/gl_ex1.jpg" alt="confusingstairs" width="40%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://brightside.me/articles/15-designs-that-can-confuse-our-common-sense-809304/" style="color: gray;">Bright Side</a></p>
+</div>
 
 ### Problem
 
@@ -89,7 +119,7 @@ In this image, the circles inside the box are perceived as a group because they 
 **Enhancing Contrast**
 - To better separate the background and foreground, stronger color contrast can be applied to the steps. For example, using a brighter color on the edges of the stairs will help clearly define the steps, making it easier to perceive the changes in height.
 
-
+---
 
 ## *2. Apple Recent call*
 

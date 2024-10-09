@@ -21,5 +21,5 @@ I'm Jiwon KANG 🇰🇷
 
 For those who are not familiar with Korean names, my name is pronounced by combining the letter '**G**' and the number '**1**', like **G1** 😉
 
-I'm currently in Master 2 of VAR in Telecom SudParis 👩‍💻
+I'm currently in Master 2 of VAR in Institut Polytechnique de Paris 👩‍💻
 

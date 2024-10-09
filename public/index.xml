@@ -6,104 +6,140 @@
         <description>Recent content on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 27 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>http://localhost:1313/page/about/</link>
+        <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/about/</guid>
+        <description>&lt;p&gt;Hello,&lt;/p&gt;
+&lt;p&gt;Welcome to my blog !&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Jiwon KANG 🇰🇷&lt;/p&gt;
+&lt;p&gt;For those who are not familiar with Korean names, my name is pronounced by combining the letter &amp;lsquo;&lt;strong&gt;G&lt;/strong&gt;&amp;rsquo; and the number &amp;lsquo;&lt;strong&gt;1&lt;/strong&gt;&amp;rsquo;, like &lt;strong&gt;G1&lt;/strong&gt; 😉&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m currently in Master 2 of VAR in Institut Polytechnique de Paris 👩‍💻&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Lecture 1 - Affordances</title>
+        <link>http://localhost:1313/post/affordances/affordances/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/affordances/affordances/</guid>
+        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Lecture 1 - Affordances" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style=&#34;color: gray;&#34;&gt; Anant Kadiyala &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
+&lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
+&lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
+&lt;p&gt;In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.&lt;/p&gt;
+&lt;h2 id=&#34;good-case---traffic-lights-that-show-the-remaining-time&#34;&gt;Good case - Traffic lights that show the remaining time
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/trafficlight.jpg&#34; alt=&#34;Traffic light&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://busan.fnnews.com/news/202004071520322481&#34; style=&#34;color: gray;&#34;&gt;Busan News&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1. Clear Information Display&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Traffic lights that show the remaining time provide users with clear information on how much time is left before the signal changes. Pedestrians can easily determine whether they have enough time to cross the street, and drivers can predict when the signal will switch. This intuitive display helps users make more informed and safer decisions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Behavior Guidance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The countdown timer allows both pedestrians and drivers to act accordingly. Pedestrians can choose to cross quickly if there is enough time, or wait for the next signal if time is running out. This guides user behavior and enhances traffic safety by reducing risky actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Meeting User Expectations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In addition to simply showing red or green lights, the countdown timer allows users to predict signal changes more accurately. This design meets user expectations by providing precise information, reducing stress at intersections, and improving overall traffic flow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bad-case---keyboard&#34;&gt;Bad case - Keyboard
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/keyboard.jpg&#34; alt=&#34;Keyboard&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: https://www.clien.net/service/board/park/16744923&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The placement of a power button above the delete key on a keyboard is a bad example of affordance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Risk of Accidental Use&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the power button is located too close to the delete key, users are more likely to press it accidentally, potentially shutting down the system unintentionally. The functions are too distinct to be placed so closely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Functional Mismatch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The delete key is frequently used, whereas the power button is not. Placing such an important function near a less frequently used key increases the risk of errors and reduces the overall usability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Contrary to User Expectations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users do not expect two very different functions to be positioned so closely together. This placement disrupts the intuitive understanding of how the keyboard should work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solutions&#34;&gt;&lt;em&gt;Solutions&lt;/em&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Relocate the Power Button&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most straightforward solution is to move the power button to a location further away from frequently used keys like the delete key. For example, the power button could be placed at the right-top corner of the keyboard, near the function keys or in a separate, more isolated area where it’s less likely to be pressed by accident.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Add a Confirmation Step&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementing a confirmation step when the power button is pressed would prevent accidental shutdowns. For instance, instead of instantly shutting down the system, the button could trigger a prompt asking the user to confirm the action.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Lecture 2 - Gestalt Law</title>
         <link>http://localhost:1313/post/gestalt-laws/gestaltlaw/</link>
-        <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/gestalt-laws/gestaltlaw/</guid>
-        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Lecture 2 - Gestalt Law" /&gt;&lt;p&gt;&lt;strong&gt;Gestalt&lt;/strong&gt; is a German word meaning &amp;lsquo;form&amp;rsquo; or &amp;lsquo;shape.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Lecture 2 - Gestalt Law" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc&#34; style=&#34;color: gray;&#34;&gt;Gestalt Principles&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gestalt&lt;/strong&gt; is a German word meaning &amp;lsquo;form&amp;rsquo; or &amp;lsquo;shape.&lt;/p&gt;
 &lt;p&gt;It refers to how people perceive visual elements in a given situation. Generally, we compare visual patterns and past experiences to make sense of what we see. We often perceive these elements as a single whole, rather than as separate parts. By connecting the elements, recognizing familiar shapes, sharing information, and filling in the gaps, we make sense of the overall picture.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;1-law-of-proximity&#34;&gt;1. Law of Proximity
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/proximity.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;proximity&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/proximity.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Proximity&lt;/strong&gt; descrives the phenomenon in which element that are close to each other are perceived and felt as a group.&lt;/p&gt;
 &lt;p&gt;For example, in the left image, the dots don&amp;rsquo;t appear to be grouped. However, in the right image, the dots are closer together making them appear as three distinct groups. This &lt;strong&gt;proximity&lt;/strong&gt; can help in organizing related content by placing them close to each other.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;2-law-of-similarity&#34;&gt;2. Law of Similarity
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/similarity.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;similarity&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/similarity.jpg&#34; alt=&#34;similarity&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Similarity&lt;/strong&gt; means that objects with similar shpes, sizes, colors, or other attributes are perceived as part of the same group.&lt;/p&gt;
 &lt;p&gt;In this example, all shapes are squares, but the difference in color causes our brain to group the green squares together and the gray squares together, even though they share the same shape. This shows how color similarity plays a key role in organizing visual elements into groups.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;3-law-of-closure&#34;&gt;3. Law of Closure
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/closure.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;closure&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/closure.jpg&#34; alt=&#34;closure&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Closure&lt;/strong&gt; refers to the tendency to perceive incomplete shapes as whole or complete. Our brain fills in the missing parts, allowing us to recognize an entire form even when elements are missing.&lt;/p&gt;
 &lt;p&gt;In the image, some parts of the shapes are missing, but our brain automatically fills in the gaps, making us perceive the incomplete shapes as a complete form. This principle is commonly seen in logos or icons where parts of the design are missing, yet we still recognize the full shape.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;4-law-of-figure-ground&#34;&gt;4. Law of Figure-Ground
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/figureground.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;figure-ground&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/figureground.jpg&#34; alt=&#34;figure-ground&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Figure-Ground&lt;/strong&gt; describes how we distinguish an object (the figure) from its surrounding background (the ground). Our focus shifts between the object and the background, depending on what we are focusing on at any given moment.&lt;/p&gt;
 &lt;p&gt;In this image, depending on where we focus, we may see either the foreground shapes as the figure or the background. This principle is often used in visual illusions, where the brain toggles between seeing two different images depending on whether it focuses on the figure or the ground.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;5-law-of-continuity&#34;&gt;5. Law of Continuity
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/continuity.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;continutiy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/continuity.jpg&#34; alt=&#34;continutiy&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Continuity&lt;/strong&gt; states that elements arranged on a line or curve are perceived as related or continuous. This principle explains how our eyes follow the smoothest path when interpreting visual elements.&lt;/p&gt;
 &lt;p&gt;In this image, the red and gray dots form continuous curves. Even though they are separate dots, our brain perceives the curves as a single continuous path, demonstrating how continuity helps us organize visual elements in a flowing pattern.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;6-law-of-common-region&#34;&gt;6. Law of Common-region
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/commonregion.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;common-region&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/commonregion.jpg&#34; alt=&#34;common-region&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/law-of-common-region-899&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;The &lt;strong&gt;Law of Common-region&lt;/strong&gt; states that elements located within the same boundary are perceived as part of a group. A visual boundary such as a box or a color background can create this perception of grouping, even if the elements are not physically close.&lt;/p&gt;
 &lt;p&gt;In this image, the circles inside the box are perceived as a group because they share a common region (the box). Even though the circles outside the box are the same size, shape, and color, they are seen as separate because they are not within the same boundary.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;applications-of-gestalt-laws-in-daily-life&#34;&gt;Applications of Gestalt laws in daily life
 &lt;/h1&gt;&lt;h2 id=&#34;1-confusing-stairs&#34;&gt;&lt;em&gt;1. Confusing stairs&lt;/em&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/gl_ex1.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;confusingstairs&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/gl_ex1.jpg&#34; alt=&#34;confusingstairs&#34; width=&#34;40%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://brightside.me/articles/15-designs-that-can-confuse-our-common-sense-809304/&#34; style=&#34;color: gray;&#34;&gt;Bright Side&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;problem&#34;&gt;Problem
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Continuity&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -122,6 +158,7 @@
 &lt;ul&gt;
 &lt;li&gt;To better separate the background and foreground, stronger color contrast can be applied to the steps. For example, using a brighter color on the edges of the stairs will help clearly define the steps, making it easier to perceive the changes in height.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;2-apple-recent-call&#34;&gt;&lt;em&gt;2. Apple Recent call&lt;/em&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/gl_ex2.jpg&#34;
 	
@@ -150,81 +187,83 @@
 </description>
         </item>
         <item>
-        <title>About</title>
-        <link>http://localhost:1313/page/about/</link>
-        <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/page/about/</guid>
-        <description>&lt;p&gt;Hello,&lt;/p&gt;
-&lt;p&gt;Welcome to my blog !&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m Jiwon KANG 🇰🇷&lt;/p&gt;
-&lt;p&gt;For those who are not familiar with Korean names, my name is pronounced by combining the letter &amp;lsquo;&lt;strong&gt;G&lt;/strong&gt;&amp;rsquo; and the number &amp;lsquo;&lt;strong&gt;1&lt;/strong&gt;&amp;rsquo;, like &lt;strong&gt;G1&lt;/strong&gt; 😉&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m currently in Master 2 of VAR in Telecom SudParis 👩‍💻&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Lecture 1 - Affordances</title>
-        <link>http://localhost:1313/post/affordances/affordances/</link>
+        <title>Lecture 3 - Dark Design Patterns</title>
+        <link>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</link>
         <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/post/affordances/affordances/</guid>
-        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Lecture 1 - Affordances" /&gt;&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
-&lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
-&lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
-&lt;p&gt;In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.&lt;/p&gt;
-&lt;h2 id=&#34;good-case---floor-traffic-lights&#34;&gt;Good case - Floor Traffic Lights
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/floorsign.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;trafficlight&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Clear Functional Communication&lt;/strong&gt;&lt;/p&gt;
+        <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
+        <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Lecture 3 - Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/darkpattern.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://uxknowledgebase.com/dark-patterns-3b41ed7a690e&#34; style=&#34;color: gray;&#34;&gt;By Krisztina Szerovay&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words, dark patterns refer to UI/UX that is cleverly and intentionally designed to elicit certain actions from users, whether they want to or not. These designs often serve business goals, such as increasing subscriptions or data collection, but they do so at the expense of the user’s autonomy, leading to unintended actions like accidental purchases or subscriptions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;types-of-dark-patterns-design&#34;&gt;Types of Dark Patterns Design
+&lt;/h3&gt;&lt;p&gt;Here are five types of dark patterns commonly seen&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Just like a door handle that instantly communicates its function, floor traffic lights, placed at pedestrian crossings, clearly indicate when a person should stop or walk. The placement on the ground provides a solution specifically for people who often look down at their phones while walking. Without any instructions, pedestrians can understand what action to take based on the light signals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/li&gt;
+&lt;li&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Intuitive Usage Encouragement&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pedestrians who walk while looking at their smartphones also unconsciously recognize the signals on the ground. While existing traffic lights are located above the head and are difficult to see unless you look up, floor traffic lights are designed to align with modern pedestrian behavior, particularly smartphone use. By positioning the signal at eye level for those looking down, the design naturally guides users to stop or walk.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;bad-case---keyboard&#34;&gt;Bad case - Keyboard
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/keyboard.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Keyboard&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;The placement of a power button above the delete key on a keyboard is a bad example of affordance.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Risk of Accidental Use&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;When the power button is located too close to the delete key, users are more likely to press it accidentally, potentially shutting down the system unintentionally. The functions are too distinct to be placed so closely.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Functional Mismatch&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The delete key is frequently used, whereas the power button is not. Placing such an important function near a less frequently used key increases the risk of errors and reduces the overall usability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Contrary to User Expectations&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Users do not expect two very different functions to be positioned so closely together. This placement disrupts the intuitive understanding of how the keyboard should work.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;how-can-we-fix-the-bad-case&#34;&gt;&lt;em&gt;How can we fix the bad case&lt;/em&gt;
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Relocate the Power Button&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The most straightforward solution is to move the power button to a location further away from frequently used keys like the delete key. For example, the power button could be placed at the right-top corner of the keyboard, near the function keys or in a separate, more isolated area where it’s less likely to be pressed by accident.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Add a Confirmation Step&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implementing a confirmation step when the power button is pressed would prevent accidental shutdowns. For instance, instead of instantly shutting down the system, the button could trigger a prompt asking the user to confirm the action.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+ &lt;!--  
+2. **Obstruction**
+
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/obstruction.jpg&#34; alt=&#34;Obstruction dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+- **Obstruction** involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.
+- For example, subscribing to a service may be as simple as one click, but canceling that same service might involve navigating through a series of confusing steps, or even contacting customer support. By increasing the effort required to complete the task, users are more likely to give up and continue their subscription, even if they originally intended to cancel.
+
+3. **Sneaking**
+
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/sneaking.jpg&#34; alt=&#34;Sneaking dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/dark-patterns-024&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+- **Sneaking** occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.
+
+- For example, an e-commerce site may show an item at a discounted price, but hidden fees like taxes or shipping costs are only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.
+
+
+4. **Interface Interference**
+
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+- **Interface** interference manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.
+
+- A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.
+
+5. **Forced Action**
+
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+- **Forced Action** refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.
+
+- For instance, a user might be required to create an account or subscribe to a newsletter before they can continue using a free app or access content. This design forces users to take an action they don’t necessarily want to take, making them feel trapped or cornered.
+
+
+---
+--&gt;</description>
         </item>
         <item>
         <title>Archives</title>
