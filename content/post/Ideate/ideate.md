@@ -1,5 +1,8 @@
 +++
-title = 'Ideate'
-date = 2024-10-08T14:46:43+02:00
+title = 'Lecture 7 - Ideate'
+date = 2024-10-08
+categories =["HCI"]
+tags = ["HCI-Lecture"]
+author = "jiwon"
 draft = true
 +++

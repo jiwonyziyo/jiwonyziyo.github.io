@@ -1,6 +1,6 @@
 +++
 title = 'Lab 2 - Set up Unity'
-date = 2024-10-14
+date = 2024-10-12
 categories = ["HCI"]
 tags = ["HCI-Lab"]
 image = "images/unity.jpg"
