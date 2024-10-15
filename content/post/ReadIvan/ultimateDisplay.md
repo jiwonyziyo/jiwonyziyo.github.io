@@ -5,6 +5,7 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/ivan.jpg"
+draf = true
 +++
 
 # Reflections on Ivan Sutherland's "The Ultimate Display"

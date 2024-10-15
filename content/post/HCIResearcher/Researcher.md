@@ -5,6 +5,7 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/researcher.png"
+draf = true
 +++
 
 # HCI Researcher : Young-Ho Kim

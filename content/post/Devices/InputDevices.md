@@ -5,7 +5,7 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/leap.jpg"
-draf = false
+draf = true
 +++
 
 # Input Devices and Interaction Paradigms: The Leap Motion Controller
