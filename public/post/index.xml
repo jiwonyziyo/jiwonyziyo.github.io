@@ -243,73 +243,13 @@
 </description>
         </item>
         <item>
-        <title>Lab 4 - Kinect</title>
-        <link>http://localhost:1313/post/lab4/kinect/</link>
-        <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/lab4/kinect/</guid>
-        <description>&lt;ol&gt;
-&lt;li&gt;why we use the virtual environement? (what is the purpose of the virutal -&amp;gt; is much easier to handle the each virtual ..)
-what kind of virtual envrionement?
-D:\Users\Studen\Desktop\kinect&amp;gt;.\kinect\student\Scripts\activate&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;(student) D: \Users\Student\Desktop\kinect&amp;gt;&lt;/p&gt;
-&lt;p&gt;(student) this means we are in the virtual envrionment&lt;/p&gt;
-&lt;p&gt;virtual -&amp;gt; create the folder / cmd / python -m venv .bonjour( . for hidden folder) / to activate: ..bonjour\Scripts\activate&lt;/p&gt;
-&lt;p&gt;number of sensor -&amp;gt; number of kinect
-store in the data folder / images and depth&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;run
-python real_time.py
-: if you want to detect each face -&amp;gt; we can modify the code to draw a bounding box ror sth , detect the people faces or ,..&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;sdk -&amp;gt; kinect for windows : sample projects
-before, just check kinect toolkit /developper toolkit
-kinect toolkit and kinect sdk v1.8&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;kinect fusion basics -&amp;gt; recontruct the walls, laptop, keyboard,.. we can even check the texture&lt;/li&gt;
-&lt;li&gt;kinect head scanning -&amp;gt; create mesh -&amp;gt; obj and check in the unity&lt;/li&gt;
-&lt;li&gt;depth basic -&amp;gt; black : really far away&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>Ideate</title>
-        <link>http://localhost:1313/post/ideate/ideate/</link>
-        <pubDate>Tue, 08 Oct 2024 14:46:43 +0200</pubDate>
-        
-        <guid>http://localhost:1313/post/ideate/ideate/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Lecture 8 - Prototype</title>
-        <link>http://localhost:1313/post/prototype/prototype/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/prototype/prototype/</guid>
-        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
-&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
-&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
-lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
-&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
-&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
-&lt;p&gt;for example, imagine we work for gain the money.
-in this case the independent variable is the amount of work because this variable can change ourselves.
-the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
-&lt;p&gt;independent variable -&amp;gt;
-dependent variable -&amp;gt;
-control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
-&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>Lecture 4 - HCI Researcher</title>
         <link>http://localhost:1313/post/hciresearcher/researcher/</link>
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/hciresearcher/researcher/</guid>
-        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post Lecture 4 - HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kim&#34;&gt;HCI Researcher : Young-Ho Kim
+        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post Lecture 4 - HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kimhttpyounghokimnet&#34;&gt;HCI Researcher : &lt;a class=&#34;link&#34; href=&#34;http://younghokim.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Young-Ho Kim&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;current-role-and-expertise&#34;&gt;Current Role and Expertise
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Young-Ho Kim&lt;/strong&gt; is a &lt;strong&gt;Lead Research Scientist at NAVER AI Lab&lt;/strong&gt; and a prominent researcher in the field of &lt;strong&gt;HCI&lt;/strong&gt;. His work spans across multiple domains, including &lt;strong&gt;Personal Health Informatics&lt;/strong&gt;, &lt;strong&gt;Ubiquitous Computing (UbiComp)&lt;/strong&gt;, and &lt;strong&gt;Personal Data Visualization&lt;/strong&gt;. By integrating his knowledge of &lt;strong&gt;computer science&lt;/strong&gt; and &lt;strong&gt;visual communication design&lt;/strong&gt;, Kim focuses on designing systems that enhance human-data interaction, especially in the context of &lt;strong&gt;self-tracking technologies&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;research-focus&#34;&gt;Research Focus
@@ -384,7 +324,7 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/devices/inputdevices/</guid>
-        <description>&lt;h1 id=&#34;input-devices-and-interaction-paradigms-the-leap-motion-controller&#34;&gt;Input Devices and Interaction Paradigms: The Leap Motion Controller
+        <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Lecture 6 - Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;input-devices-and-interaction-paradigms-the-leap-motion-controller&#34;&gt;Input Devices and Interaction Paradigms: The Leap Motion Controller
 &lt;/h1&gt;&lt;h2 id=&#34;overview-of-the-leap-motion-controller&#34;&gt;Overview of the Leap Motion Controller
 &lt;/h2&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt;, introduced in 2013, was a &lt;strong&gt;gesture-based input device&lt;/strong&gt; that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.&lt;/p&gt;
 &lt;h3 id=&#34;classification-gesture-based-user-interface&#34;&gt;Classification: Gesture-Based User Interface
@@ -405,15 +345,6 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
 &lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a visionary product that failed to achieve widespread success due to a lack of compelling use cases, tracking issues, and insufficient developer support. However, with the growing demand for &lt;strong&gt;gesture-based interaction&lt;/strong&gt; in VR/AR environments, and the potential for improved accuracy through new technologies, the underlying concepts of Leap Motion may still play a key role in future human-computer interaction paradigms.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Sources&lt;/strong&gt;:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.leapmotion.com/product&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Leap Motion Controller Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.extremetech.com/extreme/171202-leap-motion-review-hands-on-with-the-motion-control-of-the-future&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Why Leap Motion Failed&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ultraleap.com/company/news/leap-motion-ultrahaptics/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Ultrahaptics Acquires Leap Motion&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
         </item>
         <item>

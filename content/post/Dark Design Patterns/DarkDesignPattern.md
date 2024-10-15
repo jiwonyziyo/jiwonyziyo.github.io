@@ -35,7 +35,7 @@ Here are five types of dark patterns commonly seen
 
 - **Nagging** occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.
 - If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.
- <!--  
+
 2. **Obstruction**
 
 <div style="text-align: center;">
@@ -55,25 +55,25 @@ Here are five types of dark patterns commonly seen
 
 - **Sneaking** occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.
 
-- For example, an e-commerce site may show an item at a discounted price, but hidden fees like taxes or shipping costs are only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.
+- For example, an accomodation booking site may show a price at a discounted price, but hidden fees like cleaning costs is only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.
 
 
 4. **Interface Interference**
 
 <div style="text-align: center;">
-  <img src="/images/nagging.jpg" alt="Nagging dark pattern example" width="30%">
-  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969" style="color: gray;">ResearchGate</a></p>
+  <img src="/images/interfaceinterference.jpg" alt="Interface Interference example" width="50%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.emailtooltester.com/en/blog/dark-patterns-canceling-subscription-report/" style="color: gray;">By Cai & Roberta</a></p>
 </div>
 
-- **Interface** interference manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.
+- **Interface interference** manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.
 
 - A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.
 
 5. **Forced Action**
 
 <div style="text-align: center;">
-  <img src="/images/nagging.jpg" alt="Nagging dark pattern example" width="30%">
-  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969" style="color: gray;">ResearchGate</a></p>
+  <img src="/images/forcedaction.jpg" alt="Forced action example" width="50%">
+  <p style="font-size: 12px; color: gray;">Image Source: <a href="https://blog.raidboxes.io/en/security/dark-patterns/" style="color: gray;">blog</a></p>
 </div>
 
 - **Forced Action** refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.
@@ -82,4 +82,3 @@ Here are five types of dark patterns commonly seen
 
 
 ---
--->

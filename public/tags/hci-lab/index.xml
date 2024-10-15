@@ -242,37 +242,6 @@
 &lt;/h2&gt;&lt;p&gt;Good luck, and enjoy building with Unity!&lt;/p&gt;
 </description>
         </item>
-        <item>
-        <title>Lab 4 - Kinect</title>
-        <link>http://localhost:1313/post/lab4/kinect/</link>
-        <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/lab4/kinect/</guid>
-        <description>&lt;ol&gt;
-&lt;li&gt;why we use the virtual environement? (what is the purpose of the virutal -&amp;gt; is much easier to handle the each virtual ..)
-what kind of virtual envrionement?
-D:\Users\Studen\Desktop\kinect&amp;gt;.\kinect\student\Scripts\activate&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;(student) D: \Users\Student\Desktop\kinect&amp;gt;&lt;/p&gt;
-&lt;p&gt;(student) this means we are in the virtual envrionment&lt;/p&gt;
-&lt;p&gt;virtual -&amp;gt; create the folder / cmd / python -m venv .bonjour( . for hidden folder) / to activate: ..bonjour\Scripts\activate&lt;/p&gt;
-&lt;p&gt;number of sensor -&amp;gt; number of kinect
-store in the data folder / images and depth&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;run
-python real_time.py
-: if you want to detect each face -&amp;gt; we can modify the code to draw a bounding box ror sth , detect the people faces or ,..&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;sdk -&amp;gt; kinect for windows : sample projects
-before, just check kinect toolkit /developper toolkit
-kinect toolkit and kinect sdk v1.8&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;kinect fusion basics -&amp;gt; recontruct the walls, laptop, keyboard,.. we can even check the texture&lt;/li&gt;
-&lt;li&gt;kinect head scanning -&amp;gt; create mesh -&amp;gt; obj and check in the unity&lt;/li&gt;
-&lt;li&gt;depth basic -&amp;gt; black : really far away&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
         
     </channel>
 </rss>

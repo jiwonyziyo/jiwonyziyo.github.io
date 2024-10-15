@@ -5,10 +5,10 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/researcher.png"
-draf = true
+draf = false
 +++
 
-# HCI Researcher : Young-Ho Kim
+# HCI Researcher : [Young-Ho Kim](http://younghokim.net/)
 
 ## Current Role and Expertise
 
@@ -20,11 +20,8 @@ His **current research** emphasizes the development of **flexible self-tracking 
 
 ## Recent Research Projects
 
-One of Kim's **notable ongoing projects** includes:
 - **CareCall**: A project designed to use LLMs for public health interventions. In this system, conversational AI assists socially isolated individuals by conducting regular check-up calls. The system not only gathers health metrics but also provides emotional support through empathetic conversations. The findings from this project highlight both the benefits and challenges of using LLM-driven systems in real-world public health contexts, such as balancing user expectations and handling the limitations of AI in personalization and memory. 
 
-    
-Another major project is:
 - **Textoshop**: A novel tool that applies concepts from image editing to text manipulation. It allows users to engage in flexible and creative text editing by treating words and sentences similarly to how designers manipulate visual elements in software like Photoshop.
 
 
@@ -33,12 +30,12 @@ Another major project is:
 
 Kim's work has significantly impacted how **AI and human-centered design** are integrated into real-world applications. By designing systems that bridge the gap between humans and data, he has contributed to making **self-tracking technologies** more accessible and adaptable to various user needs. His contributions to **public health technology**—especially in using AI to enhance social and emotional well-being—highlight the evolving role of **HCI** in addressing both technical and social challenges.
 
-### Key Publications
-- **"Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention"** (2023): This paper explores how LLM-based conversational AI systems can assist in public health interventions by monitoring and supporting socially isolated individuals.
+### Source
+- **"Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention"** (2023)
 
-    [Kim's CareCall project paper](https://dl.acm.org/doi/10.1145/3544548.3581503)
+    [CareCall project paper](https://dl.acm.org/doi/10.1145/3544548.3581503)
 
-- **"Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing"** (2024): In this paper, Kim and collaborators introduce a tool that reimagines text editing by applying principles of design software, enhancing user interaction with text through direct manipulation.
+- **"Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing"** (2024)
 
     [Textoshop project paper](https://arxiv.org/abs/2409.17088)
 

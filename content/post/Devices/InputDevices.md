@@ -8,15 +8,13 @@ image = "images/leap.jpg"
 draf = true
 +++
 
-# Input Devices and Interaction Paradigms: The Leap Motion Controller
+# The Leap Motion Controller
 
-## Overview of the Leap Motion Controller
-
-The **Leap Motion Controller**, introduced in 2013, was a **gesture-based input device** that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using **hand and finger movements**. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a **touch-free, 3D interaction** experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.
+The **Leap Motion Controller**, introduced in 2013, was a **gesture-based input device** that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using **hand and finger movements**. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a **touch-free, 3D interaction** experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet. 
 
 ### Classification: Gesture-Based User Interface
 
-The Leap Motion falls under the category of **Gesture-Based User Interface (GBUI)**. This type of user interface allows users to interact with a computer through body movements—specifically, hand and finger gestures. GBUI is a part of **Natural User Interfaces (NUI)**, which focus on intuitive and natural interaction techniques.
+The Leap Motion falls under the category of **Gesture-Based User Interface**. This type of user interface allows users to interact with a computer through body movements. Specifically, hand and finger gestures. This is a part of **Natural User Interfaces**, which focus on intuitive and natural interaction techniques.
 
 ## Why the Leap Motion Failed to Succeed
 
