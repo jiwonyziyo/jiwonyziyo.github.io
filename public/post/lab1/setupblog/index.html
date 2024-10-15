@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Today, I&rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&rsquo;ll be working on a MacBook 💻 (Apple silicon).\nWhy Hugo? No server-side code: Hugo builds purely static files, so there is no need to manage any backend infrastructure. Fast to render: Static sites are quick to render because they are pre-built into HTML before deployment. No dynamic content: While this means no interactive elements like forms or real-time data updates, it also simplifies maintenance. No database: Content is stored as files, not in a database, which reduces complexity and overhead. Often more secure: Fewer security vulnerabilities as there are no databases or server-side scripts to attack. No real-time UI: Hugo sites don’t support real-time updates or interactions without additional tools. Content is versioned: With git, all content can be version controlled, providing an easy way to manage changes and rollbacks. Prerequisites Before starting, make sure you have Homebrew and Git installed on your MacBook. If you don&rsquo;t have it, you can install it with the command below:\n">
+<title>Lab 1 - Set up Blog</title>
+
+<link rel='canonical' href='http://localhost:1313/post/lab1/setupblog/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Lab 1 - Set up Blog">
+<meta property='og:description' content="Today, I&rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&rsquo;ll be working on a MacBook 💻 (Apple silicon).\nWhy Hugo? No server-side code: Hugo builds purely static files, so there is no need to manage any backend infrastructure. Fast to render: Static sites are quick to render because they are pre-built into HTML before deployment. No dynamic content: While this means no interactive elements like forms or real-time data updates, it also simplifies maintenance. No database: Content is stored as files, not in a database, which reduces complexity and overhead. Often more secure: Fewer security vulnerabilities as there are no databases or server-side scripts to attack. No real-time UI: Hugo sites don’t support real-time updates or interactions without additional tools. Content is versioned: With git, all content can be version controlled, providing an easy way to manage changes and rollbacks. Prerequisites Before starting, make sure you have Homebrew and Git installed on your MacBook. If you don&rsquo;t have it, you can install it with the command below:\n">
+<meta property='og:url' content='http://localhost:1313/post/lab1/setupblog/'>
+<meta property='og:site_name' content='Jiwon KANG'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='HCI-Lab' /><meta property='article:published_time' content='2024-10-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-10-14T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/images/hugo.jpg' />
+<meta name="twitter:title" content="Lab 1 - Set up Blog">
+<meta name="twitter:description" content="Today, I&rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&rsquo;ll be working on a MacBook 💻 (Apple silicon).\nWhy Hugo? No server-side code: Hugo builds purely static files, so there is no need to manage any backend infrastructure. Fast to render: Static sites are quick to render because they are pre-built into HTML before deployment. No dynamic content: While this means no interactive elements like forms or real-time data updates, it also simplifies maintenance. No database: Content is stored as files, not in a database, which reduces complexity and overhead. Often more secure: Fewer security vulnerabilities as there are no databases or server-side scripts to attack. No real-time UI: Hugo sites don’t support real-time updates or interactions without additional tools. Content is versioned: With git, all content can be version controlled, providing an easy way to manage changes and rollbacks. Prerequisites Before starting, make sure you have Homebrew and Git installed on your MacBook. If you don&rsquo;t have it, you can install it with the command below:\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/images/hugo.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/sticker_hu8134136761807756024.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jiwon KANG</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/lab1/setupblog/">
+                
+                    <img src="/images/hugo.jpg" loading="lazy" alt="Featured image of post Lab 1 - Set up Blog" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hci/" >
+                HCI
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/lab1/setupblog/">Lab 1 - Set up Blog</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 14, 2024</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Today, I&rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&rsquo;ll be working on a MacBook 💻 (Apple silicon).</p>
+<h2 id="why-hugo">Why Hugo?
+</h2><ul>
+<li><strong>No server-side code</strong>: Hugo builds purely static files, so there is no need to manage any backend infrastructure.</li>
+<li><strong>Fast to render</strong>: Static sites are quick to render because they are pre-built into HTML before deployment.</li>
+<li><strong>No dynamic content</strong>: While this means no interactive elements like forms or real-time data updates, it also simplifies maintenance.</li>
+<li><strong>No database</strong>: Content is stored as files, not in a database, which reduces complexity and overhead.</li>
+<li><strong>Often more secure</strong>: Fewer security vulnerabilities as there are no databases or server-side scripts to attack.</li>
+<li><strong>No real-time UI</strong>: Hugo sites don’t support real-time updates or interactions without additional tools.</li>
+<li><strong>Content is versioned</strong>: With git, all content can be version controlled, providing an easy way to manage changes and rollbacks.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites
+</h2><p>Before starting, make sure you have <strong>Homebrew</strong> and Git installed on your MacBook. If you don&rsquo;t have it, you can install it with the command below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>To check if Git is already installed, run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>If Git is not installed, you can install it using Homebrew:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><p>Once installed, verify it by running <code>git --version</code> again to ensure everything is set up correctly.</p>
+<hr>
+<h2 id="step-1-install-hugo">Step 1: Install Hugo
+</h2><p>To install Hugo, first you open the terminal and run this code</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p>Once the installation is complete, verify the installation by checking the Hugo version</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#and if installed correctly, you should see an output similar to the following</span>
+</span></span><span style="display:flex;"><span>Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
+</span></span></code></pre></div><hr>
+<h2 id="step-2-create-a-new-hugo-site">Step 2: Create a New Hugo Site
+</h2><p>Now that Hugo is installed, you can create your new blog. Navigate to the directory where you&rsquo;d like to store your blog and create a new site with the command below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site &lt;nameOftheSite&gt;
+</span></span></code></pre></div><p>Replace <code>nameOftheSite</code> with your desired name for the blog site.</p>
+<hr>
+<h2 id="step-3-add-a-theme">Step 3: Add a Theme
+</h2><p>To give your blog a proper design, you&rsquo;ll need to add a theme. Hugo has a variety of themes available that you can browse and choose from.</p>
+<ol>
+<li>Go to the <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >Hugo Themes website</a> to browse available themes.</li>
+<li>Once you find a theme you like, click on it.</li>
+<li>On the theme&rsquo;s page, there will be a &ldquo;Download&rdquo; button. When you click this button, you&rsquo;ll be redirected to the theme&rsquo;s GitHub repository.</li>
+<li>You should check the <code>ReadMe</code> file on the GitHub repository for instructions on how to apply the theme.</li>
+</ol>
+<p><em>For example, I used the <code>hugo-theme-stack</code> theme.</em></p>
+<p>First, initialize git in your project directory (ensure you are in the correct directory):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>Then, add the theme as a git submodule:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+</span></span></code></pre></div><p>Now, open the <code>hugo.toml</code> file and configure Hugo to use this theme by adding the following line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-stack&#34;</span>
+</span></span></code></pre></div><p>Each theme has different configuration options, so make sure to follow the specific instructions in the theme&rsquo;s GitHub repository. You can also customize it further based on your needs.</p>
+<hr>
+<h3 id="step-31-creating-new-posts">Step 3.1: Creating New Posts
+</h3><p>To create a new blog post, you can use the following Hugo command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/&lt;post-name&gt;.md
+</span></span></code></pre></div><p>This will create a new Markdown file in the <code>content/posts/</code> directory. You can then edit this file to write your post.</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/my-first-post.md
+</span></span></code></pre></div><hr>
+<h2 id="step-4-create-a-new-github-repository">Step 4: Create a New GitHub Repository
+</h2><p>To deploy the site to GitHub Pages, you&rsquo;ll need to connect it to a GitHub repository.</p>
+<p>First, create a new repository on your GitHub account.</p>
+<div style="text-align: center;">
+  <img src="/images/newrepo.jpg" alt="new_repository" width="70%">
+</div>
+<p><em>In my case, I created my repository with the name <code>&lt;username&gt;.github.io</code> and left it public.</em></p>
+<p>Once the repository is created, you&rsquo;ll see a setup page. Here, you&rsquo;ll find instructions on how to push your existing files to this repository.</p>
+<div style="text-align: center;">
+  <img src="/images/quicksetup.png" alt="new_repository" width="70%">
+</div>
+<p>Go back to your terminal and connect your Hugo project to this GitHub repository by following the commands on the setup page (red box).</p>
+<hr>
+<h2 id="step-5-deploy-to-github-pages">Step 5: Deploy to GitHub Pages
+</h2><p>We&rsquo;ll use GitHub Actions to automatically build and deploy the Hugo site to GitHub Pages whenever changes are pushed to the <code>main</code> branch.</p>
+<p>I followed the steps indicated in the official Hugo documentation: <a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
+    >Host on GitHub Pages</a>.</p>
+<p>Before you deploy it, you should change the <code>baseURL</code> in the <code>hugo.toml</code> file to your GitHub Pages URL.</p>
+<p>For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://jiwonyziyo.github.io/&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="step-6-access-your-site">Step 6: Access Your Site
+</h2><p>Once the GitHub Action finishes running, your blog will be deployed to GitHub Pages. You can check your blog by visiting the URL found in <strong>Settings &gt; Pages</strong>.</p>
+<div style="text-align: center;">
+  <img src="/images/githuburl.jpg" alt="github_url" width="70%">
+</div>
+<p>To see the deployment status, you can also go to the <strong>Actions</strong> tab in your GitHub repository. If everything went well, you&rsquo;ll see that your site was successfully deployed.</p>
+<hr>
+<h2 id="voilà--now-you-have-a-fully-functioning-personal-blog">Voilà ! Now you have a fully functioning personal blog!
+</h2><div style="text-align: center;">
+  <img src="/images/website.jpg" alt="website" width="70%">
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hci-lab/">HCI-Lab</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/lab2/setupunity/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/unity.jpg" loading="lazy" data-key="" data-hash="/images/unity.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Lab 2 - Set up Unity</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/lab3/unity3dapplication/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Lab 3 - Unity 3D Application</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Jiwon KANG
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-08T14:46:43+02:00</lastmod>
+    <lastmod>2024-10-14T23:57:21+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-10-08T14:46:43+02:00</lastmod>
+    <lastmod>2024-10-14T23:57:21+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/hci/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hci-lab/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab2/setupunity/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab1/setupblog/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab4/lab4/</loc>
+    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/about/</loc>
     <lastmod>2024-09-23T00:00:00+00:00</lastmod>
@@ -14,10 +35,7 @@
     <loc>http://localhost:1313/page/</loc>
     <lastmod>2024-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/hci/</loc>
+    <loc>http://localhost:1313/tags/hci-lecture/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/affordances/affordances/</loc>
@@ -33,7 +51,5 @@
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

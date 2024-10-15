@@ -2,6 +2,7 @@
 title = 'Lecture 2 - Gestalt Law'
 date = 2024-09-19
 categories =["HCI"]
+tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/gestalt.jpg"
 +++

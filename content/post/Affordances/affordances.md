@@ -2,6 +2,7 @@
 title = "Lecture 1 - Affordances"
 date = 2024-09-19
 categories =["HCI"]
+tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/affordance.jpg"
 draft = false

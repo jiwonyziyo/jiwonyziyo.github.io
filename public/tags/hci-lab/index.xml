@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>HCI-Lab on Jiwon KANG</title>
+        <link>http://localhost:1313/tags/hci-lab/</link>
+        <description>Recent content in HCI-Lab on Jiwon KANG</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Lab 1 - Set up Blog</title>
+        <link>http://localhost:1313/post/lab1/setupblog/</link>
+        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab1/setupblog/</guid>
+        <description>&lt;img src="http://localhost:1313/images/hugo.jpg" alt="Featured image of post Lab 1 - Set up Blog" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&amp;rsquo;ll be working on a MacBook 💻 (Apple silicon).&lt;/p&gt;
+&lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No server-side code&lt;/strong&gt;: Hugo builds purely static files, so there is no need to manage any backend infrastructure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast to render&lt;/strong&gt;: Static sites are quick to render because they are pre-built into HTML before deployment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No dynamic content&lt;/strong&gt;: While this means no interactive elements like forms or real-time data updates, it also simplifies maintenance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No database&lt;/strong&gt;: Content is stored as files, not in a database, which reduces complexity and overhead.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Often more secure&lt;/strong&gt;: Fewer security vulnerabilities as there are no databases or server-side scripts to attack.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No real-time UI&lt;/strong&gt;: Hugo sites don’t support real-time updates or interactions without additional tools.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content is versioned&lt;/strong&gt;: With git, all content can be version controlled, providing an easy way to manage changes and rollbacks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h2&gt;&lt;p&gt;Before starting, make sure you have &lt;strong&gt;Homebrew&lt;/strong&gt; and Git installed on your MacBook. If you don&amp;rsquo;t have it, you can install it with the command below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/bin/bash -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To check if Git is already installed, run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If Git is not installed, you can install it using Homebrew:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once installed, verify it by running &lt;code&gt;git --version&lt;/code&gt; again to ensure everything is set up correctly.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1: Install Hugo
+&lt;/h2&gt;&lt;p&gt;To install Hugo, first you open the terminal and run this code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the installation is complete, verify the installation by checking the Hugo version&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#and if installed correctly, you should see an output similar to the following&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;step-2-create-a-new-hugo-site&#34;&gt;Step 2: Create a New Hugo Site
+&lt;/h2&gt;&lt;p&gt;Now that Hugo is installed, you can create your new blog. Navigate to the directory where you&amp;rsquo;d like to store your blog and create a new site with the command below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site &amp;lt;nameOftheSite&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;nameOftheSite&lt;/code&gt; with your desired name for the blog site.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-3-add-a-theme&#34;&gt;Step 3: Add a Theme
+&lt;/h2&gt;&lt;p&gt;To give your blog a proper design, you&amp;rsquo;ll need to add a theme. Hugo has a variety of themes available that you can browse and choose from.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Themes website&lt;/a&gt; to browse available themes.&lt;/li&gt;
+&lt;li&gt;Once you find a theme you like, click on it.&lt;/li&gt;
+&lt;li&gt;On the theme&amp;rsquo;s page, there will be a &amp;ldquo;Download&amp;rdquo; button. When you click this button, you&amp;rsquo;ll be redirected to the theme&amp;rsquo;s GitHub repository.&lt;/li&gt;
+&lt;li&gt;You should check the &lt;code&gt;ReadMe&lt;/code&gt; file on the GitHub repository for instructions on how to apply the theme.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;For example, I used the &lt;code&gt;hugo-theme-stack&lt;/code&gt; theme.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;First, initialize git in your project directory (ensure you are in the correct directory):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, add the theme as a git submodule:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, open the &lt;code&gt;hugo.toml&lt;/code&gt; file and configure Hugo to use this theme by adding the following line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hugo-theme-stack&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each theme has different configuration options, so make sure to follow the specific instructions in the theme&amp;rsquo;s GitHub repository. You can also customize it further based on your needs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-31-creating-new-posts&#34;&gt;Step 3.1: Creating New Posts
+&lt;/h3&gt;&lt;p&gt;To create a new blog post, you can use the following Hugo command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/&amp;lt;post-name&amp;gt;.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a new Markdown file in the &lt;code&gt;content/posts/&lt;/code&gt; directory. You can then edit this file to write your post.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-first-post.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;step-4-create-a-new-github-repository&#34;&gt;Step 4: Create a New GitHub Repository
+&lt;/h2&gt;&lt;p&gt;To deploy the site to GitHub Pages, you&amp;rsquo;ll need to connect it to a GitHub repository.&lt;/p&gt;
+&lt;p&gt;First, create a new repository on your GitHub account.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/newrepo.jpg&#34; alt=&#34;new_repository&#34; width=&#34;70%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;In my case, I created my repository with the name &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; and left it public.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Once the repository is created, you&amp;rsquo;ll see a setup page. Here, you&amp;rsquo;ll find instructions on how to push your existing files to this repository.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/quicksetup.png&#34; alt=&#34;new_repository&#34; width=&#34;70%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Go back to your terminal and connect your Hugo project to this GitHub repository by following the commands on the setup page (red box).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-5-deploy-to-github-pages&#34;&gt;Step 5: Deploy to GitHub Pages
+&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ll use GitHub Actions to automatically build and deploy the Hugo site to GitHub Pages whenever changes are pushed to the &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;p&gt;I followed the steps indicated in the official Hugo documentation: &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Host on GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Before you deploy it, you should change the &lt;code&gt;baseURL&lt;/code&gt; in the &lt;code&gt;hugo.toml&lt;/code&gt; file to your GitHub Pages URL.&lt;/p&gt;
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://jiwonyziyo.github.io/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;step-6-access-your-site&#34;&gt;Step 6: Access Your Site
+&lt;/h2&gt;&lt;p&gt;Once the GitHub Action finishes running, your blog will be deployed to GitHub Pages. You can check your blog by visiting the URL found in &lt;strong&gt;Settings &amp;gt; Pages&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/githuburl.jpg&#34; alt=&#34;github_url&#34; width=&#34;70%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;To see the deployment status, you can also go to the &lt;strong&gt;Actions&lt;/strong&gt; tab in your GitHub repository. If everything went well, you&amp;rsquo;ll see that your site was successfully deployed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;voilà--now-you-have-a-fully-functioning-personal-blog&#34;&gt;Voilà ! Now you have a fully functioning personal blog!
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/website.jpg&#34; alt=&#34;website&#34; width=&#34;70%&#34;&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
+        <title>Lab 2 - Set up Unity</title>
+        <link>http://localhost:1313/post/lab2/setupunity/</link>
+        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab2/setupunity/</guid>
+        <description>&lt;img src="http://localhost:1313/images/unity.jpg" alt="Featured image of post Lab 2 - Set up Unity" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you the process of setting up Unity on a MacBook 💻.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-sign-up-for-a-unity-account&#34;&gt;Step 1: Sign Up for a Unity Account
+&lt;/h2&gt;&lt;p&gt;To start using Unity, you&amp;rsquo;ll need to create an account. You can sign up on the &lt;a class=&#34;link&#34; href=&#34;https://id.unity.com/account/new&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unity website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once your account is created, you will have access to Unity Hub.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-2-verify-student-status-for-unity-education-license&#34;&gt;Step 2: Verify Student Status for Unity Education License
+&lt;/h2&gt;&lt;p&gt;Unity offers free premium access to students through the Unity Student Plan. Follow these steps to verify your student status:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to the &lt;a class=&#34;link&#34; href=&#34;https://store.unity.com/academic/unity-student&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unity Student Plan page&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;strong&gt;Free Access: Post-Secondary&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Log in with the Unity account you created earlier. (&lt;em&gt;I used my personal Google account for registration but verified my student status using my school email.&lt;/em&gt;) During the verification process, you will need to provide your school information and expected graduation year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After verification, you will receive a completion email. Click on &lt;strong&gt;Redeem my Student plan&lt;/strong&gt; to finalize the process. Make sure to log in using the same email you used to sign up, not your school email.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/redeem.png&#34; alt=&#34;redeem&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will receive a license key via email, which you will use during the Unity installation process.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unitykey.png&#34; alt=&#34;unitykey&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-3-install-unity-hub&#34;&gt;Step 3: Install Unity Hub
+&lt;/h2&gt;&lt;p&gt;Unity Hub is a central application for managing Unity installations, projects, and licenses. Here&amp;rsquo;s how to install Unity Hub on your MacBook:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Visit the &lt;a class=&#34;link&#34; href=&#34;https://unity.com/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unity Hub download page&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download and install Unity Hub for macOS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once installed, open Unity Hub and log in with your Unity account.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now you need to add a license. Click on &lt;strong&gt;Preferences&lt;/strong&gt; in Unity Hub.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unitypreferences.png&#34; alt=&#34;preferences&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the menu on the left, go to &lt;strong&gt;Licenses&lt;/strong&gt; and click &lt;strong&gt;Add&lt;/strong&gt;. Select &lt;strong&gt;Activate with serial number&lt;/strong&gt;, then enter the license key you received via email.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unityadd.png&#34; alt=&#34;Add&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your license, which grants one year of access to Unity, will now be active.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unitylicence.png&#34; alt=&#34;Licence&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-4-install-a-specific-version-of-unity&#34;&gt;Step 4: Install a Specific Version of Unity
+&lt;/h2&gt;&lt;p&gt;For my HCI classes, I need to use a specific version of Unity rather than the latest one. Here’s how you can install a different version:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open Unity Hub.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to the &lt;strong&gt;Installs&lt;/strong&gt; tab.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unityinstall.png&#34; alt=&#34;Install tab&#34; width=&#34;30%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;strong&gt;Install Editor&lt;/strong&gt; to install a new Unity Editor version.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the &lt;strong&gt;Choose a version&lt;/strong&gt; section, select &lt;strong&gt;Archive&lt;/strong&gt; from the dropdown to see older versions of Unity.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unityversion.png&#34; alt=&#34;Version&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the required version for your class or project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choose the &lt;strong&gt;platform modules&lt;/strong&gt; you need (such as iOS, Android, WebGL, etc.).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Next&lt;/strong&gt;, and Unity will begin installing the selected version.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-5-set-up-your-first-unity-project&#34;&gt;Step 5: Set Up Your First Unity Project
+&lt;/h2&gt;&lt;p&gt;Once Unity is installed, you can create your first project:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open Unity Hub and go to the &lt;strong&gt;Projects&lt;/strong&gt; tab. Click &lt;strong&gt;New Project&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unitynewproject.png&#34; alt=&#34;new_project&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a template (e.g., 2D, 3D, etc.) based on the type of project you want to build. Name your project and choose a location for it.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unitynewsetup.png&#34; alt=&#34;new_project&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Create&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Unity will set up the project, and you&amp;rsquo;ll be taken to the Unity Editor where you can start developing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;voilà-&#34;&gt;Voilà !
+&lt;/h2&gt;&lt;p&gt;Good luck, and enjoy building with Unity!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Lab 3 - Unity 3D Application</title>
+        <link>http://localhost:1313/post/lab3/unity3dapplication/</link>
+        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab3/unity3dapplication/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -2,6 +2,7 @@
 title = 'Lecture 3 - Dark Design Patterns'
 date = 2024-09-19
 categories =["HCI"]
+tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "/images/darkpatterndesign.jpg"
 draft = false
