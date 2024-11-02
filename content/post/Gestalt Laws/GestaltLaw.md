@@ -125,7 +125,7 @@ In this image, the circles inside the box are perceived as a group because they 
 ## *2. Confusing Buttons on YES24*
 
 <div style="text-align: center;">
-  <img src="/images/yes24.png" alt="confusing buttons yes24" width="40%">
+  <img src="/images/yes24.png" alt="confusing buttons yes24" width="60%">
   <p style="font-size: 12px; color: gray;">Image Source: YES24</p>
 </div>
 *YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*
