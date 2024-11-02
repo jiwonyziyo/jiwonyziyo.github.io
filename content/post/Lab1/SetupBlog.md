@@ -1,5 +1,5 @@
 +++
-title = 'Lab 1 - Set up Blog'
+title = 'Set up Blog'
 date = 2024-10-12
 categories = ["HCI"]
 tags = ["HCI-Lab"]

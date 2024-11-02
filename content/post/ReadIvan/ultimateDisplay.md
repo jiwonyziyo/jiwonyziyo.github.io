@@ -1,5 +1,5 @@
 +++
-title = 'Lecture 5 - Ultimate Display by Ivan Sutherland '
+title = 'Ultimate Display by Ivan Sutherland '
 date = 2024-10-03
 categories =["HCI"]
 tags = ["HCI-Lecture"]

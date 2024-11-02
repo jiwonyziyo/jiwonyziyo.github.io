@@ -1,5 +1,5 @@
 +++
-title = 'Lab 3 - Unity 3D Application'
+title = 'My First Unity Project - Roll a ball'
 date = 2024-10-14
 categories = ["HCI"]
 tags = ["HCI-Lab"]

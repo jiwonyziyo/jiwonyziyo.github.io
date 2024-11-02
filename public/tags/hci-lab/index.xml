@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lab/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Lab 3 - Unity 3D Application</title>
+        <title>My First Unity Project - Roll a ball</title>
         <link>http://localhost:1313/post/lab3/unity3dapplication/</link>
         <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
         
@@ -15,12 +15,12 @@
         <description></description>
         </item>
         <item>
-        <title>Lab 1 - Set up Blog</title>
+        <title>Set up Blog</title>
         <link>http://localhost:1313/post/lab1/setupblog/</link>
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab1/setupblog/</guid>
-        <description>&lt;img src="http://localhost:1313/images/hugo.jpg" alt="Featured image of post Lab 1 - Set up Blog" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&amp;rsquo;ll be working on a MacBook 💻 (Apple silicon).&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/hugo.jpg" alt="Featured image of post Set up Blog" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&amp;rsquo;ll be working on a MacBook 💻 (Apple silicon).&lt;/p&gt;
 &lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo?
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No server-side code&lt;/strong&gt;: Hugo builds purely static files, so there is no need to manage any backend infrastructure.&lt;/li&gt;
@@ -114,12 +114,12 @@
 </description>
         </item>
         <item>
-        <title>Lab 2 - Set up Unity</title>
+        <title>Set up Unity</title>
         <link>http://localhost:1313/post/lab2/setupunity/</link>
         <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab2/setupunity/</guid>
-        <description>&lt;img src="http://localhost:1313/images/unity.jpg" alt="Featured image of post Lab 2 - Set up Unity" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you the process of setting up Unity on a MacBook 💻.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/unity.jpg" alt="Featured image of post Set up Unity" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you the process of setting up Unity on a MacBook 💻.&lt;/p&gt;
 &lt;h2 id=&#34;step-1-sign-up-for-a-unity-account&#34;&gt;Step 1: Sign Up for a Unity Account
 &lt;/h2&gt;&lt;p&gt;To start using Unity, you&amp;rsquo;ll need to create an account. You can sign up on the &lt;a class=&#34;link&#34; href=&#34;https://id.unity.com/account/new&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Unity website&lt;/a&gt;.&lt;/p&gt;
@@ -240,6 +240,37 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;voilà-&#34;&gt;Voilà !
 &lt;/h2&gt;&lt;p&gt;Good luck, and enjoy building with Unity!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kinect</title>
+        <link>http://localhost:1313/post/lab4/kinect/</link>
+        <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab4/kinect/</guid>
+        <description>&lt;ol&gt;
+&lt;li&gt;why we use the virtual environement? (what is the purpose of the virutal -&amp;gt; is much easier to handle the each virtual ..)
+what kind of virtual envrionement?
+D:\Users\Studen\Desktop\kinect&amp;gt;.\kinect\student\Scripts\activate&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(student) D: \Users\Student\Desktop\kinect&amp;gt;&lt;/p&gt;
+&lt;p&gt;(student) this means we are in the virtual envrionment&lt;/p&gt;
+&lt;p&gt;virtual -&amp;gt; create the folder / cmd / python -m venv .bonjour( . for hidden folder) / to activate: ..bonjour\Scripts\activate&lt;/p&gt;
+&lt;p&gt;number of sensor -&amp;gt; number of kinect
+store in the data folder / images and depth&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;run
+python real_time.py
+: if you want to detect each face -&amp;gt; we can modify the code to draw a bounding box ror sth , detect the people faces or ,..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;sdk -&amp;gt; kinect for windows : sample projects
+before, just check kinect toolkit /developper toolkit
+kinect toolkit and kinect sdk v1.8&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;kinect fusion basics -&amp;gt; recontruct the walls, laptop, keyboard,.. we can even check the texture&lt;/li&gt;
+&lt;li&gt;kinect head scanning -&amp;gt; create mesh -&amp;gt; obj and check in the unity&lt;/li&gt;
+&lt;li&gt;depth basic -&amp;gt; black : really far away&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         

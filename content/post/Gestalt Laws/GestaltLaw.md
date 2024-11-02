@@ -1,5 +1,5 @@
 +++
-title = 'Lecture 2 - Gestalt Law'
+title = 'Gestalt Law'
 date = 2024-09-19
 categories =["HCI"]
 tags = ["HCI-Lecture"]
@@ -122,20 +122,28 @@ In this image, the circles inside the box are perceived as a group because they 
 
 ---
 
-## *2. Apple Recent call*
+## *2. Confusing Buttons on YES24*
 
-![confusingstairs](images/gl_ex2.jpg)
+<div style="text-align: center;">
+  <img src="/images/yes24.png" alt="confusing buttons yes24" width="40%">
+  <p style="font-size: 12px; color: gray;">Image Source: YES24</p>
+</div>
+*YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*
 
 ### Problem
 
+**Law of Similarity**
+
+- The **NPay Purchase** and **One-Click Purchase** buttons look similar in color, which can confuse users. Since both buttons serve different functions but appear visually similar, users may accidentally choose the wrong payment option. Because Naver's branding is strongly associated with green, the green color of the NPay button helps signify that it is a Naver-related payment method. However, the other buttons are also visually similar, which may lead to mistaken selections.
+
 **Law of Proximity**
-- In this interface, the name and the call action are perceived as a single unit or function because of how the interaction works (tapping on the name directly initiates a call.) Users expect tapping on the name to display contact details, but because the call action is implicitly tied to this tap, they accidentally initiate calls. The proximity of the name and the action (or the lack of distinction between the two actions) leads to confusion.
+
+- The **Buy**, **Add to Cart**, **NPay**, and **One-Click Purchase** buttons are placed very close to each other, which can make it difficult for users to quickly differentiate between actions. When buttons with different functions are positioned without sufficient spacing, they are perceived as part of a single group, leading to potential confusion and misclicks.
 
 ### Solution
 
-**Add a confirmation dialog**
-- After tapping a contact name, ask the user, "Do you want to make a call?" This would help prevent accidental calls.
+**Color Differentiation**
+- Keep the **NPay button** green to signify its association with Naver, and use a different color for other purchase options, such as **One-Click Purchase**. This will allow users to easily distinguish between payment methods based on color, reducing the chances of accidental selections.
 
-**Improve visual cues**
-- Clearly distinguish the action of viewing contact details from initiating a call. For example, a separate button for calling that’s visually distinct from the contact's name would better guide the user’s actions.
-
+**Spacing Adjustments**
+- Increase the spacing between the **Buy**, **Add to Cart**, **NPay**, and **One-Click Purchase** buttons to create a clearer separation of actions. By adding more space, each button will stand out as a distinct option, making it easier for users to select the correct action without confusion.

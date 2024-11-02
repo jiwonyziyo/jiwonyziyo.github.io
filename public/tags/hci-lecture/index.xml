@@ -6,38 +6,68 @@
         <description>Recent content in HCI-Lecture on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lecture/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Lecture 4 - HCI Researcher</title>
+        <lastBuildDate>Tue, 08 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lecture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Lecture 7 - Ideate</title>
+        <link>http://localhost:1313/post/ideate/ideate/</link>
+        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/ideate/ideate/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Prototype</title>
+        <link>http://localhost:1313/post/prototype/prototype/</link>
+        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/prototype/prototype/</guid>
+        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
+&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
+&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
+lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
+&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
+&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
+&lt;p&gt;for example, imagine we work for gain the money.
+in this case the independent variable is the amount of work because this variable can change ourselves.
+the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
+&lt;p&gt;independent variable -&amp;gt;
+dependent variable -&amp;gt;
+control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
+&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>HCI Researcher</title>
         <link>http://localhost:1313/post/hciresearcher/researcher/</link>
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/hciresearcher/researcher/</guid>
-        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post Lecture 4 - HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kimhttpyounghokimnet&#34;&gt;HCI Researcher : &lt;a class=&#34;link&#34; href=&#34;http://younghokim.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kimhttpyounghokimnet&#34;&gt;HCI Researcher : &lt;a class=&#34;link&#34; href=&#34;http://younghokim.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Young-Ho Kim&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;current-role-and-expertise&#34;&gt;Current Role and Expertise
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Young-Ho Kim&lt;/strong&gt; is a &lt;strong&gt;Lead Research Scientist at NAVER AI Lab&lt;/strong&gt; and a prominent researcher in the field of &lt;strong&gt;HCI&lt;/strong&gt;. His work spans across multiple domains, including &lt;strong&gt;Personal Health Informatics&lt;/strong&gt;, &lt;strong&gt;Ubiquitous Computing (UbiComp)&lt;/strong&gt;, and &lt;strong&gt;Personal Data Visualization&lt;/strong&gt;. By integrating his knowledge of &lt;strong&gt;computer science&lt;/strong&gt; and &lt;strong&gt;visual communication design&lt;/strong&gt;, Kim focuses on designing systems that enhance human-data interaction, especially in the context of &lt;strong&gt;self-tracking technologies&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;research-focus&#34;&gt;Research Focus
 &lt;/h2&gt;&lt;p&gt;His &lt;strong&gt;current research&lt;/strong&gt; emphasizes the development of &lt;strong&gt;flexible self-tracking systems&lt;/strong&gt; that adapt to the needs, contexts, and preferences of individuals. His goal is to empower users to make informed decisions and behavioral changes through better data interaction. His approach often involves combining &lt;strong&gt;AI&lt;/strong&gt; and &lt;strong&gt;Natural Language Processing (NLP)&lt;/strong&gt; technologies, particularly &lt;strong&gt;Large Language Models (LLMs)&lt;/strong&gt;, to create &lt;strong&gt;intelligent self-trackers&lt;/strong&gt;. These systems help users better understand and reflect on their behaviors and health data in everyday contexts.&lt;/p&gt;
 &lt;h2 id=&#34;recent-research-projects&#34;&gt;Recent Research Projects
-&lt;/h2&gt;&lt;p&gt;One of Kim&amp;rsquo;s &lt;strong&gt;notable ongoing projects&lt;/strong&gt; includes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CareCall&lt;/strong&gt;: A project designed to use LLMs for public health interventions. In this system, conversational AI assists socially isolated individuals by conducting regular check-up calls. The system not only gathers health metrics but also provides emotional support through empathetic conversations. The findings from this project highlight both the benefits and challenges of using LLM-driven systems in real-world public health contexts, such as balancing user expectations and handling the limitations of AI in personalization and memory.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Another major project is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Textoshop&lt;/strong&gt;: A novel tool that applies concepts from image editing to text manipulation. It allows users to engage in flexible and creative text editing by treating words and sentences similarly to how designers manipulate visual elements in software like Photoshop.&lt;/li&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CareCall&lt;/strong&gt;: A project designed to use LLMs for public health interventions. In this system, conversational AI assists socially isolated individuals by conducting regular check-up calls. The system not only gathers health metrics but also provides emotional support through empathetic conversations. The findings from this project highlight both the benefits and challenges of using LLM-driven systems in real-world public health contexts, such as balancing user expectations and handling the limitations of AI in personalization and memory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Textoshop&lt;/strong&gt;: A novel tool that applies concepts from image editing to text manipulation. It allows users to engage in flexible and creative text editing by treating words and sentences similarly to how designers manipulate visual elements in software like Photoshop.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;notable-contributions-and-impact-on-hci&#34;&gt;Notable Contributions and Impact on HCI
 &lt;/h2&gt;&lt;p&gt;Kim&amp;rsquo;s work has significantly impacted how &lt;strong&gt;AI and human-centered design&lt;/strong&gt; are integrated into real-world applications. By designing systems that bridge the gap between humans and data, he has contributed to making &lt;strong&gt;self-tracking technologies&lt;/strong&gt; more accessible and adaptable to various user needs. His contributions to &lt;strong&gt;public health technology&lt;/strong&gt;—especially in using AI to enhance social and emotional well-being—highlight the evolving role of &lt;strong&gt;HCI&lt;/strong&gt; in addressing both technical and social challenges.&lt;/p&gt;
-&lt;h3 id=&#34;key-publications&#34;&gt;Key Publications
+&lt;h3 id=&#34;source&#34;&gt;Source
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention&amp;rdquo;&lt;/strong&gt; (2023): This paper explores how LLM-based conversational AI systems can assist in public health interventions by monitoring and supporting socially isolated individuals.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention&amp;rdquo;&lt;/strong&gt; (2023)&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.org/doi/10.1145/3544548.3581503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Kim&amp;rsquo;s CareCall project paper&lt;/a&gt;&lt;/p&gt;
+    &gt;CareCall project paper&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing&amp;rdquo;&lt;/strong&gt; (2024): In this paper, Kim and collaborators introduce a tool that reimagines text editing by applying principles of design software, enhancing user interaction with text through direct manipulation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing&amp;rdquo;&lt;/strong&gt; (2024)&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2409.17088&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Textoshop project paper&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -53,12 +83,40 @@
 </description>
         </item>
         <item>
-        <title>Lecture 5 - Ultimate Display by Ivan Sutherland </title>
+        <title>Input Devices and Interaction Paradigm</title>
+        <link>http://localhost:1313/post/devices/inputdevices/</link>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/devices/inputdevices/</guid>
+        <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;the-leap-motion-controller&#34;&gt;The Leap Motion Controller
+&lt;/h1&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt;, introduced in 2013, was a &lt;strong&gt;gesture-based input device&lt;/strong&gt; that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.&lt;/p&gt;
+&lt;h3 id=&#34;classification-gesture-based-user-interface&#34;&gt;Classification: Gesture-Based User Interface
+&lt;/h3&gt;&lt;p&gt;The Leap Motion falls under the category of &lt;strong&gt;Gesture-Based User Interface&lt;/strong&gt;. This type of user interface allows users to interact with a computer through body movements. Specifically, hand and finger gestures. This is a part of &lt;strong&gt;Natural User Interfaces&lt;/strong&gt;, which focus on intuitive and natural interaction techniques.&lt;/p&gt;
+&lt;h2 id=&#34;why-the-leap-motion-failed-to-succeed&#34;&gt;Why the Leap Motion Failed to Succeed
+&lt;/h2&gt;&lt;p&gt;While Leap Motion was exciting in its innovation and garnered significant media attention upon launch, it ultimately did not achieve widespread adoption. Several reasons contribute to its failure to succeed:&lt;/p&gt;
+&lt;h3 id=&#34;1-limited-use-cases&#34;&gt;1. &lt;strong&gt;Limited Use Cases&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Although the Leap Motion device was revolutionary in concept, it struggled to find compelling real-world applications. Its primary use cases were limited to &lt;strong&gt;gaming, 3D modeling&lt;/strong&gt;, and a few experimental applications. The niche appeal of these areas limited the audience. Most users still found traditional input methods (like the mouse and keyboard) more convenient and efficient for daily tasks.&lt;/p&gt;
+&lt;h3 id=&#34;2-accuracy-and-tracking-issues&#34;&gt;2. &lt;strong&gt;Accuracy and Tracking Issues&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;While Leap Motion promised precise hand tracking, many users reported &lt;strong&gt;inconsistent accuracy&lt;/strong&gt; and &lt;strong&gt;latency&lt;/strong&gt; issues, especially when their hands moved too quickly or left the designated interaction zone. This inconsistency frustrated users and made it difficult to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt; or &lt;strong&gt;professional workflows&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;3-lack-of-developer-support&#34;&gt;3. &lt;strong&gt;Lack of Developer Support&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;The success of input devices heavily depends on third-party developer support to create applications and software that leverage the technology. In Leap Motion’s case, there was a lack of &lt;strong&gt;sufficient developer support&lt;/strong&gt; to build a robust ecosystem of applications. Many developers found the Leap Motion SDK challenging to work with, and without compelling applications, users had little incentive to adopt the device.&lt;/p&gt;
+&lt;h3 id=&#34;4-competition-with-vr-and-ar-technologies&#34;&gt;4. &lt;strong&gt;Competition with VR and AR Technologies&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;At the time of its launch, &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; were becoming more popular, with devices like the &lt;strong&gt;Oculus Rift&lt;/strong&gt; and &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; capturing the attention of both developers and users. Leap Motion tried to pivot toward VR, offering integration with VR headsets, but it was too late to compete effectively in the growing immersive tech space.&lt;/p&gt;
+&lt;h2 id=&#34;could-it-succeed-in-the-future&#34;&gt;Could It Succeed in the Future?
+&lt;/h2&gt;&lt;p&gt;Though the Leap Motion Controller did not succeed in its initial form, the technology behind it could find new life in the future with advancements in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;. Gesture-based interfaces are becoming increasingly important in &lt;strong&gt;augmented reality (AR)&lt;/strong&gt; and &lt;strong&gt;virtual reality (VR)&lt;/strong&gt; environments, where hands-free interaction is critical.&lt;/p&gt;
+&lt;p&gt;For instance, Leap Motion&amp;rsquo;s acquisition by &lt;strong&gt;Ultrahaptics&lt;/strong&gt; in 2019 (now &lt;strong&gt;Ultraleap&lt;/strong&gt;) suggests there is still interest in developing &lt;strong&gt;touchless interaction technologies&lt;/strong&gt;. By combining Leap Motion&amp;rsquo;s gesture recognition technology with &lt;strong&gt;haptic feedback systems&lt;/strong&gt;, there is potential for future devices that offer more immersive and precise touchless experiences in &lt;strong&gt;healthcare&lt;/strong&gt;, &lt;strong&gt;industrial design&lt;/strong&gt;, or &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a visionary product that failed to achieve widespread success due to a lack of compelling use cases, tracking issues, and insufficient developer support. However, with the growing demand for &lt;strong&gt;gesture-based interaction&lt;/strong&gt; in VR/AR environments, and the potential for improved accuracy through new technologies, the underlying concepts of Leap Motion may still play a key role in future human-computer interaction paradigms.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Ultimate Display by Ivan Sutherland </title>
         <link>http://localhost:1313/post/readivan/ultimatedisplay/</link>
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/readivan/ultimatedisplay/</guid>
-        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Lecture 5 - Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland&amp;rsquo;s &amp;ldquo;The Ultimate Display&amp;rdquo;
+        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland&amp;rsquo;s &amp;ldquo;The Ultimate Display&amp;rdquo;
 &lt;/h1&gt;&lt;p&gt;In his seminal work &lt;strong&gt;&amp;ldquo;The Ultimate Display&amp;rdquo;&lt;/strong&gt; (1965), Ivan Sutherland laid the foundation for what we now recognize as virtual and augmented reality (VR/AR). His visionary ideas foreshadowed many technologies that are prevalent today, and he also introduced concepts that continue to guide future developments in human-computer interaction and immersive experiences.&lt;/p&gt;
 &lt;h2 id=&#34;current-realizations-of-sutherlands-vision&#34;&gt;Current Realizations of Sutherland’s Vision
 &lt;/h2&gt;&lt;h3 id=&#34;1-virtual-reality-vr-and-augmented-reality-ar&#34;&gt;1. Virtual Reality (VR) and Augmented Reality (AR)
@@ -83,41 +141,12 @@
 </description>
         </item>
         <item>
-        <title>Lecture 6 - Input Devices and Interaction Paradigm</title>
-        <link>http://localhost:1313/post/devices/inputdevices/</link>
-        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/devices/inputdevices/</guid>
-        <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Lecture 6 - Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;input-devices-and-interaction-paradigms-the-leap-motion-controller&#34;&gt;Input Devices and Interaction Paradigms: The Leap Motion Controller
-&lt;/h1&gt;&lt;h2 id=&#34;overview-of-the-leap-motion-controller&#34;&gt;Overview of the Leap Motion Controller
-&lt;/h2&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt;, introduced in 2013, was a &lt;strong&gt;gesture-based input device&lt;/strong&gt; that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.&lt;/p&gt;
-&lt;h3 id=&#34;classification-gesture-based-user-interface&#34;&gt;Classification: Gesture-Based User Interface
-&lt;/h3&gt;&lt;p&gt;The Leap Motion falls under the category of &lt;strong&gt;Gesture-Based User Interface (GBUI)&lt;/strong&gt;. This type of user interface allows users to interact with a computer through body movements—specifically, hand and finger gestures. GBUI is a part of &lt;strong&gt;Natural User Interfaces (NUI)&lt;/strong&gt;, which focus on intuitive and natural interaction techniques.&lt;/p&gt;
-&lt;h2 id=&#34;why-the-leap-motion-failed-to-succeed&#34;&gt;Why the Leap Motion Failed to Succeed
-&lt;/h2&gt;&lt;p&gt;While Leap Motion was exciting in its innovation and garnered significant media attention upon launch, it ultimately did not achieve widespread adoption. Several reasons contribute to its failure to succeed:&lt;/p&gt;
-&lt;h3 id=&#34;1-limited-use-cases&#34;&gt;1. &lt;strong&gt;Limited Use Cases&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Although the Leap Motion device was revolutionary in concept, it struggled to find compelling real-world applications. Its primary use cases were limited to &lt;strong&gt;gaming, 3D modeling&lt;/strong&gt;, and a few experimental applications. The niche appeal of these areas limited the audience. Most users still found traditional input methods (like the mouse and keyboard) more convenient and efficient for daily tasks.&lt;/p&gt;
-&lt;h3 id=&#34;2-accuracy-and-tracking-issues&#34;&gt;2. &lt;strong&gt;Accuracy and Tracking Issues&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;While Leap Motion promised precise hand tracking, many users reported &lt;strong&gt;inconsistent accuracy&lt;/strong&gt; and &lt;strong&gt;latency&lt;/strong&gt; issues, especially when their hands moved too quickly or left the designated interaction zone. This inconsistency frustrated users and made it difficult to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt; or &lt;strong&gt;professional workflows&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;3-lack-of-developer-support&#34;&gt;3. &lt;strong&gt;Lack of Developer Support&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The success of input devices heavily depends on third-party developer support to create applications and software that leverage the technology. In Leap Motion’s case, there was a lack of &lt;strong&gt;sufficient developer support&lt;/strong&gt; to build a robust ecosystem of applications. Many developers found the Leap Motion SDK challenging to work with, and without compelling applications, users had little incentive to adopt the device.&lt;/p&gt;
-&lt;h3 id=&#34;4-competition-with-vr-and-ar-technologies&#34;&gt;4. &lt;strong&gt;Competition with VR and AR Technologies&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;At the time of its launch, &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; were becoming more popular, with devices like the &lt;strong&gt;Oculus Rift&lt;/strong&gt; and &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; capturing the attention of both developers and users. Leap Motion tried to pivot toward VR, offering integration with VR headsets, but it was too late to compete effectively in the growing immersive tech space.&lt;/p&gt;
-&lt;h2 id=&#34;could-it-succeed-in-the-future&#34;&gt;Could It Succeed in the Future?
-&lt;/h2&gt;&lt;p&gt;Though the Leap Motion Controller did not succeed in its initial form, the technology behind it could find new life in the future with advancements in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;. Gesture-based interfaces are becoming increasingly important in &lt;strong&gt;augmented reality (AR)&lt;/strong&gt; and &lt;strong&gt;virtual reality (VR)&lt;/strong&gt; environments, where hands-free interaction is critical.&lt;/p&gt;
-&lt;p&gt;For instance, Leap Motion&amp;rsquo;s acquisition by &lt;strong&gt;Ultrahaptics&lt;/strong&gt; in 2019 (now &lt;strong&gt;Ultraleap&lt;/strong&gt;) suggests there is still interest in developing &lt;strong&gt;touchless interaction technologies&lt;/strong&gt;. By combining Leap Motion&amp;rsquo;s gesture recognition technology with &lt;strong&gt;haptic feedback systems&lt;/strong&gt;, there is potential for future devices that offer more immersive and precise touchless experiences in &lt;strong&gt;healthcare&lt;/strong&gt;, &lt;strong&gt;industrial design&lt;/strong&gt;, or &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a visionary product that failed to achieve widespread success due to a lack of compelling use cases, tracking issues, and insufficient developer support. However, with the growing demand for &lt;strong&gt;gesture-based interaction&lt;/strong&gt; in VR/AR environments, and the potential for improved accuracy through new technologies, the underlying concepts of Leap Motion may still play a key role in future human-computer interaction paradigms.&lt;/p&gt;
-&lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>Lecture 1 - Affordances</title>
+        <title>Affordances</title>
         <link>http://localhost:1313/post/affordances/affordances/</link>
         <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/affordances/affordances/</guid>
-        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Lecture 1 - Affordances" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style=&#34;color: gray;&#34;&gt; Anant Kadiyala &lt;/a&gt;&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Affordances" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style=&#34;color: gray;&#34;&gt; Anant Kadiyala &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
 &lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
 &lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
@@ -169,12 +198,101 @@
 </description>
         </item>
         <item>
-        <title>Lecture 2 - Gestalt Law</title>
+        <title>Dark Design Patterns</title>
+        <link>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
+        <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/darkpattern.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://uxknowledgebase.com/dark-patterns-3b41ed7a690e&#34; style=&#34;color: gray;&#34;&gt;By Krisztina Szerovay&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words, dark patterns refer to UI/UX that is cleverly and intentionally designed to elicit certain actions from users, whether they want to or not. These designs often serve business goals, such as increasing subscriptions or data collection, but they do so at the expense of the user’s autonomy, leading to unintended actions like accidental purchases or subscriptions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;types-of-dark-patterns-design&#34;&gt;Types of Dark Patterns Design
+&lt;/h3&gt;&lt;p&gt;Here are five types of dark patterns commonly seen&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/li&gt;
+&lt;li&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/obstruction.jpg&#34; alt=&#34;Obstruction dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt; involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.&lt;/li&gt;
+&lt;li&gt;For example, subscribing to a service may be as simple as one click, but canceling that same service might involve navigating through a series of confusing steps, or even contacting customer support. By increasing the effort required to complete the task, users are more likely to give up and continue their subscription, even if they originally intended to cancel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/sneaking.jpg&#34; alt=&#34;Sneaking dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/dark-patterns-024&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sneaking&lt;/strong&gt; occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For example, an accomodation booking site may show a price at a discounted price, but hidden fees like cleaning costs is only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/interfaceinterference.jpg&#34; alt=&#34;Interface Interference example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.emailtooltester.com/en/blog/dark-patterns-canceling-subscription-report/&#34; style=&#34;color: gray;&#34;&gt;By Cai &amp; Roberta&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Interface interference&lt;/strong&gt; manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/forcedaction.jpg&#34; alt=&#34;Forced action example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://blog.raidboxes.io/en/security/dark-patterns/&#34; style=&#34;color: gray;&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt; refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For instance, a user might be required to create an account or subscribe to a newsletter before they can continue using a free app or access content. This design forces users to take an action they don’t necessarily want to take, making them feel trapped or cornered.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Gestalt Law</title>
         <link>http://localhost:1313/post/gestalt-laws/gestaltlaw/</link>
         <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/gestalt-laws/gestaltlaw/</guid>
-        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Lecture 2 - Gestalt Law" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc&#34; style=&#34;color: gray;&#34;&gt;Gestalt Principles&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Gestalt Law" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc&#34; style=&#34;color: gray;&#34;&gt;Gestalt Principles&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Gestalt&lt;/strong&gt; is a German word meaning &amp;lsquo;form&amp;rsquo; or &amp;lsquo;shape.&lt;/p&gt;
 &lt;p&gt;It refers to how people perceive visual elements in a given situation. Generally, we compare visual patterns and past experiences to make sense of what we see. We often perceive these elements as a single whole, rather than as separate parts. By connecting the elements, recognizing familiar shapes, sharing information, and filling in the gaps, we make sense of the overall picture.&lt;/p&gt;
 &lt;hr&gt;
@@ -251,111 +369,31 @@
 &lt;li&gt;To better separate the background and foreground, stronger color contrast can be applied to the steps. For example, using a brighter color on the edges of the stairs will help clearly define the steps, making it easier to perceive the changes in height.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-apple-recent-call&#34;&gt;&lt;em&gt;2. Apple Recent call&lt;/em&gt;
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/gl_ex2.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;confusingstairs&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-confusing-buttons-on-yes24&#34;&gt;&lt;em&gt;2. Confusing Buttons on YES24&lt;/em&gt;
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/yes24.png&#34; alt=&#34;confusing buttons yes24&#34; width=&#34;40%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: YES24&lt;/p&gt;
+&lt;/div&gt;
+*YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*
 &lt;h3 id=&#34;problem-1&#34;&gt;Problem
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Proximity&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Similarity&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;In this interface, the name and the call action are perceived as a single unit or function because of how the interaction works (tapping on the name directly initiates a call.) Users expect tapping on the name to display contact details, but because the call action is implicitly tied to this tap, they accidentally initiate calls. The proximity of the name and the action (or the lack of distinction between the two actions) leads to confusion.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;NPay Purchase&lt;/strong&gt; and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons look similar in color, which can confuse users. Since both buttons serve different functions but appear visually similar, users may accidentally choose the wrong payment option. Because Naver&amp;rsquo;s branding is strongly associated with green, the green color of the NPay button helps signify that it is a Naver-related payment method. However, the other buttons are also visually similar, which may lead to mistaken selections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Law of Proximity&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons are placed very close to each other, which can make it difficult for users to quickly differentiate between actions. When buttons with different functions are positioned without sufficient spacing, they are perceived as part of a single group, leading to potential confusion and misclicks.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;solution-1&#34;&gt;Solution
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Add a confirmation dialog&lt;/strong&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Color Differentiation&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;After tapping a contact name, ask the user, &amp;ldquo;Do you want to make a call?&amp;rdquo; This would help prevent accidental calls.&lt;/li&gt;
+&lt;li&gt;Keep the &lt;strong&gt;NPay button&lt;/strong&gt; green to signify its association with Naver, and use a different color for other purchase options, such as &lt;strong&gt;One-Click Purchase&lt;/strong&gt;. This will allow users to easily distinguish between payment methods based on color, reducing the chances of accidental selections.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Improve visual cues&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spacing Adjustments&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Clearly distinguish the action of viewing contact details from initiating a call. For example, a separate button for calling that’s visually distinct from the contact&amp;rsquo;s name would better guide the user’s actions.&lt;/li&gt;
+&lt;li&gt;Increase the spacing between the &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons to create a clearer separation of actions. By adding more space, each button will stand out as a distinct option, making it easier for users to select the correct action without confusion.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        </item>
-        <item>
-        <title>Lecture 3 - Dark Design Patterns</title>
-        <link>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</link>
-        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
-        <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Lecture 3 - Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/darkpattern.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://uxknowledgebase.com/dark-patterns-3b41ed7a690e&#34; style=&#34;color: gray;&#34;&gt;By Krisztina Szerovay&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In other words, dark patterns refer to UI/UX that is cleverly and intentionally designed to elicit certain actions from users, whether they want to or not. These designs often serve business goals, such as increasing subscriptions or data collection, but they do so at the expense of the user’s autonomy, leading to unintended actions like accidental purchases or subscriptions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;types-of-dark-patterns-design&#34;&gt;Types of Dark Patterns Design
-&lt;/h3&gt;&lt;p&gt;Here are five types of dark patterns commonly seen&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/li&gt;
-&lt;li&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/li&gt;
-&lt;/ul&gt;
- &lt;!--  
-2. **Obstruction**
-
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/obstruction.jpg&#34; alt=&#34;Obstruction dark pattern example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-- **Obstruction** involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.
-- For example, subscribing to a service may be as simple as one click, but canceling that same service might involve navigating through a series of confusing steps, or even contacting customer support. By increasing the effort required to complete the task, users are more likely to give up and continue their subscription, even if they originally intended to cancel.
-
-3. **Sneaking**
-
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/sneaking.jpg&#34; alt=&#34;Sneaking dark pattern example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/dark-patterns-024&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-- **Sneaking** occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.
-
-- For example, an e-commerce site may show an item at a discounted price, but hidden fees like taxes or shipping costs are only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.
-
-
-4. **Interface Interference**
-
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-- **Interface** interference manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.
-
-- A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.
-
-5. **Forced Action**
-
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-- **Forced Action** refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.
-
-- For instance, a user might be required to create an account or subscribe to a newsletter before they can continue using a free app or access content. This design forces users to take an action they don’t necessarily want to take, making them feel trapped or cornered.
-
-
----
---&gt;</description>
         </item>
         
     </channel>

@@ -1,5 +1,5 @@
 +++
-title = 'Lecture 6 - Input Devices and Interaction Paradigm'
+title = 'Input Devices and Interaction Paradigm'
 date = 2024-10-03
 categories =["HCI"]
 tags = ["HCI-Lecture"]

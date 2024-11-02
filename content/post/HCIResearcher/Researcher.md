@@ -1,5 +1,5 @@
 +++
-title = 'Lecture 4 - HCI Researcher'
+title = 'HCI Researcher'
 date = 2024-10-03
 categories =["HCI"]
 tags = ["HCI-Lecture"]

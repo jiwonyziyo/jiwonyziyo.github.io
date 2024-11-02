@@ -1,5 +1,5 @@
 +++
-title = 'Lab 4 - Kinect'
+title = 'Kinect'
 date = 2024-10-10
 categories = ["HCI"]
 tags = ["HCI-Lab"]
