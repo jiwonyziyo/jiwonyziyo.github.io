@@ -201,23 +201,6 @@ I implemented **accelerometer-based movement**. This allowed the player to contr
 
 After implementing accelerometer controls, I wanted to test the game on a mobile device. Since I’m using a **MacBook and iPhone**, I needed **Xcode** to build and deploy the app.
 
-1. **Using Unity Remote 5**
-    - I downloaded **Unity Remote 5** on my iPhone and connected my phone to my MacBook. After setting the **Project Settings > Editor > Device** to **Any iOS Device** (or **Any Android Device** if you’re on Android), I could simply hit "Play" in Unity, and the game streamed directly to my iPhone. 
-
-2. **Installing Xcode**: Once I was ready to see the game fully on my device, I set up Xcode. If you’re on a Mac and developing for iOS, Xcode is essential. Downloading and setting it up took some time, but it’s necessary for deploying iOS builds.
-
-3. **Building for iOS**: With Xcode installed, I went back to **File > Build Settings > iOS** in Unity and clicked **Switch Platform**. I configured the **Bundle Identifier** (found under **Player Settings > iOS**) and opened the project in Xcode.
-
-4. **Testing on Device**: After some initial setup in Xcode, I was able to deploy the game to my iPhone and test it in full. Seeing the accelerometer-based controls in action on my actual device was incredibly rewarding.
-
-> **Tip**: Unity Remote 5 works with both iOS and Android devices, making it a quick option for mobile testing if you don’t want to go through a full build each time.
-
----
-
-#### Deploying as a Mobile Application
-
-After implementing accelerometer controls, I wanted to test the game on a mobile device. Since I’m using a **MacBook and iPhone**, I needed **Xcode** to build and deploy the app.
-
 1. **Xcode Requirement for iOS Testing**
     - Initially, I planned to use **Unity Remote 5** for quick mobile testing. I went to **File > Build Settings > iOS > Switch Platform** to change the platform to iOS. I also opened **Player Settings** to configure my project for iOS. However, I discovered that without Xcode installed, Unity wouldn’t let me select **iPhone** under **Editor > Device** in **Project Settings**
 
