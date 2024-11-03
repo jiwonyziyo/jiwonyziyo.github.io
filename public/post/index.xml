@@ -6,10 +6,32 @@
         <description>Recent content in Posts on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 03 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Idea &amp; Prototype &amp; Evaluation</title>
+        <link>http://localhost:1313/post/ideate/ideateprototypeevaluation/</link>
+        <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/ideate/ideateprototypeevaluation/</guid>
+        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
+&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
+&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
+lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
+&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
+&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
+&lt;p&gt;for example, imagine we work for gain the money.
+in this case the independent variable is the amount of work because this variable can change ourselves.
+the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
+&lt;p&gt;independent variable -&amp;gt;
+dependent variable -&amp;gt;
+control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
+&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>The Compute For the 21st Century</title>
         <link>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</link>
-        <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</guid>
         <description>&lt;img src="http://localhost:1313/images/ubiquitos.jpeg" alt="Featured image of post The Compute For the 21st Century" /&gt;&lt;h2 id=&#34;what-is-ubiquitous-computing&#34;&gt;What is ubiquitous computing?
@@ -64,7 +86,7 @@
         <item>
         <title>The Shape of Smartphones</title>
         <link>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</link>
-        <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</guid>
         <description>&lt;img src="http://localhost:1313/images/shapeofsmart.jpg" alt="Featured image of post The Shape of Smartphones" /&gt;&lt;p&gt;The shape of smartphones is continuously evolving, driven by technological advancements and shifting consumer demands. From the earliest cell phones to today’s smartphones, designs have undergone significant changes in both form and functionality, with further innovations anticipated in the future.&lt;/p&gt;
@@ -122,64 +144,132 @@
 </description>
         </item>
         <item>
+        <title>VR &amp; AR &amp; MR</title>
+        <link>http://localhost:1313/post/mrapp/mrapp/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrapp/mrapp/</guid>
+        <description>&lt;img src="http://localhost:1313/images/mr.jpg" alt="Featured image of post VR &amp; AR &amp; MR" /&gt;&lt;h3 id=&#34;vr-ar-and-mr&#34;&gt;VR, AR, and MR
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VR (Virtual Reality):&lt;/strong&gt; VR immerses users in a completely virtual environment, isolating them from the real world. Users experience a 100% simulated environment. (e.g. VR museum)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AR (Augmented Reality):&lt;/strong&gt; AR overlays digital information onto the real world. Users see information or graphics layered onto their actual surroundings. (e.g. Pokémon GO)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MR (Mixed Reality):&lt;/strong&gt; Like AR, MR is based on the real world, but it allows digital objects to interact with physical surroundings. For example, a virtual character might sit on a real desk, blending naturally into the environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;future-mr-app-store-most-downloaded-apps-entertainment-focus&#34;&gt;Future MR App Store: Most Downloaded Apps (Entertainment Focus)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Olympic Sports Experience App&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Allows users to experience Olympic events in MR, such as ski jumping or competitive swimming, as if they’re truly participating.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; We can perform a ski jump motion in their living room, and the MR display creates the scene of an actual jump, complete with timing and visuals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; People can safely and thrillingly explore various sports without risk, appealing to adventure-seekers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Virtual Concerts and Festivals&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Enables users to experience concerts or virtual festivals at home, with artists appearing as if they’re performing live in front of them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; In a virtual concert setting, users can enjoy the music up close and interact with the crowd, feeling like they’re part of the event.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; For fans who can’t attend live events, this app provides a unique chance to connect closely with favorite artists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;One of MR’s main strengths is that it allows people to experience things that would otherwise require a lot of time and money. This accessibility increase equality, giving everyone the chance to explore, learn, and participate in experiences that were previously limited. Thanks to this, apps that make diverse experiences more accessible are likely to become highly popular in the future MR app store.&lt;/p&gt;
+&lt;p&gt;Moreover, MR&amp;rsquo;s applications extend far beyond entertainment. In education, MR can immerse students in interactive learning environments, from virtual science labs to historical reenactments. In industry, MR is invaluable for training, allowing professionals to practice skills in realistic yet safe virtual settings, such as operating complex machinery or conducting medical procedures.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Kinect</title>
         <link>http://localhost:1313/post/lab4/kinect/</link>
         <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab4/kinect/</guid>
-        <description>&lt;ol&gt;
-&lt;li&gt;why we use the virtual environement? (what is the purpose of the virutal -&amp;gt; is much easier to handle the each virtual ..)
-what kind of virtual envrionement?
-D:\Users\Studen\Desktop\kinect&amp;gt;.\kinect\student\Scripts\activate&lt;/li&gt;
+        <description>&lt;img src="http://localhost:1313/images/kinectimage.jpg" alt="Featured image of post Kinect" /&gt;&lt;h2 id=&#34;what-is-kinect&#34;&gt;What is Kinect?
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/kinect.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Kinect is a motion-sensing device used for recognizing human movement. Kinect includes a 3D depth camera, RGB camera, and microphone array, making it highly effective for tracking body positions and movements. Today, Kinect is widely used in research fields and various HCI projects beyond gaming.&lt;/p&gt;
+&lt;h2 id=&#34;purpose-of-a-virtual-environment&#34;&gt;Purpose of a Virtual Environment
+&lt;/h2&gt;&lt;p&gt;Using a virtual environment helps in managing project-specific dependencies independently. Each project can have its own set of libraries and versions, preventing conflicts with other projects and streamlining workflow.&lt;/p&gt;
+&lt;h3 id=&#34;to-create-and-activate-a-virtual-environment&#34;&gt;To create and activate a virtual environment
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create the virtual environment folder&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;(student) D: \Users\Student\Desktop\kinect&amp;gt;&lt;/p&gt;
-&lt;p&gt;(student) this means we are in the virtual envrionment&lt;/p&gt;
-&lt;p&gt;virtual -&amp;gt; create the folder / cmd / python -m venv .bonjour( . for hidden folder) / to activate: ..bonjour\Scripts\activate&lt;/p&gt;
-&lt;p&gt;number of sensor -&amp;gt; number of kinect
-store in the data folder / images and depth&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;run
-python real_time.py
-: if you want to detect each face -&amp;gt; we can modify the code to draw a bounding box ror sth , detect the people faces or ,..&lt;/li&gt;
+&lt;li&gt;In the project directory, such as &lt;code&gt;D:\Users\Student\Desktop\kinect&lt;/code&gt;, create a virtual environment using a hidden folder
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python -m venv .bonjour
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;sdk -&amp;gt; kinect for windows : sample projects
-before, just check kinect toolkit /developper toolkit
-kinect toolkit and kinect sdk v1.8&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;kinect fusion basics -&amp;gt; recontruct the walls, laptop, keyboard,.. we can even check the texture&lt;/li&gt;
-&lt;li&gt;kinect head scanning -&amp;gt; create mesh -&amp;gt; obj and check in the unity&lt;/li&gt;
-&lt;li&gt;depth basic -&amp;gt; black : really far away&lt;/li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Activate the virtual environment&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>Lecture 7 - Ideate</title>
-        <link>http://localhost:1313/post/ideate/ideate/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/ideate/ideate/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Prototype</title>
-        <link>http://localhost:1313/post/prototype/prototype/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/prototype/prototype/</guid>
-        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
-&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
-&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
-lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
-&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
-&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
-&lt;p&gt;for example, imagine we work for gain the money.
-in this case the independent variable is the amount of work because this variable can change ourselves.
-the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
-&lt;p&gt;independent variable -&amp;gt;
-dependent variable -&amp;gt;
-control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
-&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use this command to activate it
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;\.&lt;/span&gt;bonjour&lt;span style=&#34;color:#ae81ff&#34;&gt;\S&lt;/span&gt;cripts&lt;span style=&#34;color:#ae81ff&#34;&gt;\a&lt;/span&gt;ctivate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Check if activated&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;If activated successfully, the prompt will display &lt;code&gt;(student)&lt;/code&gt; before the directory path, indicating that the virtual environment is in use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kinect-and-sensor-configuration&#34;&gt;Kinect and Sensor Configuration
+&lt;/h2&gt;&lt;p&gt;Kinect has multiple sensors that capture both image and depth data simultaneously. Data is stored in the project’s &lt;code&gt;data&lt;/code&gt; folder, with image and depth data organized separately.&lt;/p&gt;
+&lt;h2 id=&#34;examples-of-kinect-functionalities&#34;&gt;Examples of Kinect Functionalities
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Kinect Fusion Head Scanning&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/headscanning.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;As shown in the image above, Kinect Fusion allows 3D head scanning, which reconstructs a detailed 3D model of the user&amp;rsquo;s head. Users can adjust parameters like &amp;ldquo;Volume Max Integration Weight&amp;rdquo; and &amp;ldquo;Volume Voxel Resolution&amp;rdquo; to control the detail and quality of the scan.&lt;/li&gt;
+&lt;li&gt;This functionality is useful for applications that require 3D head models, which can be exported as &lt;code&gt;.STL&lt;/code&gt;, &lt;code&gt;.OBJ&lt;/code&gt;, or &lt;code&gt;.PLY&lt;/code&gt; files for use in other software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unity3dhead.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Depth Sensing and Mapping&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/depthsensing.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;This image illustrates Kinect’s depth sensing capabilities, where objects are visualized based on their distance from the sensor. Black areas represent regions farthest from the Kinect, while closer areas appear in lighter shades.&lt;/li&gt;
+&lt;li&gt;This depth map allows for spatial awareness, essential for applications like gesture recognition and object tracking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Face Tracking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/facetraking.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;This image showcs Kinect’s face tracking functionality. Here, Kinect detects the user’s face and maps key facial features using a network of lines, making it ideal for applications requiring facial recognition, facial expression analysis, or real-time face-driven animations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;real-time-data-collection-and-processing&#34;&gt;Real-Time Data Collection and Processing
+&lt;/h2&gt;&lt;p&gt;To initiate real-time data collection, run the &lt;code&gt;real_time.py&lt;/code&gt; script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python real_time.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script enables real-time detection of faces and bodies. It can be modified to add functionalities such as drawing bounding boxes around detected faces or adding other interactive elements.&lt;/p&gt;
+&lt;h2 id=&#34;kinect-sdk-and-toolkit&#34;&gt;Kinect SDK and Toolkit
+&lt;/h2&gt;&lt;p&gt;In our project, we’re using the Kinect SDK and the Kinect Developer Toolkit. These tools give us access to Kinect’s main features, like motion tracking, depth sensing, and 3D scanning, making it easier to work with the Kinect sensor. The SDK includes useful sample projects, such as &lt;strong&gt;Skeleton Basics&lt;/strong&gt; for tracking body movements.&lt;/p&gt;
+&lt;h2 id=&#34;another-example-of-kinect---skeleton-basics&#34;&gt;Another example of Kinect - Skeleton Basics
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/skeleton.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>

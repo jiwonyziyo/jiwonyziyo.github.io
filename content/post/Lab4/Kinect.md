@@ -4,7 +4,7 @@ date = 2024-10-10
 categories = ["HCI"]
 tags = ["HCI-Lab"]
 author = "jiwon"
-image = "/images/kinectimage.jpg"
+image = "/images/kinectimage.png"
 draft = false
 +++
 
