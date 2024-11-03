@@ -138,7 +138,7 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab4/kinect/</guid>
-        <description>&lt;img src="http://localhost:1313/images/kinectimage.jpg" alt="Featured image of post Kinect" /&gt;&lt;h2 id=&#34;what-is-kinect&#34;&gt;What is Kinect?
+        <description>&lt;img src="http://localhost:1313/images/kinectimage.png" alt="Featured image of post Kinect" /&gt;&lt;h2 id=&#34;what-is-kinect&#34;&gt;What is Kinect?
 &lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;http://localhost:1313/images/kinect.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
 &lt;/div&gt;
@@ -301,7 +301,122 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab3/unity3dapplication/</guid>
-        <description></description>
+        <description>&lt;p&gt;Today, I’ll introduce my first Unity 3D project, the classic Roll-a-Ball game.&lt;/p&gt;
+&lt;h4 id=&#34;unity-setup&#34;&gt;Unity Setup
+&lt;/h4&gt;&lt;p&gt;If you’re interested in how to set up Unity, check out my &lt;a class=&#34;link&#34; href=&#34;https://jiwonyziyo.github.io/post/lab2/setupunity/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Set up Unity&lt;/a&gt;. I cover everything from downloading Unity Hub to configuring the environment for this project.&lt;/p&gt;
+&lt;h4 id=&#34;building-the-basics&#34;&gt;Building the Basics
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Setting the Scene:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I created a new 3D project in Unity, named it &amp;ldquo;Roll-a-Ball,&amp;rdquo; and got started by adding a flat &lt;strong&gt;Plane&lt;/strong&gt; as the ground.&lt;/li&gt;
+&lt;li&gt;Resized it to &lt;code&gt;(2, 1, 2)&lt;/code&gt; to give our rolling ball plenty of space to move.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adding the Player:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next, I created a &lt;strong&gt;Sphere&lt;/strong&gt; object and named it &lt;strong&gt;Player&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Moved the sphere up slightly by setting the Y coordinate to &lt;code&gt;0.5&lt;/code&gt;. This gave it a realistic &amp;ldquo;standing&amp;rdquo; position on the ground.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adding the Rigidbody Component:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable physics interactions, I added a &lt;strong&gt;Rigidbody&lt;/strong&gt; component to the Player object. This step was critical, as it allows the ball to respond to forces and gravity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creating a Player Controller Script:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now, here’s where things got interesting. I added a script called &lt;strong&gt;PlayerController.cs&lt;/strong&gt; to manage the ball&amp;rsquo;s movement.&lt;/li&gt;
+&lt;li&gt;The lab instructions mentioned Unity’s &lt;strong&gt;Input System Package&lt;/strong&gt;. After installing version 1.4.4, I configured the input settings. But I ran into an issue! I initially forgot to set the &lt;strong&gt;Active Input Handling&lt;/strong&gt; to &amp;ldquo;Both&amp;rdquo; under &lt;strong&gt;Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; Other Settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; UnityEngine;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Rigidbody rb;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb = GetComponent&amp;lt;Rigidbody&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; FixedUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; moveHorizontal = Input.GetAxis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Horizontal&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; moveVertical = Input.GetAxis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Vertical&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Vector3 movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(moveHorizontal, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, moveVertical);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb.AddForce(movement * speed);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script got the ball rolling! 🎉&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;setting-up-the-camera&#34;&gt;Setting Up the Camera
+&lt;/h4&gt;&lt;p&gt;For a more immersive experience, I wanted the camera to follow the player. Initially, I tried making the &lt;strong&gt;Main Camera&lt;/strong&gt; a child of the Player object, but that led to a weird, shaky view. So instead, I wrote a &lt;strong&gt;CameraController&lt;/strong&gt; script that allowed the camera to follow the ball smoothly, using a fixed offset.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;CameraController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; GameObject player;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Vector3 offset;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        offset = transform.position - player.transform.position;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; LateUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        transform.position = player.transform.position + offset;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-the-pick-ups&#34;&gt;Adding the Pick-Ups
+&lt;/h4&gt;&lt;p&gt;No game is complete without a challenge! I added cube objects, renamed them &lt;strong&gt;PickUp&lt;/strong&gt;, and made them disappear when the player collected them. Here&amp;rsquo;s how I did it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Created a &lt;strong&gt;Cube&lt;/strong&gt; object, scaled it down, and duplicated it to have multiple collectibles.&lt;/li&gt;
+&lt;li&gt;Tagged each as &amp;ldquo;PickUp&amp;rdquo; and added a &lt;strong&gt;Collider&lt;/strong&gt; with &amp;ldquo;Is Trigger&amp;rdquo; enabled.&lt;/li&gt;
+&lt;li&gt;Updated the &lt;strong&gt;PlayerController&lt;/strong&gt; script to detect and count each collection.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnTriggerEnter(Collider other)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUp&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        other.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        score++;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        UpdateScore();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;the-ui-text-hurdle-adding-the-score-and-win-text&#34;&gt;The UI Text Hurdle: Adding the Score and Win Text
+&lt;/h4&gt;&lt;p&gt;Here&amp;rsquo;s where I ran into a small hiccup. I wanted to display the score and a &amp;ldquo;You Win!&amp;rdquo; message, but Unity wasn’t showing the UI objects. I realized I had forgotten to make the &lt;strong&gt;countText&lt;/strong&gt; and &lt;strong&gt;winText&lt;/strong&gt; fields in my script public, which prevented me from linking them in the Inspector. Without these fields being public, Unity can’t display the UI elements on screen, so I was left staring at a blank display.&lt;/p&gt;
+&lt;p&gt;After making them public, I linked the &lt;strong&gt;countText&lt;/strong&gt; and &lt;strong&gt;winText&lt;/strong&gt; objects in the Inspector, and it worked like a charm! Here&amp;rsquo;s the updated code with the public UI fields:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Rigidbody rb;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Text countText;  &lt;span style=&#34;color:#75715e&#34;&gt;// Now public so it can be linked&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Text winText;    &lt;span style=&#34;color:#75715e&#34;&gt;// Now public so it can be linked&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb = GetComponent&amp;lt;Rigidbody&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        UpdateScore();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        winText.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Remaining code here...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;wrapping-up-with-ui-elements&#34;&gt;Wrapping Up with UI Elements
+&lt;/h4&gt;&lt;p&gt;To track the score, I added a simple UI Text element. Using &lt;strong&gt;TextMeshPro&lt;/strong&gt;, I made it dynamic so the score updates as the player collects items. This update felt like the final piece of the puzzle coming together!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This project taught me a lot about Unity&amp;rsquo;s basics, especially dealing with Rigidbody physics, input handling, and even those small details with UI text fields. Overcoming those little issues was pretty satisfying. There’s so much more to explore, and I’m looking forward to adding more features and testing on mobile.&lt;/p&gt;
+&lt;p&gt;Stay tuned for the next update, where I’ll dive into mobile deployment! 🚀&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Ultimate Display by Ivan Sutherland </title>
