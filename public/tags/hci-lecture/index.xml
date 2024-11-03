@@ -12,20 +12,35 @@
         <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/ideate/ideateprototypeevaluation/</guid>
-        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
-&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
-&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
-lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
-&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
-&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
-&lt;p&gt;for example, imagine we work for gain the money.
-in this case the independent variable is the amount of work because this variable can change ourselves.
-the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
-&lt;p&gt;independent variable -&amp;gt;
-dependent variable -&amp;gt;
-control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
-&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;Sense Boost Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea: Sense Boost&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sense Boost is an AR glasses concept designed for individuals with hearing impairments. It visualizes surrounding sounds in real time, translating sound intensity and direction into visual effects displayed on the screen. This allows users to perceive sound information through sight rather than hearing, especially for specific sounds like conversations or alerts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/prototye.jpg&#34; alt=&#34;prototye&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;With Sense Boost AR glasses, users can see sounds visually displayed in front of them. For instance, if someone on the left says, “I’m tired,” the glasses show sound waves from the left, with the spoken text “I’m tired” displayed beneath. The size of the sound wave varies depending on the volume of the sound — louder sounds appear as larger waves, while softer, distant sounds are represented by smaller, thinner waves, helping the user gauge both volume and proximity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback and Suggestions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Need for Sound Filtering Options&lt;/strong&gt;&lt;br&gt;
+When multiple sounds are displayed simultaneously, the screen can become cluttered. It was suggested to have options to filter specific types of sounds, such as displaying only conversational sounds or prioritizing important alert sounds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Distinguishing Important Sounds&lt;/strong&gt;&lt;br&gt;
+When multiple people are speaking or when there are various sounds, it may be challenging to discern which sound is important. Adding an option to selectively emphasize crucial sounds could enhance usability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Potential Eye Strain with Extended Use&lt;/strong&gt;&lt;br&gt;
+Since the AR display continuously presents information in front of the user’s eyes, it could lead to eye strain or discomfort over time. To address this, an alternative approach, such as a smartphone app, could reduce this strain, allowing users to view sounds only when needed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Summary of Improvement Suggestions&lt;/strong&gt;: Enhancements could include sound filtering, prioritization of important sounds, and exploring alternative devices for viewing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In summary, Sense Boost is an innovative AR tool designed to assist hearing-impaired individuals by allowing them to see sounds visually. This initial feedback highlights valuable areas for potential improvements, making it even more user-centric.&lt;/p&gt;
 </description>
         </item>
         <item>

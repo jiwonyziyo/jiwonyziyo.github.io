@@ -97,7 +97,7 @@
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab3/unity3dapplication/</guid>
-        <description>&lt;p&gt;Today, I’ll introduce my first Unity 3D project, the classic Roll-a-Ball game.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/rollaballimage.png" alt="Featured image of post My First Unity Project - Roll a ball" /&gt;&lt;p&gt;Today, I’ll introduce my first Unity 3D project, the classic Roll-a-Ball game.&lt;/p&gt;
 &lt;h4 id=&#34;unity-setup&#34;&gt;Unity Setup
 &lt;/h4&gt;&lt;p&gt;If you’re interested in how to set up Unity, check out my &lt;a class=&#34;link&#34; href=&#34;https://jiwonyziyo.github.io/post/lab2/setupunity/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Set up Unity&lt;/a&gt;. I cover everything from downloading Unity Hub to configuring the environment for this project.&lt;/p&gt;
@@ -106,7 +106,7 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Setting the Scene:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;I created a new 3D project in Unity, named it &amp;ldquo;Roll-a-Ball,&amp;rdquo; and got started by adding a flat &lt;strong&gt;Plane&lt;/strong&gt; as the ground.&lt;/li&gt;
+&lt;li&gt;I created a new 3D project in Unity and got started by adding a flat &lt;strong&gt;Plane&lt;/strong&gt; as the ground.&lt;/li&gt;
 &lt;li&gt;Resized it to &lt;code&gt;(2, 1, 2)&lt;/code&gt; to give our rolling ball plenty of space to move.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -120,14 +120,13 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Adding the Rigidbody Component:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;To enable physics interactions, I added a &lt;strong&gt;Rigidbody&lt;/strong&gt; component to the Player object. This step was critical, as it allows the ball to respond to forces and gravity.&lt;/li&gt;
+&lt;li&gt;To enable physics interactions, I added a &lt;strong&gt;Rigidbody&lt;/strong&gt; component to the Player object. This step allows the ball to respond to forces and gravity.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Creating a Player Controller Script:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Now, here’s where things got interesting. I added a script called &lt;strong&gt;PlayerController.cs&lt;/strong&gt; to manage the ball&amp;rsquo;s movement.&lt;/li&gt;
-&lt;li&gt;The lab instructions mentioned Unity’s &lt;strong&gt;Input System Package&lt;/strong&gt;. After installing version 1.4.4, I configured the input settings. But I ran into an issue! I initially forgot to set the &lt;strong&gt;Active Input Handling&lt;/strong&gt; to &amp;ldquo;Both&amp;rdquo; under &lt;strong&gt;Edit &amp;gt; Project Settings &amp;gt; Player &amp;gt; Other Settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;I added a script called &lt;strong&gt;PlayerController.cs&lt;/strong&gt; to manage the ball&amp;rsquo;s movement.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; UnityEngine;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -150,7 +149,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb.AddForce(movement * speed);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script got the ball rolling! 🎉&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script got the ball rolling!&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;setting-up-the-camera&#34;&gt;Setting Up the Camera
@@ -170,48 +169,157 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        transform.position = player.transform.position + offset;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-the-pick-ups&#34;&gt;Adding the Pick-Ups
-&lt;/h4&gt;&lt;p&gt;No game is complete without a challenge! I added cube objects, renamed them &lt;strong&gt;PickUp&lt;/strong&gt;, and made them disappear when the player collected them. Here&amp;rsquo;s how I did it:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-the-pick-ups-with-score-variations&#34;&gt;Adding the Pick-Ups with Score Variations
+&lt;/h4&gt;&lt;p&gt;I added two types of collectible cubes: &lt;code&gt;PickUpGreenParents&lt;/code&gt; and &lt;code&gt;PickUpOrangeParents&lt;/code&gt;. Each of them affects the score differently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Green Pick-Ups&lt;/strong&gt;: When the player collects these, the score increases by &lt;strong&gt;+1&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: These are trickier! Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;Created a &lt;strong&gt;Cube&lt;/strong&gt; object, scaled it down, and duplicated it to have multiple collectibles.&lt;/li&gt;
-&lt;li&gt;Tagged each as &amp;ldquo;PickUp&amp;rdquo; and added a &lt;strong&gt;Collider&lt;/strong&gt; with &amp;ldquo;Is Trigger&amp;rdquo; enabled.&lt;/li&gt;
-&lt;li&gt;Updated the &lt;strong&gt;PlayerController&lt;/strong&gt; script to detect and count each collection.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creating Prefabs for Green and Orange Pick-Ups&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I created one green and one orange cube, then saved them as separate prefabs: &lt;code&gt;PickUpGreenParents&lt;/code&gt; (colored green) and &lt;code&gt;PickUpOrangeParents&lt;/code&gt; (colored orange). Prefabs made it easy to duplicate and spread these objects around the scene while keeping the setup consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configuring Collider and Trigger&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each prefab was tagged with &lt;code&gt;PickUpGreenParents&lt;/code&gt; or &lt;code&gt;PickUpOrangeParents&lt;/code&gt; so I could handle them differently in the script. I also added a &lt;strong&gt;Collider&lt;/strong&gt; component to each with &amp;ldquo;Is Trigger&amp;rdquo; enabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Updating the PlayerController Script&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To manage scoring, I modified the &lt;strong&gt;PlayerController&lt;/strong&gt; script to check each collected object’s tag. Based on whether the tag was &lt;code&gt;PickUpGreenParents&lt;/code&gt; or &lt;code&gt;PickUpOrangeParents&lt;/code&gt;, the script either increased or decreased the score.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnTriggerEnter(Collider other)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnTriggerEnter(Collider other)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUp&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUpGreenParents&amp;#34;&lt;/span&gt;))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        other.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        score++;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        UpdateScore();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = count + &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;  &lt;span style=&#34;color:#75715e&#34;&gt;// Increases score by 1 for green&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SetCountText();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUpOrangeParents&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        other.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = count - &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;  &lt;span style=&#34;color:#75715e&#34;&gt;// Decreases score by 1 for orange&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SetCountText();
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;the-ui-text-hurdle-adding-the-score-and-win-text&#34;&gt;The UI Text Hurdle: Adding the Score and Win Text
-&lt;/h4&gt;&lt;p&gt;Here&amp;rsquo;s where I ran into a small hiccup. I wanted to display the score and a &amp;ldquo;You Win!&amp;rdquo; message, but Unity wasn’t showing the UI objects. I realized I had forgotten to make the &lt;strong&gt;countText&lt;/strong&gt; and &lt;strong&gt;winText&lt;/strong&gt; fields in my script public, which prevented me from linking them in the Inspector. Without these fields being public, Unity can’t display the UI elements on screen, so I was left staring at a blank display.&lt;/p&gt;
-&lt;p&gt;After making them public, I linked the &lt;strong&gt;countText&lt;/strong&gt; and &lt;strong&gt;winText&lt;/strong&gt; objects in the Inspector, and it worked like a charm! Here&amp;rsquo;s the updated code with the public UI fields:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Using the SetCountText Method&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;I used the &lt;code&gt;SetCountText()&lt;/code&gt; method to update the score display each time a pick-up was collected, so the player sees their updated score in real-time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; SetCountText()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        countText.text = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Count: &amp;#34;&lt;/span&gt; + count.ToString();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (count &amp;gt;= &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            winTextObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;the-ui-text-hurdle-adding-the-score-and-win-text&#34;&gt;The UI Text Hurdle: Adding the Score and Win Text
+&lt;/h4&gt;&lt;p&gt;Here&amp;rsquo;s where I had a small error. I wanted to display the score and a &amp;ldquo;You Win!&amp;rdquo; message, but Unity wasn’t showing the UI objects. I realized I had forgotten to make the &lt;strong&gt;CountText&lt;/strong&gt; and &lt;strong&gt;WinTextObject&lt;/strong&gt; fields in my script public, which prevented me from linking them in the Inspector. Without these fields being public, Unity can’t display the UI elements on screen, so I was left staring at a blank display.&lt;/p&gt;
+&lt;p&gt;After making them public, I linked the &lt;strong&gt;CountText&lt;/strong&gt; and &lt;strong&gt;WinTextObject&lt;/strong&gt; objects in the Inspector. Here is the updat code !&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerController&lt;/span&gt; : MonoBehaviour
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Rigidbody rb;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Text countText;  &lt;span style=&#34;color:#75715e&#34;&gt;// Now public so it can be linked&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Text winText;    &lt;span style=&#34;color:#75715e&#34;&gt;// Now public so it can be linked&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; TextMeshProUGUI countText;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; GameObject winTextObject;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/rollaball.png&#34; alt=&#34;Kinect&#34; width=&#34;100%&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;adding-accelerometer-input-for-mobile&#34;&gt;Adding Accelerometer Input for Mobile
+&lt;/h4&gt;&lt;p&gt;I implemented &lt;strong&gt;accelerometer-based movement&lt;/strong&gt;. This allowed the player to control the ball by tilting their device—a great way to enhance gameplay on smartphones!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enabling the Accelerometer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To use the accelerometer, I first checked if the device is a mobile device by using an &lt;code&gt;isMobileBuild&lt;/code&gt; flag. I also used &lt;code&gt;InputSystem.EnableDevice&lt;/code&gt; to activate the accelerometer input when running on mobile.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Updating Movement Logic&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;FixedUpdate&lt;/code&gt; method, I checked for accelerometer data. If it was available, I used that data for movement; otherwise, I defaulted to keyboard input (for desktop testing). Here’s the updated &lt;code&gt;FixedUpdate&lt;/code&gt; code:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; FixedUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Vector3 movement = Vector3.zero;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (isMobileBuild &amp;amp;&amp;amp; UnityEngine.InputSystem.Accelerometer.current != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb = GetComponent&amp;lt;Rigidbody&amp;gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        UpdateScore();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        winText.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Get accelerometer data for movement&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Vector3 acceleration = UnityEngine.InputSystem.Accelerometer.current.acceleration.ReadValue();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        AccText.text = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Accelerometer: &amp;#34;&lt;/span&gt; + acceleration.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;F6&amp;#34;&lt;/span&gt;);  &lt;span style=&#34;color:#75715e&#34;&gt;// Display accelerometer data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Map accelerometer data to movement (adjust axes if needed based on phone orientation)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(acceleration.x, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, acceleration.y);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Use input from the non-mobile build (keyboard/controller input)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(movementX, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, movementY);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Remaining code here...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Apply movement force to the rigidbody&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    rb.AddForce(movement * speed);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;wrapping-up-with-ui-elements&#34;&gt;Wrapping Up with UI Elements
-&lt;/h4&gt;&lt;p&gt;To track the score, I added a simple UI Text element. Using &lt;strong&gt;TextMeshPro&lt;/strong&gt;, I made it dynamic so the score updates as the player collects items. This update felt like the final piece of the puzzle coming together!&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Enable accelerometer if running on a mobile device&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (isMobileBuild &amp;amp;&amp;amp; UnityEngine.InputSystem.Accelerometer.current != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Displaying Accelerometer Data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To help debug, I displayed the accelerometer data on the screen using a &lt;code&gt;Text&lt;/code&gt; component (&lt;code&gt;AccText&lt;/code&gt;). This allowed me to confirm the data being received and adjust the movement accordingly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;This project taught me a lot about Unity&amp;rsquo;s basics, especially dealing with Rigidbody physics, input handling, and even those small details with UI text fields. Overcoming those little issues was pretty satisfying. There’s so much more to explore, and I’m looking forward to adding more features and testing on mobile.&lt;/p&gt;
-&lt;p&gt;Stay tuned for the next update, where I’ll dive into mobile deployment! 🚀&lt;/p&gt;
+&lt;h4 id=&#34;deploying-as-a-mobile-application&#34;&gt;Deploying as a Mobile Application
+&lt;/h4&gt;&lt;p&gt;After implementing accelerometer controls, I wanted to test the game on a mobile device. Since I’m using a &lt;strong&gt;MacBook and iPhone&lt;/strong&gt;, I needed &lt;strong&gt;Xcode&lt;/strong&gt; to build and deploy the app.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Xcode Requirement for iOS Testing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initially, I planned to use &lt;strong&gt;Unity Remote 5&lt;/strong&gt; for quick mobile testing. I went to &lt;strong&gt;File &amp;gt; Build Settings &amp;gt; iOS &amp;gt; Switch Platform&lt;/strong&gt; to change the platform to iOS. I also opened &lt;strong&gt;Player Settings&lt;/strong&gt; to configure my project for iOS. However, I discovered that without Xcode installed, Unity wouldn’t let me select &lt;strong&gt;iPhone&lt;/strong&gt; under &lt;strong&gt;Editor &amp;gt; Device&lt;/strong&gt; in &lt;strong&gt;Project Settings&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Installing Xcode&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To resolve this, I downloaded and installed Xcode from the App Store. This process took a while, but it’s essential for iOS development on Unity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Using Unity Remote 5 for Quick Testing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With Xcode installed, I could finally set the platform to iOS and select &lt;strong&gt;iPhone&lt;/strong&gt; under &lt;strong&gt;Editor &amp;gt; Device&lt;/strong&gt; in &lt;strong&gt;Project Settings&lt;/strong&gt;. I downloaded &lt;strong&gt;Unity Remote 5&lt;/strong&gt; on my iPhone, connected it, and could now use the remote app to test things like accelerometer movement without needing to build and deploy the app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/rollaball.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>
