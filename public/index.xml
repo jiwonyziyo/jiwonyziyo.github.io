@@ -12,35 +12,71 @@
         <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/ideate/ideateprototypeevaluation/</guid>
-        <description>&lt;p&gt;&lt;strong&gt;Sense Boost Summary&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Idea: Sense Boost&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Sense Boost is an AR glasses concept designed for individuals with hearing impairments. It visualizes surrounding sounds in real time, translating sound intensity and direction into visual effects displayed on the screen. This allows users to perceive sound information through sight rather than hearing, especially for specific sounds like conversations or alerts.&lt;/p&gt;
+        <description>&lt;h2 id=&#34;idea&#34;&gt;Idea
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Sense Boost&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;This is an AR glasses concept designed for individuals with hearing impairments. It visualizes surrounding sounds in real time, translating sound intensity and direction into visual effects displayed on the screen. This allows users to perceive sound information through sight rather than hearing, especially for specific sounds like conversations or alerts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Focus Vision&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;These AR glasses help users concentrate on tasks by minimizing visual distractions. For example, when studying or working, the glasses detect and blur out distracting elements in the surroundings, automatically guiding the user’s attention to their main task.&lt;/li&gt;
+&lt;li&gt;Useful for students, office workers, or anyone working in environments with frequent distractions, helping them to sustain their focus by reducing visual interruptions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Memory Navigator&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;This is an AR app that helps users recall experiences associated with specific places or people. For example, when visiting a particular location, users can view past photos, notes, or important events linked to that place to enhance memory recall.&lt;/li&gt;
+&lt;li&gt;Suitable for people who want to remember names and faces of important individuals or recall schedules and events connected to specific locations.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Prototype&lt;/strong&gt;&lt;/p&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
+&lt;h2 id=&#34;prototype&#34;&gt;Prototype
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;http://localhost:1313/images/prototye.jpg&#34; alt=&#34;prototye&#34; width=&#34;50%&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;With Sense Boost AR glasses, users can see sounds visually displayed in front of them. For instance, if someone on the left says, “I’m tired,” the glasses show sound waves from the left, with the spoken text “I’m tired” displayed beneath. The size of the sound wave varies depending on the volume of the sound — louder sounds appear as larger waves, while softer, distant sounds are represented by smaller, thinner waves, helping the user gauge both volume and proximity.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Evaluation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Feedback and Suggestions:&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;evaluation&#34;&gt;Evaluation
+&lt;/h2&gt;&lt;p&gt;After sharing the Sense Boost concept with friends, I realized that it was challenging for them to provide an accurate evaluation, as none of them have actual hearing difficulties. However, I recently experienced a blocked ear for about three days, which caused some discomfort. Using this experience, I tried to imagine what it might feel like not to hear fully and evaluated the concept through this perspective of limited hearing.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Need for Sound Filtering Options&lt;/strong&gt;&lt;br&gt;
-When multiple sounds are displayed simultaneously, the screen can become cluttered. It was suggested to have options to filter specific types of sounds, such as displaying only conversational sounds or prioritizing important alert sounds.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Increased Awareness of Surroundings&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With a partially blocked ear, I found myself more alert to visual cues. Sense Boost&amp;rsquo;s design, which provides visual feedback for sounds, would be especially helpful in crowded or busy environments where sounds can be overwhelming or indistinguishable. I could imagine feeling reassured by visual prompts for key sounds, like a doorbell or someone calling my name.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Distinguishing Important Sounds&lt;/strong&gt;&lt;br&gt;
-When multiple people are speaking or when there are various sounds, it may be challenging to discern which sound is important. Adding an option to selectively emphasize crucial sounds could enhance usability.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Need for Sound Filtering Options&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imagine when multiple sounds are displayed simultaneously, the screen can become cluttered. It was suggested to have options to filter specific types of sounds, such as displaying only conversational sounds or prioritizing important alert sounds.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Potential Eye Strain with Extended Use&lt;/strong&gt;&lt;br&gt;
-Since the AR display continuously presents information in front of the user’s eyes, it could lead to eye strain or discomfort over time. To address this, an alternative approach, such as a smartphone app, could reduce this strain, allowing users to view sounds only when needed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Distinguishing Important Sounds&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When multiple people are speaking or when there are various sounds, it may be challenging to discern which sound is important. Adding an option to selectively emphasize crucial sounds could enhance usability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Potential Eye Strain with Extended Use&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Since the AR display continuously presents information in front of the user’s eyes, it could lead to eye strain or discomfort over time. To address this, an alternative approach, such as a smartphone app, could reduce this strain, allowing users to view sounds only when needed.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Summary of Improvement Suggestions&lt;/strong&gt;: Enhancements could include sound filtering, prioritization of important sounds, and exploring alternative devices for viewing.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;In summary, Sense Boost is an innovative AR tool designed to assist hearing-impaired individuals by allowing them to see sounds visually. This initial feedback highlights valuable areas for potential improvements, making it even more user-centric.&lt;/p&gt;
+&lt;h2 id=&#34;enhancement&#34;&gt;Enhancement
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Enhancements could include sound filtering, prioritization of important sounds, and exploring alternative devices for viewing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A phone-based app is less intrusive than AR glasses and could be used only when needed, helping users avoid visual overload. It’s also highly portable and compatible with most devices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -447,7 +483,7 @@ Since the AR display continuously presents information in front of the user’s 
 &lt;/h4&gt;&lt;p&gt;I added two types of collectible cubes: &lt;code&gt;PickUpGreenParents&lt;/code&gt; and &lt;code&gt;PickUpOrangeParents&lt;/code&gt;. Each of them affects the score differently:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Green Pick-Ups&lt;/strong&gt;: When the player collects these, the score increases by &lt;strong&gt;+1&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: These are trickier! Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;

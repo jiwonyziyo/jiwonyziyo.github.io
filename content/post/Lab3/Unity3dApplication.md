@@ -82,7 +82,7 @@ public class CameraController : MonoBehaviour
 I added two types of collectible cubes: `PickUpGreenParents` and `PickUpOrangeParents`. Each of them affects the score differently:
 
 - **Green Pick-Ups**: When the player collects these, the score increases by **+1**.
-- **Orange Pick-Ups**: These are trickier! Collecting an orange pick-up decreases the score by **-1**.
+- **Orange Pick-Ups**: Collecting an orange pick-up decreases the score by **-1**.
 
 1. **Creating Prefabs for Green and Orange Pick-Ups**
     - I created one green and one orange cube, then saved them as separate prefabs: `PickUpGreenParents` (colored green) and `PickUpOrangeParents` (colored orange). Prefabs made it easy to duplicate and spread these objects around the scene while keeping the setup consistent.
