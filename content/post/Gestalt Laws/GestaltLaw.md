@@ -98,7 +98,7 @@ In this image, the circles inside the box are perceived as a group because they 
 ## *1. Confusing stairs*
 
 <div style="text-align: center;">
-  <img src="/images/gl_ex1.jpg" alt="confusingstairs" width="40%">
+  <img src="/images/gl_ex1.jpg" alt="confusingstairs" width="70%">
   <p style="font-size: 12px; color: gray;">Image Source: <a href="https://brightside.me/articles/15-designs-that-can-confuse-our-common-sense-809304/" style="color: gray;">Bright Side</a></p>
 </div>
 
