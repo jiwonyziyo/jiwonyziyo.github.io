@@ -6,20 +6,12 @@
         <description>Recent content in HCI-Lecture on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 08 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lecture/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Lecture 7 - Ideate</title>
-        <link>http://localhost:1313/post/ideate/ideate/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
+        <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lecture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Idea &amp; Prototype &amp; Evaluation</title>
+        <link>http://localhost:1313/post/ideate/ideateprototypeevaluation/</link>
+        <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/post/ideate/ideate/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Prototype</title>
-        <link>http://localhost:1313/post/prototype/prototype/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/prototype/prototype/</guid>
+        <guid>http://localhost:1313/post/ideate/ideateprototypeevaluation/</guid>
         <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
 &lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
 &lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
@@ -34,6 +26,165 @@ the dependent variable is the salary. because the amount of the money we can ear
 dependent variable -&amp;gt;
 control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
 &lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Compute For the 21st Century</title>
+        <link>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</guid>
+        <description>&lt;img src="http://localhost:1313/images/ubiquitos.jpeg" alt="Featured image of post The Compute For the 21st Century" /&gt;&lt;h2 id=&#34;what-is-ubiquitous-computing&#34;&gt;What is ubiquitous computing?
+&lt;/h2&gt;&lt;p&gt;Ubiquitous computing refers to the concept of computers naturally blending into people&amp;rsquo;s daily environments, allowing them to interact with computers anytime, anywhere. It aims to realize &amp;ldquo;invisible&amp;rdquo; computing by embedding computers into various objects and spaces around them, rather than limiting them to specific devices.&lt;/p&gt;
+&lt;h2 id=&#34;are-we-already-living-in-a-world-of-ubiquitous-computing&#34;&gt;Are we already living in a world of ubiquitous computing?
+&lt;/h2&gt;&lt;p&gt;Yes, we are already living in a world of ubiquitous computing to some extent.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For example, technologies such as calling an elevator in advance through a smartphone before leaving the house and receiving automatic notifications at home when a car enters an underground parking lot are becoming widespread.&lt;/li&gt;
+&lt;li&gt;These smart home technologies are creating an environment where IoT and AI-based systems automatically respond to the user&amp;rsquo;s needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-aspects-of-weisers-vision-have-already-happened&#34;&gt;What aspects of Weiser’s vision have already happened?
+&lt;/h2&gt;&lt;p&gt;Weiser’s vision of invisible, seamless computing is becoming more real with some of today’s technologies. Here are two examples that illustrate how close we are:&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/amazongo.jpg&#34; alt=&#34;Amazon go&#34; width=&#34;50%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Amazon Go&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Amazon Go’s Checkout-Free Shopping&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon Go stores use sensors and AI to detect items shoppers pick up and automatically charge them when they leave the store, eliminating the need for a checkout line. This technology, which lets people simply “grab and go,” reflects Weiser’s vision of technology that integrates seamlessly into our routines without obvious intervention.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Apple Watch Fall Detection and Emergency Call&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When an Apple Watch detects a hard fall, it automatically sends an alert to emergency services if the user doesn’t respond within a few seconds. This kind of technology demonstrates how computing can act almost invisibly in the background, offering potentially life-saving help without the user actively engaging with it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-needs-to-happen-for-a-more-ubiquitous-computing-world&#34;&gt;What Needs to Happen for a More Ubiquitous Computing World?
+&lt;/h2&gt;&lt;p&gt;While ubiquitous computing offers convenience and integration, it also brings serious privacy and security risks. Here are some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Personal Surveillance and Privacy Risks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recently in South Korea, a widespread hacking incident involving apartment intercom cameras led to residents’ private lives being recorded and leaked online. This incident illustrates how vulnerable connected devices in personal spaces can be to unauthorized access. As we add more cameras and sensors into homes, offices, and public areas, the risk of such breaches grows. Without robust security measures, these technologies can easily turn from helpers into privacy threats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Hacking and Identity Theft&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As more devices are interconnected, they create additional access points for hackers. Wearables, smart appliances, and IoT devices are often less secure, making them easy targets for cyberattacks. A single breach could expose multiple data types across devices, increasing risks of identity theft and financial loss.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This example highlights that while ubiquitous computing makes life more convenient, it also requires rigorous security standards to protect users. We need strong encryption, secure data storage, and regular software updates to mitigate these risks. Only then can we enjoy the benefits of a connected world without sacrificing privacy and security.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.lri.fr/~mbl/Stanford/CS477/papers/Weiser-SciAm.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Computer for the 21st Century by Mark Weiser&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Shape of Smartphones</title>
+        <link>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</guid>
+        <description>&lt;img src="http://localhost:1313/images/shapeofsmart.jpg" alt="Featured image of post The Shape of Smartphones" /&gt;&lt;p&gt;The shape of smartphones is continuously evolving, driven by technological advancements and shifting consumer demands. From the earliest cell phones to today’s smartphones, designs have undergone significant changes in both form and functionality, with further innovations anticipated in the future.&lt;/p&gt;
+&lt;h3 id=&#34;1-cell-phone-shapes-before-smartphones&#34;&gt;1. Cell Phone Shapes Before Smartphones
+&lt;/h3&gt;&lt;p&gt;Early cell phones began as large, heavy, rectangular “bar” shapes focused primarily on basic calling functions. Later, &lt;strong&gt;flip&lt;/strong&gt; and &lt;strong&gt;slide&lt;/strong&gt; designs emerged, offering screen protection and larger keypads, enhancing ease of use.&lt;/p&gt;
+&lt;h3 id=&#34;2-the-earliest-forms-of-smartphones&#34;&gt;2. The Earliest Forms of Smartphones
+&lt;/h3&gt;&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/blackberry.jpg&#34; alt=&#34;blackberry&#34; width=&#34;60%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Blackberry Bold 9650&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/iphone3.webp&#34; alt=&#34;iphone3gs&#34; width=&#34;80%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;iPhone 3gs&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BlackBerry&lt;/strong&gt;: BlackBerry featured a compact, rectangular design with a physical keyboard and small screen, appealing especially to business users. The physical keyboard enabled fast and accurate typing, making it ideal for email and messaging.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;iPhone&lt;/strong&gt;: iPhone was revolutionary in its fully touchscreen rectangular design. By replacing the physical keyboard with a touch interface and adding a single home button, the iPhone’s minimalist design set the standard for app-centric usage, significantly impacting the shape of future smartphones.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-why-physical-keyboards-disappeared&#34;&gt;3. Why Physical Keyboards Disappeared
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maximizing Screen Size&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical keyboards occupied valuable screen space, limiting the display size on smartphones. With the adoption of touchscreens, the entire front surface could be utilized as a display.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enabling Diverse Input Methods&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Touchscreens support not only typing but also various gesture inputs such as multi-touch, swipe, and zooming. This allows users to interact with smartphones in a more intuitive way, going beyond simple text input.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-the-future-shape-of-smartphones&#34;&gt;4. The Future Shape of Smartphones
+&lt;/h3&gt;&lt;p&gt;Future smartphones are expected to take on more flexible shapes, like &lt;strong&gt;foldable&lt;/strong&gt; and &lt;strong&gt;rollable&lt;/strong&gt; designs, in response to evolving user needs.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/fold.jpg&#34; alt=&#34;Galaxy Fold 4&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Foldable Smartphones&lt;/strong&gt;: These devices provide a large display but fold up compactly to fit in a pocket, ideal for users who want both portability and a larger screen when needed. For instance, devices like the Galaxy Fold offer a large screen for immersive experiences but fold down for easy portability.As technology advances, we might even see multi-fold designs that can be folded multiple times, offering even larger displays while maintaining compactness for daily carry.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Rollable Smartphones&lt;/strong&gt;: Rollable smartphones, which expand when additional screen space is required, address the demand for larger screens without compromising on compactness when not in use.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;Ultimately, smartphones have developed into more portable forms because they have become essential items we carry everywhere. At the same time, users still desire larger screens, and meeting both needs has led to concepts like foldable designs that can be carried compactly or rollable screens that expand when needed. This evolution reflects our desire for smartphones that are lighter, more compact, and easier to carry around, while still offering a larger display when required.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>VR &amp; AR &amp; MR</title>
+        <link>http://localhost:1313/post/mrapp/mrapp/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrapp/mrapp/</guid>
+        <description>&lt;img src="http://localhost:1313/images/mr.jpg" alt="Featured image of post VR &amp; AR &amp; MR" /&gt;&lt;h3 id=&#34;vr-ar-and-mr&#34;&gt;VR, AR, and MR
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VR (Virtual Reality):&lt;/strong&gt; VR immerses users in a completely virtual environment, isolating them from the real world. Users experience a 100% simulated environment. (e.g. VR museum)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AR (Augmented Reality):&lt;/strong&gt; AR overlays digital information onto the real world. Users see information or graphics layered onto their actual surroundings. (e.g. Pokémon GO)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MR (Mixed Reality):&lt;/strong&gt; Like AR, MR is based on the real world, but it allows digital objects to interact with physical surroundings. For example, a virtual character might sit on a real desk, blending naturally into the environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;future-mr-app-store-most-downloaded-apps-entertainment-focus&#34;&gt;Future MR App Store: Most Downloaded Apps (Entertainment Focus)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Olympic Sports Experience App&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Allows users to experience Olympic events in MR, such as ski jumping or competitive swimming, as if they’re truly participating.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; We can perform a ski jump motion in their living room, and the MR display creates the scene of an actual jump, complete with timing and visuals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; People can safely and thrillingly explore various sports without risk, appealing to adventure-seekers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Virtual Concerts and Festivals&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Enables users to experience concerts or virtual festivals at home, with artists appearing as if they’re performing live in front of them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; In a virtual concert setting, users can enjoy the music up close and interact with the crowd, feeling like they’re part of the event.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; For fans who can’t attend live events, this app provides a unique chance to connect closely with favorite artists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;One of MR’s main strengths is that it allows people to experience things that would otherwise require a lot of time and money. This accessibility increase equality, giving everyone the chance to explore, learn, and participate in experiences that were previously limited. Thanks to this, apps that make diverse experiences more accessible are likely to become highly popular in the future MR app store.&lt;/p&gt;
+&lt;p&gt;Moreover, MR&amp;rsquo;s applications extend far beyond entertainment. In education, MR can immerse students in interactive learning environments, from virtual science labs to historical reenactments. In industry, MR is invaluable for training, allowing professionals to practice skills in realistic yet safe virtual settings, such as operating complex machinery or conducting medical procedures.&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -89,25 +240,29 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         
         <guid>http://localhost:1313/post/devices/inputdevices/</guid>
         <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;the-leap-motion-controller&#34;&gt;The Leap Motion Controller
-&lt;/h1&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt;, introduced in 2013, was a &lt;strong&gt;gesture-based input device&lt;/strong&gt; that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.&lt;/p&gt;
-&lt;h3 id=&#34;classification-gesture-based-user-interface&#34;&gt;Classification: Gesture-Based User Interface
-&lt;/h3&gt;&lt;p&gt;The Leap Motion falls under the category of &lt;strong&gt;Gesture-Based User Interface&lt;/strong&gt;. This type of user interface allows users to interact with a computer through body movements. Specifically, hand and finger gestures. This is a part of &lt;strong&gt;Natural User Interfaces&lt;/strong&gt;, which focus on intuitive and natural interaction techniques.&lt;/p&gt;
-&lt;h2 id=&#34;why-the-leap-motion-failed-to-succeed&#34;&gt;Why the Leap Motion Failed to Succeed
-&lt;/h2&gt;&lt;p&gt;While Leap Motion was exciting in its innovation and garnered significant media attention upon launch, it ultimately did not achieve widespread adoption. Several reasons contribute to its failure to succeed:&lt;/p&gt;
-&lt;h3 id=&#34;1-limited-use-cases&#34;&gt;1. &lt;strong&gt;Limited Use Cases&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Although the Leap Motion device was revolutionary in concept, it struggled to find compelling real-world applications. Its primary use cases were limited to &lt;strong&gt;gaming, 3D modeling&lt;/strong&gt;, and a few experimental applications. The niche appeal of these areas limited the audience. Most users still found traditional input methods (like the mouse and keyboard) more convenient and efficient for daily tasks.&lt;/p&gt;
-&lt;h3 id=&#34;2-accuracy-and-tracking-issues&#34;&gt;2. &lt;strong&gt;Accuracy and Tracking Issues&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;While Leap Motion promised precise hand tracking, many users reported &lt;strong&gt;inconsistent accuracy&lt;/strong&gt; and &lt;strong&gt;latency&lt;/strong&gt; issues, especially when their hands moved too quickly or left the designated interaction zone. This inconsistency frustrated users and made it difficult to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt; or &lt;strong&gt;professional workflows&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;3-lack-of-developer-support&#34;&gt;3. &lt;strong&gt;Lack of Developer Support&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The success of input devices heavily depends on third-party developer support to create applications and software that leverage the technology. In Leap Motion’s case, there was a lack of &lt;strong&gt;sufficient developer support&lt;/strong&gt; to build a robust ecosystem of applications. Many developers found the Leap Motion SDK challenging to work with, and without compelling applications, users had little incentive to adopt the device.&lt;/p&gt;
-&lt;h3 id=&#34;4-competition-with-vr-and-ar-technologies&#34;&gt;4. &lt;strong&gt;Competition with VR and AR Technologies&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;At the time of its launch, &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; were becoming more popular, with devices like the &lt;strong&gt;Oculus Rift&lt;/strong&gt; and &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; capturing the attention of both developers and users. Leap Motion tried to pivot toward VR, offering integration with VR headsets, but it was too late to compete effectively in the growing immersive tech space.&lt;/p&gt;
-&lt;h2 id=&#34;could-it-succeed-in-the-future&#34;&gt;Could It Succeed in the Future?
-&lt;/h2&gt;&lt;p&gt;Though the Leap Motion Controller did not succeed in its initial form, the technology behind it could find new life in the future with advancements in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;. Gesture-based interfaces are becoming increasingly important in &lt;strong&gt;augmented reality (AR)&lt;/strong&gt; and &lt;strong&gt;virtual reality (VR)&lt;/strong&gt; environments, where hands-free interaction is critical.&lt;/p&gt;
-&lt;p&gt;For instance, Leap Motion&amp;rsquo;s acquisition by &lt;strong&gt;Ultrahaptics&lt;/strong&gt; in 2019 (now &lt;strong&gt;Ultraleap&lt;/strong&gt;) suggests there is still interest in developing &lt;strong&gt;touchless interaction technologies&lt;/strong&gt;. By combining Leap Motion&amp;rsquo;s gesture recognition technology with &lt;strong&gt;haptic feedback systems&lt;/strong&gt;, there is potential for future devices that offer more immersive and precise touchless experiences in &lt;strong&gt;healthcare&lt;/strong&gt;, &lt;strong&gt;industrial design&lt;/strong&gt;, or &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
+&lt;/h1&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt; (introduced in 2013) is a &lt;strong&gt;gesture-based input device&lt;/strong&gt; designed to allow users to control on-screen elements through &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse and keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It could track users&amp;rsquo; hand movements in real time, within an interaction space of about 8 cubic feet.&lt;/p&gt;
+&lt;h3 id=&#34;gesture-based-user-interface&#34;&gt;Gesture-Based User Interface
+&lt;/h3&gt;&lt;p&gt;Leap Motion falls under &lt;strong&gt;Gesture-Based User Interfaces (GBUI)&lt;/strong&gt;, which allow interaction through body movements. Specifically, it’s part of the broader &lt;strong&gt;Natural User Interface (NUI)&lt;/strong&gt; category, focusing on natural and intuitive interactions.&lt;/p&gt;
+&lt;h2 id=&#34;why-leap-motion-failed&#34;&gt;Why Leap Motion Failed
+&lt;/h2&gt;&lt;p&gt;Despite its innovative concept, Leap Motion did not gain widespread adoption due to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Limited Use Cases&lt;/strong&gt;: Its primary applications, like &lt;strong&gt;gaming&lt;/strong&gt; and &lt;strong&gt;3D modeling&lt;/strong&gt;, appealed only to niche audiences. Most users found traditional input methods more practical for everyday tasks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tracking Issues&lt;/strong&gt;: Many users reported inconsistent accuracy and latency, particularly when hands moved quickly or left the interaction zone. This made it hard to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Lack of Developer Support&lt;/strong&gt;: Limited developer interest meant fewer applications that leveraged Leap Motion’s capabilities, reducing user incentive to adopt the device.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Competition with VR/AR&lt;/strong&gt;: As VR and AR technology gained popularity, Leap Motion struggled to stay relevant despite attempts to integrate with VR headsets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;potential-for-future-success&#34;&gt;Potential for Future Success
+&lt;/h2&gt;&lt;p&gt;While Leap Motion didn’t succeed initially, the technology might find new applications as &lt;strong&gt;gesture-based interactions&lt;/strong&gt; become more important in &lt;strong&gt;VR and AR&lt;/strong&gt; environments. With its 2019 acquisition by &lt;strong&gt;Ultraleap&lt;/strong&gt;, which combines gesture control with haptic feedback, this technology could offer more immersive experiences in fields like &lt;strong&gt;healthcare&lt;/strong&gt; and &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a visionary product that failed to achieve widespread success due to a lack of compelling use cases, tracking issues, and insufficient developer support. However, with the growing demand for &lt;strong&gt;gesture-based interaction&lt;/strong&gt; in VR/AR environments, and the potential for improved accuracy through new technologies, the underlying concepts of Leap Motion may still play a key role in future human-computer interaction paradigms.&lt;/p&gt;
-&lt;hr&gt;
+&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a forward-thinking product that didn’t find immediate success due to limited use cases, technical challenges, and competition. However, with advances in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;, its underlying technology may still shape future human-computer interactions.&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -116,25 +271,34 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/readivan/ultimatedisplay/</guid>
-        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland&amp;rsquo;s &amp;ldquo;The Ultimate Display&amp;rdquo;
-&lt;/h1&gt;&lt;p&gt;In his seminal work &lt;strong&gt;&amp;ldquo;The Ultimate Display&amp;rdquo;&lt;/strong&gt; (1965), Ivan Sutherland laid the foundation for what we now recognize as virtual and augmented reality (VR/AR). His visionary ideas foreshadowed many technologies that are prevalent today, and he also introduced concepts that continue to guide future developments in human-computer interaction and immersive experiences.&lt;/p&gt;
-&lt;h2 id=&#34;current-realizations-of-sutherlands-vision&#34;&gt;Current Realizations of Sutherland’s Vision
-&lt;/h2&gt;&lt;h3 id=&#34;1-virtual-reality-vr-and-augmented-reality-ar&#34;&gt;1. Virtual Reality (VR) and Augmented Reality (AR)
-&lt;/h3&gt;&lt;p&gt;One of Sutherland&amp;rsquo;s most notable predictions was the creation of &lt;strong&gt;virtual worlds indistinguishable from reality&lt;/strong&gt;. He envisioned a computer-generated environment that could simulate reality with such fidelity that users would be unable to tell the difference between the virtual and the real. Today, &lt;strong&gt;VR headsets&lt;/strong&gt; like the &lt;strong&gt;Oculus Rift&lt;/strong&gt;, &lt;strong&gt;HTC Vive&lt;/strong&gt;, and &lt;strong&gt;PlayStation VR&lt;/strong&gt; offer immersive environments where users can interact with 3D worlds. &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; systems, like those seen in &lt;strong&gt;Microsoft’s HoloLens&lt;/strong&gt; and mobile apps such as &lt;strong&gt;Pokémon Go&lt;/strong&gt;, overlay digital information onto the real world, blending the virtual with the physical.&lt;/p&gt;
-&lt;h3 id=&#34;2-haptic-feedback-and-tactile-displays&#34;&gt;2. Haptic Feedback and Tactile Displays
-&lt;/h3&gt;&lt;p&gt;Sutherland also imagined the possibility of interacting with virtual objects in a way that mimicked their real-world counterparts, suggesting that &amp;ldquo;a chair displayed in such a room would be good enough to sit in.&amp;rdquo; This idea has come to life through &lt;strong&gt;haptic technology&lt;/strong&gt; and &lt;strong&gt;force feedback systems&lt;/strong&gt;, which allow users to “feel” virtual objects. Today’s &lt;strong&gt;haptic gloves&lt;/strong&gt; and &lt;strong&gt;vests&lt;/strong&gt; can simulate touch, texture, and resistance, enhancing the immersive experience in virtual worlds.&lt;/p&gt;
-&lt;h3 id=&#34;3-interactive-graphics-and-real-time-simulation&#34;&gt;3. Interactive Graphics and Real-Time Simulation
-&lt;/h3&gt;&lt;p&gt;Sutherland&amp;rsquo;s work directly influenced the development of &lt;strong&gt;interactive computer graphics&lt;/strong&gt;. He envisioned dynamic environments where users could manipulate objects in real-time. Modern computer graphics, powered by &lt;strong&gt;game engines&lt;/strong&gt; such as &lt;strong&gt;Unreal Engine&lt;/strong&gt; and &lt;strong&gt;Unity&lt;/strong&gt;, allow for the creation of highly interactive and realistic simulations. Video games, 3D modeling software, and even training simulations for fields like medicine and aviation use these technologies.&lt;/p&gt;
-&lt;h2 id=&#34;what-could-become-reality-in-the-future&#34;&gt;What Could Become Reality in the Future?
-&lt;/h2&gt;&lt;h3 id=&#34;1-full-sensory-immersion&#34;&gt;1. Full Sensory Immersion
-&lt;/h3&gt;&lt;p&gt;Sutherland hinted at the possibility of stimulating all human senses in virtual environments, suggesting that a truly ultimate display would engage &lt;strong&gt;sight, sound, touch, and possibly even taste and smell&lt;/strong&gt;. While current VR systems focus primarily on visual and auditory experiences, the future could see the development of technology that simulates all senses. &lt;strong&gt;Olfactory displays&lt;/strong&gt; (devices that emit smells) and &lt;strong&gt;gustatory technology&lt;/strong&gt; (taste simulation) are still in early research stages, but with advancements in neuroscience and sensory technology, a fully immersive multisensory virtual world may become possible.&lt;/p&gt;
-&lt;h3 id=&#34;2-brain-computer-interfaces-bci&#34;&gt;2. Brain-Computer Interfaces (BCI)
-&lt;/h3&gt;&lt;p&gt;Another aspect of Sutherland&amp;rsquo;s vision was the direct interaction between the human brain and computers. While he did not explicitly predict &lt;strong&gt;brain-computer interfaces (BCI)&lt;/strong&gt;, his ideas about creating seamless interaction between humans and machines suggest that this could be the next step. Current research into &lt;strong&gt;BCI technology&lt;/strong&gt;, such as &lt;strong&gt;Neuralink&lt;/strong&gt; by Elon Musk, explores the potential of controlling computers and virtual environments using only thoughts. This could lead to a future where users can fully immerse themselves in virtual worlds without the need for physical hardware.&lt;/p&gt;
-&lt;h3 id=&#34;3-shared-virtual-worlds-and-digital-communities&#34;&gt;3. Shared Virtual Worlds and Digital Communities
-&lt;/h3&gt;&lt;p&gt;Sutherland&amp;rsquo;s ultimate display also hinted at the potential for &lt;strong&gt;shared virtual experiences&lt;/strong&gt;, where multiple users could interact with each other in a virtual space. This concept is becoming a reality with the advent of &lt;strong&gt;the metaverse&lt;/strong&gt;, a digital universe where users can socialize, work, and play in a shared, persistent environment. Companies like &lt;strong&gt;Meta (formerly Facebook)&lt;/strong&gt; and &lt;strong&gt;Epic Games&lt;/strong&gt; are investing heavily in this area, aiming to create a connected virtual world where people can live out alternative realities together.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland’s “The Ultimate Display”
+&lt;/h1&gt;&lt;p&gt;In 1965, &lt;strong&gt;Ivan Sutherland&lt;/strong&gt; wrote &lt;em&gt;“The Ultimate Display”&lt;/em&gt;, imagining a future where computers could create realistic, immersive worlds. His ideas basically set the stage for &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; as we know them today.&lt;/p&gt;
+&lt;h2 id=&#34;what-sutherland-predicted-and-whats-happening-now&#34;&gt;What Sutherland Predicted and What’s Happening Now
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VR and AR&lt;/strong&gt;: Sutherland envisioned virtual worlds that felt as real as the physical world. Today, VR headsets like &lt;strong&gt;Oculus Rift&lt;/strong&gt; and AR tools like &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; make that idea real by letting us experience and interact with digital content in immersive ways.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Touch and Feel in VR&lt;/strong&gt;: Sutherland also imagined being able to feel virtual objects, like sitting on a virtual chair that “feels” real. With &lt;strong&gt;haptic technology&lt;/strong&gt; (gloves, vests, etc.), we can now feel textures, pressure, and vibrations in VR, bringing us closer to that vision.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Interactive Graphics&lt;/strong&gt;: He foresaw real-time interactive graphics, where users could control and manipulate digital objects. This idea led to the development of game engines like &lt;strong&gt;Unreal Engine&lt;/strong&gt; and &lt;strong&gt;Unity&lt;/strong&gt;, which power modern video games, training simulations, and 3D modeling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;what-could-still-become-reality&#34;&gt;What Could Still Become Reality
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Full Sensory VR&lt;/strong&gt;: Sutherland hinted at VR that stimulates all senses, including taste and smell. While current VR focuses on sight and sound, researchers are experimenting with &lt;strong&gt;smell and taste simulation&lt;/strong&gt;. One day, VR could fully engage all our senses.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Brain-Computer Interfaces (BCI)&lt;/strong&gt;: Although Sutherland didn’t directly mention it, his vision of seamless interaction hints at controlling VR with our minds. Projects like &lt;strong&gt;Neuralink&lt;/strong&gt; are working on this, which could let us move in VR worlds using just our thoughts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Shared Virtual Worlds (Metaverse)&lt;/strong&gt;: Sutherland imagined shared virtual experiences. Today, companies like &lt;strong&gt;Meta&lt;/strong&gt; are building the &lt;strong&gt;metaverse&lt;/strong&gt;—a persistent virtual world where people can meet, work, and socialize.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h2&gt;&lt;p&gt;Ivan Sutherland’s &lt;strong&gt;“The Ultimate Display”&lt;/strong&gt; was groundbreaking in its vision of a future where humans and computers interact in ways that were unimaginable at the time. Many of his predictions have become reality, including virtual environments, interactive graphics, and haptic feedback systems. His vision continues to inspire the next generation of researchers and technologists, pushing the boundaries of &lt;strong&gt;VR&lt;/strong&gt;, &lt;strong&gt;AR&lt;/strong&gt;, and &lt;strong&gt;BCI&lt;/strong&gt; technologies.&lt;/p&gt;
-&lt;p&gt;As we move forward, it’s clear that Sutherland’s concept of a fully immersive, multisensory, and interactive digital world remains the ultimate goal of HCI, and his work will continue to shape the future of the field.&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;Ivan Sutherland’s ideas in &lt;em&gt;“The Ultimate Display”&lt;/em&gt; were incredibly ahead of his time. Many of his predictions are now reality, and his vision still inspires new advancements in VR, AR, and immersive tech. His work is a reminder of where we started and where the future of human-computer interaction might take us.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;http://worrydream.com/refs/Sutherland%20-%20The%20Ultimate%20Display.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;The Ultimate Display by Ivan Sutherland&lt;/a&gt;&lt;/p&gt;
@@ -204,10 +368,6 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
         
         <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
         <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/darkpattern.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://uxknowledgebase.com/dark-patterns-3b41ed7a690e&#34; style=&#34;color: gray;&#34;&gt;By Krisztina Szerovay&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
@@ -224,9 +384,14 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
   &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/li&gt;
-&lt;li&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -235,9 +400,14 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
   &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt; involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.&lt;/li&gt;
-&lt;li&gt;For example, subscribing to a service may be as simple as one click, but canceling that same service might involve navigating through a series of confusing steps, or even contacting customer support. By increasing the effort required to complete the task, users are more likely to give up and continue their subscription, even if they originally intended to cancel.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Obstruction&lt;/strong&gt; involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For example, in this image, Facebook requires users to review and adjust their data sharing settings across multiple screens. Users must navigate through detailed information and various options to disable data sharing with advertisers. By making this process lengthy and complex, users are more likely to accept the default settings, even if they intended to limit data sharing.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -253,6 +423,7 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
 &lt;p&gt;For example, an accomodation booking site may show a price at a discounted price, but hidden fees like cleaning costs is only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -262,28 +433,104 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
 &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Interface interference&lt;/strong&gt; manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interface interference&lt;/strong&gt; manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This often involves making certain options (like opting out or declining a service) difficult to see or access, or placing desired actions in locations where users are less likely to find them.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.&lt;/p&gt;
+&lt;p&gt;In this example, the user is trying to cancel a subscription, but the interface prominently displays a blue button that offers a discount (“Give me US$1.00 off”), making it more noticeable than the “Continue to cancel” option. This visual manipulation influences the user’s decision, encouraging them to take the action that benefits the company (keeping the subscription) rather than proceeding with the cancellation.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/forcedaction.jpg&#34; alt=&#34;Forced action example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://blog.raidboxes.io/en/security/dark-patterns/&#34; style=&#34;color: gray;&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
+  &lt;img src=&#34;http://localhost:1313/images/forceaction.png&#34; alt=&#34;Forced action example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://darkpatterns.uxp2.com/pattern/windows-10-forced-update/&#34; style=&#34;color: gray;&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt; refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt; refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing. It can make users feel that they have no other option but to comply.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;For instance, a user might be required to create an account or subscribe to a newsletter before they can continue using a free app or access content. This design forces users to take an action they don’t necessarily want to take, making them feel trapped or cornered.&lt;/p&gt;
+&lt;p&gt;For instance, in this image, a user simply wants to shut down or restart their computer, but the only options available are “Update and shut down” or “Update and restart.” This design forces the user to perform an update, even if they would prefer to delay it, limiting their choice and making them feel compelled to take an action they may not want at that moment.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instasize Premium Subscription&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Instasize is an app that helps people resize photos for Instagram, ensuring that they don’t get cropped when posted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/instasize.png&#34; alt=&#34;Forced action example&#34; width=&#34;30%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dark Pattern Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;While I’m editing photos, a premium subscription pop-up frequently appears, interrupting my workflow. Even though I’m not interested in upgrading, I keep seeing the same subscription prompt repeatedly, which creates a sense of fatigue and frustration due to the constant interruptions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The pop-up doesn’t have a close button, and I have to wait around 10 seconds for it to disappear before I can continue using the app. This lack of a “close” option makes me feel pressured into considering the premium subscription since I’m essentially held back from my task.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to Redesign It&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Add an “X” or “Close” button to the pop-up so that users like me can dismiss it immediately if we’re not interested, giving us full control over our experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Include an option in the app settings that lets users turn off subscription prompts if they do not wish to see them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Skyscanner Price Discrepancy by Country Setting&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Skyscanner is a flight search engine that allows users to compare flight prices across different airlines and book their travel at the best price. I often use Skyscanner to find affordable flights for my travels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/skyscannerko.png&#34; alt=&#34;Price in Korea Setting&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Price in Korea Setting&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/skyscannerfr.png&#34; alt=&#34;Price in France Setting&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Price in France Setting&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dark Pattern Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When I set my country to Korea and search for a flight from Paris to Korea, the price displayed differs from the price shown when I set the country to France. This pricing difference is not clearly communicated to users, and the cheaper option is hidden unless they change their location setting. This can cause users to unknowingly pay more for the same ticket.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The interface automatically adjusts the price based on the selected country, limiting my ability to see or choose the best price across locations. Because there is no transparent way to compare prices across countries, users like me may miss out on the lower price option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to Redesign It&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Allow users to easily see the price differences between countries by adding a &amp;ldquo;Compare prices across countries&amp;rdquo; option. This would help users like me make informed choices by seeing all available prices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Display a note explaining that prices may vary depending on the country setting, giving users full transparency about potential savings if they adjust their location.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -371,7 +618,7 @@ control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-confusing-buttons-on-yes24&#34;&gt;&lt;em&gt;2. Confusing Buttons on YES24&lt;/em&gt;
 &lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/yes24.png&#34; alt=&#34;confusing buttons yes24&#34; width=&#34;40%&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/yes24.png&#34; alt=&#34;confusing buttons yes24&#34; width=&#34;60%&#34;&gt;
   &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: YES24&lt;/p&gt;
 &lt;/div&gt;
 *YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*

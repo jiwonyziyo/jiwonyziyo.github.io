@@ -1,10 +1,11 @@
 +++
 title = 'Set up Unity'
-date = 2024-10-12
+date = 2024-09-19
 categories = ["HCI"]
 tags = ["HCI-Lab"]
 image = "images/unity.jpg"
 author = "jiwon"
+draft = false
 +++
 
 Today, I'll show you the process of setting up Unity on a MacBook 💻.

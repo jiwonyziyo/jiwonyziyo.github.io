@@ -1,6 +1,6 @@
 +++
 title = 'Set up Blog'
-date = 2024-10-12
+date = 2024-09-19
 categories = ["HCI"]
 tags = ["HCI-Lab"]
 author = "jiwon"

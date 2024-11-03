@@ -5,7 +5,7 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/affordance.jpg"
-draft = false
+draf = false
 +++
 <p style="font-size: 12px; color: gray;">Image Source: <a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style="color: gray;"> Anant Kadiyala </a></p>
 

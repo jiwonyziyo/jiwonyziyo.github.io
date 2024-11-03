@@ -1,12 +1,11 @@
 +++
-title = 'Prototype'
-date = 2024-10-08
+title = 'Idea & Prototype & Evaluation'
+date = 2024-10-27
 categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
-draft = true
+draft = false
 +++
-
 ## Prototype
 
 How you can apply the same thing this kind of prototype

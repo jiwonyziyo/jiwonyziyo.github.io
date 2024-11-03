@@ -5,6 +5,7 @@ categories =["HCI"]
 tags = ["HCI-Lecture"]
 author = "jiwon"
 image = "images/gestalt.jpg"
+draft = false
 +++
 <p style="font-size: 12px; color: gray;">Image Source: <a href="https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc" style="color: gray;">Gestalt Principles</a></p>
 

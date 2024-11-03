@@ -3,37 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/hci/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hci-lab/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/lab3/unity3dapplication/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/hci-lecture/</loc>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/lab1/setupblog/</loc>
-    <lastmod>2024-10-12T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</loc>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/lab2/setupunity/</loc>
-    <lastmod>2024-10-12T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</loc>
+    <lastmod>2024-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hci-lab/</loc>
+    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/lab4/kinect/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/hci-lecture/</loc>
-    <lastmod>2024-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/ideate/ideate/</loc>
     <lastmod>2024-10-08T00:00:00+00:00</lastmod>
@@ -45,6 +42,9 @@
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/devices/inputdevices/</loc>
+    <lastmod>2024-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab3/unity3dapplication/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/readivan/ultimatedisplay/</loc>
@@ -63,6 +63,12 @@
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/gestalt-laws/gestaltlaw/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab1/setupblog/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/lab2/setupunity/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/page/archives/</loc>

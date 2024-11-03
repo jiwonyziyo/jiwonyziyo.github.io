@@ -6,18 +6,752 @@
         <description>Recent content on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Idea &amp; Prototype &amp; Evaluation</title>
+        <link>http://localhost:1313/post/ideate/ideateprototypeevaluation/</link>
+        <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/ideate/ideateprototypeevaluation/</guid>
+        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
+&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
+&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
+lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
+&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
+&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
+&lt;p&gt;for example, imagine we work for gain the money.
+in this case the independent variable is the amount of work because this variable can change ourselves.
+the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
+&lt;p&gt;independent variable -&amp;gt;
+dependent variable -&amp;gt;
+control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
+&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Compute For the 21st Century</title>
+        <link>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/21stcentury/thecomputeforthe21stcentury/</guid>
+        <description>&lt;img src="http://localhost:1313/images/ubiquitos.jpeg" alt="Featured image of post The Compute For the 21st Century" /&gt;&lt;h2 id=&#34;what-is-ubiquitous-computing&#34;&gt;What is ubiquitous computing?
+&lt;/h2&gt;&lt;p&gt;Ubiquitous computing refers to the concept of computers naturally blending into people&amp;rsquo;s daily environments, allowing them to interact with computers anytime, anywhere. It aims to realize &amp;ldquo;invisible&amp;rdquo; computing by embedding computers into various objects and spaces around them, rather than limiting them to specific devices.&lt;/p&gt;
+&lt;h2 id=&#34;are-we-already-living-in-a-world-of-ubiquitous-computing&#34;&gt;Are we already living in a world of ubiquitous computing?
+&lt;/h2&gt;&lt;p&gt;Yes, we are already living in a world of ubiquitous computing to some extent.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For example, technologies such as calling an elevator in advance through a smartphone before leaving the house and receiving automatic notifications at home when a car enters an underground parking lot are becoming widespread.&lt;/li&gt;
+&lt;li&gt;These smart home technologies are creating an environment where IoT and AI-based systems automatically respond to the user&amp;rsquo;s needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-aspects-of-weisers-vision-have-already-happened&#34;&gt;What aspects of Weiser’s vision have already happened?
+&lt;/h2&gt;&lt;p&gt;Weiser’s vision of invisible, seamless computing is becoming more real with some of today’s technologies. Here are two examples that illustrate how close we are:&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/amazongo.jpg&#34; alt=&#34;Amazon go&#34; width=&#34;50%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Amazon Go&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Amazon Go’s Checkout-Free Shopping&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon Go stores use sensors and AI to detect items shoppers pick up and automatically charge them when they leave the store, eliminating the need for a checkout line. This technology, which lets people simply “grab and go,” reflects Weiser’s vision of technology that integrates seamlessly into our routines without obvious intervention.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Apple Watch Fall Detection and Emergency Call&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When an Apple Watch detects a hard fall, it automatically sends an alert to emergency services if the user doesn’t respond within a few seconds. This kind of technology demonstrates how computing can act almost invisibly in the background, offering potentially life-saving help without the user actively engaging with it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-needs-to-happen-for-a-more-ubiquitous-computing-world&#34;&gt;What Needs to Happen for a More Ubiquitous Computing World?
+&lt;/h2&gt;&lt;p&gt;While ubiquitous computing offers convenience and integration, it also brings serious privacy and security risks. Here are some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Personal Surveillance and Privacy Risks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recently in South Korea, a widespread hacking incident involving apartment intercom cameras led to residents’ private lives being recorded and leaked online. This incident illustrates how vulnerable connected devices in personal spaces can be to unauthorized access. As we add more cameras and sensors into homes, offices, and public areas, the risk of such breaches grows. Without robust security measures, these technologies can easily turn from helpers into privacy threats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Hacking and Identity Theft&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As more devices are interconnected, they create additional access points for hackers. Wearables, smart appliances, and IoT devices are often less secure, making them easy targets for cyberattacks. A single breach could expose multiple data types across devices, increasing risks of identity theft and financial loss.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This example highlights that while ubiquitous computing makes life more convenient, it also requires rigorous security standards to protect users. We need strong encryption, secure data storage, and regular software updates to mitigate these risks. Only then can we enjoy the benefits of a connected world without sacrificing privacy and security.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.lri.fr/~mbl/Stanford/CS477/papers/Weiser-SciAm.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Computer for the 21st Century by Mark Weiser&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Shape of Smartphones</title>
+        <link>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/shapeofsmart/shapeofsmartphone/</guid>
+        <description>&lt;img src="http://localhost:1313/images/shapeofsmart.jpg" alt="Featured image of post The Shape of Smartphones" /&gt;&lt;p&gt;The shape of smartphones is continuously evolving, driven by technological advancements and shifting consumer demands. From the earliest cell phones to today’s smartphones, designs have undergone significant changes in both form and functionality, with further innovations anticipated in the future.&lt;/p&gt;
+&lt;h3 id=&#34;1-cell-phone-shapes-before-smartphones&#34;&gt;1. Cell Phone Shapes Before Smartphones
+&lt;/h3&gt;&lt;p&gt;Early cell phones began as large, heavy, rectangular “bar” shapes focused primarily on basic calling functions. Later, &lt;strong&gt;flip&lt;/strong&gt; and &lt;strong&gt;slide&lt;/strong&gt; designs emerged, offering screen protection and larger keypads, enhancing ease of use.&lt;/p&gt;
+&lt;h3 id=&#34;2-the-earliest-forms-of-smartphones&#34;&gt;2. The Earliest Forms of Smartphones
+&lt;/h3&gt;&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/blackberry.jpg&#34; alt=&#34;blackberry&#34; width=&#34;60%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Blackberry Bold 9650&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/iphone3.webp&#34; alt=&#34;iphone3gs&#34; width=&#34;80%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;iPhone 3gs&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BlackBerry&lt;/strong&gt;: BlackBerry featured a compact, rectangular design with a physical keyboard and small screen, appealing especially to business users. The physical keyboard enabled fast and accurate typing, making it ideal for email and messaging.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;iPhone&lt;/strong&gt;: iPhone was revolutionary in its fully touchscreen rectangular design. By replacing the physical keyboard with a touch interface and adding a single home button, the iPhone’s minimalist design set the standard for app-centric usage, significantly impacting the shape of future smartphones.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-why-physical-keyboards-disappeared&#34;&gt;3. Why Physical Keyboards Disappeared
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maximizing Screen Size&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical keyboards occupied valuable screen space, limiting the display size on smartphones. With the adoption of touchscreens, the entire front surface could be utilized as a display.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enabling Diverse Input Methods&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Touchscreens support not only typing but also various gesture inputs such as multi-touch, swipe, and zooming. This allows users to interact with smartphones in a more intuitive way, going beyond simple text input.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-the-future-shape-of-smartphones&#34;&gt;4. The Future Shape of Smartphones
+&lt;/h3&gt;&lt;p&gt;Future smartphones are expected to take on more flexible shapes, like &lt;strong&gt;foldable&lt;/strong&gt; and &lt;strong&gt;rollable&lt;/strong&gt; designs, in response to evolving user needs.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/fold.jpg&#34; alt=&#34;Galaxy Fold 4&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Foldable Smartphones&lt;/strong&gt;: These devices provide a large display but fold up compactly to fit in a pocket, ideal for users who want both portability and a larger screen when needed. For instance, devices like the Galaxy Fold offer a large screen for immersive experiences but fold down for easy portability.As technology advances, we might even see multi-fold designs that can be folded multiple times, offering even larger displays while maintaining compactness for daily carry.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Rollable Smartphones&lt;/strong&gt;: Rollable smartphones, which expand when additional screen space is required, address the demand for larger screens without compromising on compactness when not in use.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;Ultimately, smartphones have developed into more portable forms because they have become essential items we carry everywhere. At the same time, users still desire larger screens, and meeting both needs has led to concepts like foldable designs that can be carried compactly or rollable screens that expand when needed. This evolution reflects our desire for smartphones that are lighter, more compact, and easier to carry around, while still offering a larger display when required.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>VR &amp; AR &amp; MR</title>
+        <link>http://localhost:1313/post/mrapp/mrapp/</link>
+        <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrapp/mrapp/</guid>
+        <description>&lt;img src="http://localhost:1313/images/mr.jpg" alt="Featured image of post VR &amp; AR &amp; MR" /&gt;&lt;h3 id=&#34;vr-ar-and-mr&#34;&gt;VR, AR, and MR
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VR (Virtual Reality):&lt;/strong&gt; VR immerses users in a completely virtual environment, isolating them from the real world. Users experience a 100% simulated environment. (e.g. VR museum)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AR (Augmented Reality):&lt;/strong&gt; AR overlays digital information onto the real world. Users see information or graphics layered onto their actual surroundings. (e.g. Pokémon GO)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MR (Mixed Reality):&lt;/strong&gt; Like AR, MR is based on the real world, but it allows digital objects to interact with physical surroundings. For example, a virtual character might sit on a real desk, blending naturally into the environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;future-mr-app-store-most-downloaded-apps-entertainment-focus&#34;&gt;Future MR App Store: Most Downloaded Apps (Entertainment Focus)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Olympic Sports Experience App&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Allows users to experience Olympic events in MR, such as ski jumping or competitive swimming, as if they’re truly participating.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; We can perform a ski jump motion in their living room, and the MR display creates the scene of an actual jump, complete with timing and visuals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; People can safely and thrillingly explore various sports without risk, appealing to adventure-seekers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Virtual Concerts and Festivals&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Function:&lt;/strong&gt; Enables users to experience concerts or virtual festivals at home, with artists appearing as if they’re performing live in front of them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example:&lt;/strong&gt; In a virtual concert setting, users can enjoy the music up close and interact with the crowd, feeling like they’re part of the event.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Popularity Reason:&lt;/strong&gt; For fans who can’t attend live events, this app provides a unique chance to connect closely with favorite artists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;One of MR’s main strengths is that it allows people to experience things that would otherwise require a lot of time and money. This accessibility increase equality, giving everyone the chance to explore, learn, and participate in experiences that were previously limited. Thanks to this, apps that make diverse experiences more accessible are likely to become highly popular in the future MR app store.&lt;/p&gt;
+&lt;p&gt;Moreover, MR&amp;rsquo;s applications extend far beyond entertainment. In education, MR can immerse students in interactive learning environments, from virtual science labs to historical reenactments. In industry, MR is invaluable for training, allowing professionals to practice skills in realistic yet safe virtual settings, such as operating complex machinery or conducting medical procedures.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kinect</title>
+        <link>http://localhost:1313/post/lab4/kinect/</link>
+        <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab4/kinect/</guid>
+        <description>&lt;img src="http://localhost:1313/images/kinectimage.jpg" alt="Featured image of post Kinect" /&gt;&lt;h2 id=&#34;what-is-kinect&#34;&gt;What is Kinect?
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/kinect.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Kinect is a motion-sensing device used for recognizing human movement. Kinect includes a 3D depth camera, RGB camera, and microphone array, making it highly effective for tracking body positions and movements. Today, Kinect is widely used in research fields and various HCI projects beyond gaming.&lt;/p&gt;
+&lt;h2 id=&#34;purpose-of-a-virtual-environment&#34;&gt;Purpose of a Virtual Environment
+&lt;/h2&gt;&lt;p&gt;Using a virtual environment helps in managing project-specific dependencies independently. Each project can have its own set of libraries and versions, preventing conflicts with other projects and streamlining workflow.&lt;/p&gt;
+&lt;h3 id=&#34;to-create-and-activate-a-virtual-environment&#34;&gt;To create and activate a virtual environment
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create the virtual environment folder&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;In the project directory, such as &lt;code&gt;D:\Users\Student\Desktop\kinect&lt;/code&gt;, create a virtual environment using a hidden folder
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python -m venv .bonjour
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Activate the virtual environment&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Use this command to activate it
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;\.&lt;/span&gt;bonjour&lt;span style=&#34;color:#ae81ff&#34;&gt;\S&lt;/span&gt;cripts&lt;span style=&#34;color:#ae81ff&#34;&gt;\a&lt;/span&gt;ctivate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Check if activated&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;If activated successfully, the prompt will display &lt;code&gt;(student)&lt;/code&gt; before the directory path, indicating that the virtual environment is in use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kinect-and-sensor-configuration&#34;&gt;Kinect and Sensor Configuration
+&lt;/h2&gt;&lt;p&gt;Kinect has multiple sensors that capture both image and depth data simultaneously. Data is stored in the project’s &lt;code&gt;data&lt;/code&gt; folder, with image and depth data organized separately.&lt;/p&gt;
+&lt;h2 id=&#34;examples-of-kinect-functionalities&#34;&gt;Examples of Kinect Functionalities
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Kinect Fusion Head Scanning&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/headscanning.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;As shown in the image above, Kinect Fusion allows 3D head scanning, which reconstructs a detailed 3D model of the user&amp;rsquo;s head. Users can adjust parameters like &amp;ldquo;Volume Max Integration Weight&amp;rdquo; and &amp;ldquo;Volume Voxel Resolution&amp;rdquo; to control the detail and quality of the scan.&lt;/li&gt;
+&lt;li&gt;This functionality is useful for applications that require 3D head models, which can be exported as &lt;code&gt;.STL&lt;/code&gt;, &lt;code&gt;.OBJ&lt;/code&gt;, or &lt;code&gt;.PLY&lt;/code&gt; files for use in other software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/unity3dhead.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Depth Sensing and Mapping&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/depthsensing.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;This image illustrates Kinect’s depth sensing capabilities, where objects are visualized based on their distance from the sensor. Black areas represent regions farthest from the Kinect, while closer areas appear in lighter shades.&lt;/li&gt;
+&lt;li&gt;This depth map allows for spatial awareness, essential for applications like gesture recognition and object tracking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Face Tracking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/facetraking.png&#34; alt=&#34;Kinect&#34; width=&#34;50%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;This image showcs Kinect’s face tracking functionality. Here, Kinect detects the user’s face and maps key facial features using a network of lines, making it ideal for applications requiring facial recognition, facial expression analysis, or real-time face-driven animations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;real-time-data-collection-and-processing&#34;&gt;Real-Time Data Collection and Processing
+&lt;/h2&gt;&lt;p&gt;To initiate real-time data collection, run the &lt;code&gt;real_time.py&lt;/code&gt; script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python real_time.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script enables real-time detection of faces and bodies. It can be modified to add functionalities such as drawing bounding boxes around detected faces or adding other interactive elements.&lt;/p&gt;
+&lt;h2 id=&#34;kinect-sdk-and-toolkit&#34;&gt;Kinect SDK and Toolkit
+&lt;/h2&gt;&lt;p&gt;In our project, we’re using the Kinect SDK and the Kinect Developer Toolkit. These tools give us access to Kinect’s main features, like motion tracking, depth sensing, and 3D scanning, making it easier to work with the Kinect sensor. The SDK includes useful sample projects, such as &lt;strong&gt;Skeleton Basics&lt;/strong&gt; for tracking body movements.&lt;/p&gt;
+&lt;h2 id=&#34;another-example-of-kinect---skeleton-basics&#34;&gt;Another example of Kinect - Skeleton Basics
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/skeleton.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
+        <title>HCI Researcher</title>
+        <link>http://localhost:1313/post/hciresearcher/researcher/</link>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/hciresearcher/researcher/</guid>
+        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kimhttpyounghokimnet&#34;&gt;HCI Researcher : &lt;a class=&#34;link&#34; href=&#34;http://younghokim.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Young-Ho Kim&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;current-role-and-expertise&#34;&gt;Current Role and Expertise
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Young-Ho Kim&lt;/strong&gt; is a &lt;strong&gt;Lead Research Scientist at NAVER AI Lab&lt;/strong&gt; and a prominent researcher in the field of &lt;strong&gt;HCI&lt;/strong&gt;. His work spans across multiple domains, including &lt;strong&gt;Personal Health Informatics&lt;/strong&gt;, &lt;strong&gt;Ubiquitous Computing (UbiComp)&lt;/strong&gt;, and &lt;strong&gt;Personal Data Visualization&lt;/strong&gt;. By integrating his knowledge of &lt;strong&gt;computer science&lt;/strong&gt; and &lt;strong&gt;visual communication design&lt;/strong&gt;, Kim focuses on designing systems that enhance human-data interaction, especially in the context of &lt;strong&gt;self-tracking technologies&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;research-focus&#34;&gt;Research Focus
+&lt;/h2&gt;&lt;p&gt;His &lt;strong&gt;current research&lt;/strong&gt; emphasizes the development of &lt;strong&gt;flexible self-tracking systems&lt;/strong&gt; that adapt to the needs, contexts, and preferences of individuals. His goal is to empower users to make informed decisions and behavioral changes through better data interaction. His approach often involves combining &lt;strong&gt;AI&lt;/strong&gt; and &lt;strong&gt;Natural Language Processing (NLP)&lt;/strong&gt; technologies, particularly &lt;strong&gt;Large Language Models (LLMs)&lt;/strong&gt;, to create &lt;strong&gt;intelligent self-trackers&lt;/strong&gt;. These systems help users better understand and reflect on their behaviors and health data in everyday contexts.&lt;/p&gt;
+&lt;h2 id=&#34;recent-research-projects&#34;&gt;Recent Research Projects
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CareCall&lt;/strong&gt;: A project designed to use LLMs for public health interventions. In this system, conversational AI assists socially isolated individuals by conducting regular check-up calls. The system not only gathers health metrics but also provides emotional support through empathetic conversations. The findings from this project highlight both the benefits and challenges of using LLM-driven systems in real-world public health contexts, such as balancing user expectations and handling the limitations of AI in personalization and memory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Textoshop&lt;/strong&gt;: A novel tool that applies concepts from image editing to text manipulation. It allows users to engage in flexible and creative text editing by treating words and sentences similarly to how designers manipulate visual elements in software like Photoshop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notable-contributions-and-impact-on-hci&#34;&gt;Notable Contributions and Impact on HCI
+&lt;/h2&gt;&lt;p&gt;Kim&amp;rsquo;s work has significantly impacted how &lt;strong&gt;AI and human-centered design&lt;/strong&gt; are integrated into real-world applications. By designing systems that bridge the gap between humans and data, he has contributed to making &lt;strong&gt;self-tracking technologies&lt;/strong&gt; more accessible and adaptable to various user needs. His contributions to &lt;strong&gt;public health technology&lt;/strong&gt;—especially in using AI to enhance social and emotional well-being—highlight the evolving role of &lt;strong&gt;HCI&lt;/strong&gt; in addressing both technical and social challenges.&lt;/p&gt;
+&lt;h3 id=&#34;source&#34;&gt;Source
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention&amp;rdquo;&lt;/strong&gt; (2023)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.org/doi/10.1145/3544548.3581503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CareCall project paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing&amp;rdquo;&lt;/strong&gt; (2024)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2409.17088&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Textoshop project paper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;achievements&#34;&gt;Achievements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Best Paper Award&lt;/strong&gt; at CHI 2023&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Best of CHI Honorable Mention&lt;/strong&gt; in 2021&lt;/li&gt;
+&lt;li&gt;Recipient of the &lt;strong&gt;International Postdoc Fellowship&lt;/strong&gt; from the National Research Foundation of Korea (2019)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Young-Ho Kim&amp;rsquo;s work at the forefront of &lt;strong&gt;HCI research&lt;/strong&gt; continues to shape how we think about user interaction with data and technology. His contributions to &lt;strong&gt;flexible self-tracking systems&lt;/strong&gt; and &lt;strong&gt;AI-driven health interventions&lt;/strong&gt; exemplify the power of integrating &lt;strong&gt;advanced AI&lt;/strong&gt; with &lt;strong&gt;human-centered design&lt;/strong&gt;, making significant strides in both public health and everyday technology interactions.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Input Devices and Interaction Paradigm</title>
+        <link>http://localhost:1313/post/devices/inputdevices/</link>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/devices/inputdevices/</guid>
+        <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;the-leap-motion-controller&#34;&gt;The Leap Motion Controller
+&lt;/h1&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt; (introduced in 2013) is a &lt;strong&gt;gesture-based input device&lt;/strong&gt; designed to allow users to control on-screen elements through &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse and keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It could track users&amp;rsquo; hand movements in real time, within an interaction space of about 8 cubic feet.&lt;/p&gt;
+&lt;h3 id=&#34;gesture-based-user-interface&#34;&gt;Gesture-Based User Interface
+&lt;/h3&gt;&lt;p&gt;Leap Motion falls under &lt;strong&gt;Gesture-Based User Interfaces (GBUI)&lt;/strong&gt;, which allow interaction through body movements. Specifically, it’s part of the broader &lt;strong&gt;Natural User Interface (NUI)&lt;/strong&gt; category, focusing on natural and intuitive interactions.&lt;/p&gt;
+&lt;h2 id=&#34;why-leap-motion-failed&#34;&gt;Why Leap Motion Failed
+&lt;/h2&gt;&lt;p&gt;Despite its innovative concept, Leap Motion did not gain widespread adoption due to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Limited Use Cases&lt;/strong&gt;: Its primary applications, like &lt;strong&gt;gaming&lt;/strong&gt; and &lt;strong&gt;3D modeling&lt;/strong&gt;, appealed only to niche audiences. Most users found traditional input methods more practical for everyday tasks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tracking Issues&lt;/strong&gt;: Many users reported inconsistent accuracy and latency, particularly when hands moved quickly or left the interaction zone. This made it hard to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Lack of Developer Support&lt;/strong&gt;: Limited developer interest meant fewer applications that leveraged Leap Motion’s capabilities, reducing user incentive to adopt the device.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Competition with VR/AR&lt;/strong&gt;: As VR and AR technology gained popularity, Leap Motion struggled to stay relevant despite attempts to integrate with VR headsets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;potential-for-future-success&#34;&gt;Potential for Future Success
+&lt;/h2&gt;&lt;p&gt;While Leap Motion didn’t succeed initially, the technology might find new applications as &lt;strong&gt;gesture-based interactions&lt;/strong&gt; become more important in &lt;strong&gt;VR and AR&lt;/strong&gt; environments. With its 2019 acquisition by &lt;strong&gt;Ultraleap&lt;/strong&gt;, which combines gesture control with haptic feedback, this technology could offer more immersive experiences in fields like &lt;strong&gt;healthcare&lt;/strong&gt; and &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a forward-thinking product that didn’t find immediate success due to limited use cases, technical challenges, and competition. However, with advances in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;, its underlying technology may still shape future human-computer interactions.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>My First Unity Project - Roll a ball</title>
         <link>http://localhost:1313/post/lab3/unity3dapplication/</link>
-        <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab3/unity3dapplication/</guid>
         <description></description>
         </item>
         <item>
+        <title>Ultimate Display by Ivan Sutherland </title>
+        <link>http://localhost:1313/post/readivan/ultimatedisplay/</link>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/readivan/ultimatedisplay/</guid>
+        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland’s “The Ultimate Display”
+&lt;/h1&gt;&lt;p&gt;In 1965, &lt;strong&gt;Ivan Sutherland&lt;/strong&gt; wrote &lt;em&gt;“The Ultimate Display”&lt;/em&gt;, imagining a future where computers could create realistic, immersive worlds. His ideas basically set the stage for &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; as we know them today.&lt;/p&gt;
+&lt;h2 id=&#34;what-sutherland-predicted-and-whats-happening-now&#34;&gt;What Sutherland Predicted and What’s Happening Now
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VR and AR&lt;/strong&gt;: Sutherland envisioned virtual worlds that felt as real as the physical world. Today, VR headsets like &lt;strong&gt;Oculus Rift&lt;/strong&gt; and AR tools like &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; make that idea real by letting us experience and interact with digital content in immersive ways.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Touch and Feel in VR&lt;/strong&gt;: Sutherland also imagined being able to feel virtual objects, like sitting on a virtual chair that “feels” real. With &lt;strong&gt;haptic technology&lt;/strong&gt; (gloves, vests, etc.), we can now feel textures, pressure, and vibrations in VR, bringing us closer to that vision.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Interactive Graphics&lt;/strong&gt;: He foresaw real-time interactive graphics, where users could control and manipulate digital objects. This idea led to the development of game engines like &lt;strong&gt;Unreal Engine&lt;/strong&gt; and &lt;strong&gt;Unity&lt;/strong&gt;, which power modern video games, training simulations, and 3D modeling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;what-could-still-become-reality&#34;&gt;What Could Still Become Reality
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Full Sensory VR&lt;/strong&gt;: Sutherland hinted at VR that stimulates all senses, including taste and smell. While current VR focuses on sight and sound, researchers are experimenting with &lt;strong&gt;smell and taste simulation&lt;/strong&gt;. One day, VR could fully engage all our senses.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Brain-Computer Interfaces (BCI)&lt;/strong&gt;: Although Sutherland didn’t directly mention it, his vision of seamless interaction hints at controlling VR with our minds. Projects like &lt;strong&gt;Neuralink&lt;/strong&gt; are working on this, which could let us move in VR worlds using just our thoughts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Shared Virtual Worlds (Metaverse)&lt;/strong&gt;: Sutherland imagined shared virtual experiences. Today, companies like &lt;strong&gt;Meta&lt;/strong&gt; are building the &lt;strong&gt;metaverse&lt;/strong&gt;—a persistent virtual world where people can meet, work, and socialize.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Ivan Sutherland’s ideas in &lt;em&gt;“The Ultimate Display”&lt;/em&gt; were incredibly ahead of his time. Many of his predictions are now reality, and his vision still inspires new advancements in VR, AR, and immersive tech. His work is a reminder of where we started and where the future of human-computer interaction might take us.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;http://worrydream.com/refs/Sutherland%20-%20The%20Ultimate%20Display.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Ultimate Display by Ivan Sutherland&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>About</title>
+        <link>http://localhost:1313/page/about/</link>
+        <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/page/about/</guid>
+        <description>&lt;p&gt;Hello,&lt;/p&gt;
+&lt;p&gt;Welcome to my blog !&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Jiwon KANG 🇰🇷&lt;/p&gt;
+&lt;p&gt;For those who are not familiar with Korean names, my name is pronounced by combining the letter &amp;lsquo;&lt;strong&gt;G&lt;/strong&gt;&amp;rsquo; and the number &amp;lsquo;&lt;strong&gt;1&lt;/strong&gt;&amp;rsquo;, like &lt;strong&gt;G1&lt;/strong&gt; 😉&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m currently in Master 2 of VAR in Institut Polytechnique de Paris 👩‍💻&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Affordances</title>
+        <link>http://localhost:1313/post/affordances/affordances/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/affordances/affordances/</guid>
+        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Affordances" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style=&#34;color: gray;&#34;&gt; Anant Kadiyala &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
+&lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
+&lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
+&lt;p&gt;In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.&lt;/p&gt;
+&lt;h2 id=&#34;good-case---traffic-lights-that-show-the-remaining-time&#34;&gt;Good case - Traffic lights that show the remaining time
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/trafficlight.jpg&#34; alt=&#34;Traffic light&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://busan.fnnews.com/news/202004071520322481&#34; style=&#34;color: gray;&#34;&gt;Busan News&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1. Clear Information Display&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Traffic lights that show the remaining time provide users with clear information on how much time is left before the signal changes. Pedestrians can easily determine whether they have enough time to cross the street, and drivers can predict when the signal will switch. This intuitive display helps users make more informed and safer decisions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Behavior Guidance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The countdown timer allows both pedestrians and drivers to act accordingly. Pedestrians can choose to cross quickly if there is enough time, or wait for the next signal if time is running out. This guides user behavior and enhances traffic safety by reducing risky actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Meeting User Expectations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In addition to simply showing red or green lights, the countdown timer allows users to predict signal changes more accurately. This design meets user expectations by providing precise information, reducing stress at intersections, and improving overall traffic flow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bad-case---keyboard&#34;&gt;Bad case - Keyboard
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/keyboard.jpg&#34; alt=&#34;Keyboard&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: https://www.clien.net/service/board/park/16744923&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The placement of a power button above the delete key on a keyboard is a bad example of affordance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Risk of Accidental Use&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the power button is located too close to the delete key, users are more likely to press it accidentally, potentially shutting down the system unintentionally. The functions are too distinct to be placed so closely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Functional Mismatch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The delete key is frequently used, whereas the power button is not. Placing such an important function near a less frequently used key increases the risk of errors and reduces the overall usability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Contrary to User Expectations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users do not expect two very different functions to be positioned so closely together. This placement disrupts the intuitive understanding of how the keyboard should work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solutions&#34;&gt;&lt;em&gt;Solutions&lt;/em&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Relocate the Power Button&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most straightforward solution is to move the power button to a location further away from frequently used keys like the delete key. For example, the power button could be placed at the right-top corner of the keyboard, near the function keys or in a separate, more isolated area where it’s less likely to be pressed by accident.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Add a Confirmation Step&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementing a confirmation step when the power button is pressed would prevent accidental shutdowns. For instance, instead of instantly shutting down the system, the button could trigger a prompt asking the user to confirm the action.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Dark Design Patterns</title>
+        <link>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
+        <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words, dark patterns refer to UI/UX that is cleverly and intentionally designed to elicit certain actions from users, whether they want to or not. These designs often serve business goals, such as increasing subscriptions or data collection, but they do so at the expense of the user’s autonomy, leading to unintended actions like accidental purchases or subscriptions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;types-of-dark-patterns-design&#34;&gt;Types of Dark Patterns Design
+&lt;/h3&gt;&lt;p&gt;Here are five types of dark patterns commonly seen&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/obstruction.jpg&#34; alt=&#34;Obstruction dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Obstruction&lt;/strong&gt; involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For example, in this image, Facebook requires users to review and adjust their data sharing settings across multiple screens. Users must navigate through detailed information and various options to disable data sharing with advertisers. By making this process lengthy and complex, users are more likely to accept the default settings, even if they intended to limit data sharing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/sneaking.jpg&#34; alt=&#34;Sneaking dark pattern example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/dark-patterns-024&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sneaking&lt;/strong&gt; occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For example, an accomodation booking site may show a price at a discounted price, but hidden fees like cleaning costs is only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/interfaceinterference.jpg&#34; alt=&#34;Interface Interference example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.emailtooltester.com/en/blog/dark-patterns-canceling-subscription-report/&#34; style=&#34;color: gray;&#34;&gt;By Cai &amp; Roberta&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Interface interference&lt;/strong&gt; manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This often involves making certain options (like opting out or declining a service) difficult to see or access, or placing desired actions in locations where users are less likely to find them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In this example, the user is trying to cancel a subscription, but the interface prominently displays a blue button that offers a discount (“Give me US$1.00 off”), making it more noticeable than the “Continue to cancel” option. This visual manipulation influences the user’s decision, encouraging them to take the action that benefits the company (keeping the subscription) rather than proceeding with the cancellation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/forceaction.png&#34; alt=&#34;Forced action example&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://darkpatterns.uxp2.com/pattern/windows-10-forced-update/&#34; style=&#34;color: gray;&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt; refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing. It can make users feel that they have no other option but to comply.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For instance, in this image, a user simply wants to shut down or restart their computer, but the only options available are “Update and shut down” or “Update and restart.” This design forces the user to perform an update, even if they would prefer to delay it, limiting their choice and making them feel compelled to take an action they may not want at that moment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instasize Premium Subscription&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Instasize is an app that helps people resize photos for Instagram, ensuring that they don’t get cropped when posted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/instasize.png&#34; alt=&#34;Forced action example&#34; width=&#34;30%&#34;&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dark Pattern Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;While I’m editing photos, a premium subscription pop-up frequently appears, interrupting my workflow. Even though I’m not interested in upgrading, I keep seeing the same subscription prompt repeatedly, which creates a sense of fatigue and frustration due to the constant interruptions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The pop-up doesn’t have a close button, and I have to wait around 10 seconds for it to disappear before I can continue using the app. This lack of a “close” option makes me feel pressured into considering the premium subscription since I’m essentially held back from my task.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to Redesign It&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Add an “X” or “Close” button to the pop-up so that users like me can dismiss it immediately if we’re not interested, giving us full control over our experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Include an option in the app settings that lets users turn off subscription prompts if they do not wish to see them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Skyscanner Price Discrepancy by Country Setting&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Skyscanner is a flight search engine that allows users to compare flight prices across different airlines and book their travel at the best price. I often use Skyscanner to find affordable flights for my travels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/skyscannerko.png&#34; alt=&#34;Price in Korea Setting&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Price in Korea Setting&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/skyscannerfr.png&#34; alt=&#34;Price in France Setting&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Price in France Setting&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dark Pattern Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When I set my country to Korea and search for a flight from Paris to Korea, the price displayed differs from the price shown when I set the country to France. This pricing difference is not clearly communicated to users, and the cheaper option is hidden unless they change their location setting. This can cause users to unknowingly pay more for the same ticket.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The interface automatically adjusts the price based on the selected country, limiting my ability to see or choose the best price across locations. Because there is no transparent way to compare prices across countries, users like me may miss out on the lower price option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to Redesign It&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Allow users to easily see the price differences between countries by adding a &amp;ldquo;Compare prices across countries&amp;rdquo; option. This would help users like me make informed choices by seeing all available prices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Display a note explaining that prices may vary depending on the country setting, giving users full transparency about potential savings if they adjust their location.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Gestalt Law</title>
+        <link>http://localhost:1313/post/gestalt-laws/gestaltlaw/</link>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/gestalt-laws/gestaltlaw/</guid>
+        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Gestalt Law" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc&#34; style=&#34;color: gray;&#34;&gt;Gestalt Principles&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gestalt&lt;/strong&gt; is a German word meaning &amp;lsquo;form&amp;rsquo; or &amp;lsquo;shape.&lt;/p&gt;
+&lt;p&gt;It refers to how people perceive visual elements in a given situation. Generally, we compare visual patterns and past experiences to make sense of what we see. We often perceive these elements as a single whole, rather than as separate parts. By connecting the elements, recognizing familiar shapes, sharing information, and filling in the gaps, we make sense of the overall picture.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-law-of-proximity&#34;&gt;1. Law of Proximity
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/proximity.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Proximity&lt;/strong&gt; descrives the phenomenon in which element that are close to each other are perceived and felt as a group.&lt;/p&gt;
+&lt;p&gt;For example, in the left image, the dots don&amp;rsquo;t appear to be grouped. However, in the right image, the dots are closer together making them appear as three distinct groups. This &lt;strong&gt;proximity&lt;/strong&gt; can help in organizing related content by placing them close to each other.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-law-of-similarity&#34;&gt;2. Law of Similarity
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/similarity.jpg&#34; alt=&#34;similarity&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Similarity&lt;/strong&gt; means that objects with similar shpes, sizes, colors, or other attributes are perceived as part of the same group.&lt;/p&gt;
+&lt;p&gt;In this example, all shapes are squares, but the difference in color causes our brain to group the green squares together and the gray squares together, even though they share the same shape. This shows how color similarity plays a key role in organizing visual elements into groups.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-law-of-closure&#34;&gt;3. Law of Closure
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/closure.jpg&#34; alt=&#34;closure&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Closure&lt;/strong&gt; refers to the tendency to perceive incomplete shapes as whole or complete. Our brain fills in the missing parts, allowing us to recognize an entire form even when elements are missing.&lt;/p&gt;
+&lt;p&gt;In the image, some parts of the shapes are missing, but our brain automatically fills in the gaps, making us perceive the incomplete shapes as a complete form. This principle is commonly seen in logos or icons where parts of the design are missing, yet we still recognize the full shape.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-law-of-figure-ground&#34;&gt;4. Law of Figure-Ground
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/figureground.jpg&#34; alt=&#34;figure-ground&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Figure-Ground&lt;/strong&gt; describes how we distinguish an object (the figure) from its surrounding background (the ground). Our focus shifts between the object and the background, depending on what we are focusing on at any given moment.&lt;/p&gt;
+&lt;p&gt;In this image, depending on where we focus, we may see either the foreground shapes as the figure or the background. This principle is often used in visual illusions, where the brain toggles between seeing two different images depending on whether it focuses on the figure or the ground.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-law-of-continuity&#34;&gt;5. Law of Continuity
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/continuity.jpg&#34; alt=&#34;continutiy&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Continuity&lt;/strong&gt; states that elements arranged on a line or curve are perceived as related or continuous. This principle explains how our eyes follow the smoothest path when interpreting visual elements.&lt;/p&gt;
+&lt;p&gt;In this image, the red and gray dots form continuous curves. Even though they are separate dots, our brain perceives the curves as a single continuous path, demonstrating how continuity helps us organize visual elements in a flowing pattern.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-law-of-common-region&#34;&gt;6. Law of Common-region
+&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/commonregion.jpg&#34; alt=&#34;common-region&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/law-of-common-region-899&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;Law of Common-region&lt;/strong&gt; states that elements located within the same boundary are perceived as part of a group. A visual boundary such as a box or a color background can create this perception of grouping, even if the elements are not physically close.&lt;/p&gt;
+&lt;p&gt;In this image, the circles inside the box are perceived as a group because they share a common region (the box). Even though the circles outside the box are the same size, shape, and color, they are seen as separate because they are not within the same boundary.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;applications-of-gestalt-laws-in-daily-life&#34;&gt;Applications of Gestalt laws in daily life
+&lt;/h1&gt;&lt;h2 id=&#34;1-confusing-stairs&#34;&gt;&lt;em&gt;1. Confusing stairs&lt;/em&gt;
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/gl_ex1.jpg&#34; alt=&#34;confusingstairs&#34; width=&#34;70%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://brightside.me/articles/15-designs-that-can-confuse-our-common-sense-809304/&#34; style=&#34;color: gray;&#34;&gt;Bright Side&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;problem&#34;&gt;Problem
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Continuity&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This pattern has consistent stripes, which causes our eyes to fail in distinguishing where the stairs end and begin, making the surface appear like a continuous plane. In situations where step differences need to be recognized, this pattern can create visual confusion, which poses a safety risk.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Law of Figure-Ground&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is a lack of clear distinction between the figure (the stairs) and the background. As a result, it becomes harder to perceive the shape and depth of the stairs, and users may struggle to identify the height changes of the steps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Clear Boundary Markings&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding a different colored stripe to the edges of each step can help clearly distinguish the boundary of the stairs. This will break the continuity and allow the steps to be seen as distinct units.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancing Contrast&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To better separate the background and foreground, stronger color contrast can be applied to the steps. For example, using a brighter color on the edges of the stairs will help clearly define the steps, making it easier to perceive the changes in height.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-confusing-buttons-on-yes24&#34;&gt;&lt;em&gt;2. Confusing Buttons on YES24&lt;/em&gt;
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/yes24.png&#34; alt=&#34;confusing buttons yes24&#34; width=&#34;60%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: YES24&lt;/p&gt;
+&lt;/div&gt;
+*YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*
+&lt;h3 id=&#34;problem-1&#34;&gt;Problem
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Similarity&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;NPay Purchase&lt;/strong&gt; and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons look similar in color, which can confuse users. Since both buttons serve different functions but appear visually similar, users may accidentally choose the wrong payment option. Because Naver&amp;rsquo;s branding is strongly associated with green, the green color of the NPay button helps signify that it is a Naver-related payment method. However, the other buttons are also visually similar, which may lead to mistaken selections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Law of Proximity&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons are placed very close to each other, which can make it difficult for users to quickly differentiate between actions. When buttons with different functions are positioned without sufficient spacing, they are perceived as part of a single group, leading to potential confusion and misclicks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution-1&#34;&gt;Solution
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Color Differentiation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep the &lt;strong&gt;NPay button&lt;/strong&gt; green to signify its association with Naver, and use a different color for other purchase options, such as &lt;strong&gt;One-Click Purchase&lt;/strong&gt;. This will allow users to easily distinguish between payment methods based on color, reducing the chances of accidental selections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Spacing Adjustments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Increase the spacing between the &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons to create a clearer separation of actions. By adding more space, each button will stand out as a distinct option, making it easier for users to select the correct action without confusion.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Set up Blog</title>
         <link>http://localhost:1313/post/lab1/setupblog/</link>
-        <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab1/setupblog/</guid>
         <description>&lt;img src="http://localhost:1313/images/hugo.jpg" alt="Featured image of post Set up Blog" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you how to set up a blog using Hugo and deploy it on GitHub Pages. I&amp;rsquo;ll be working on a MacBook 💻 (Apple silicon).&lt;/p&gt;
@@ -116,7 +850,7 @@
         <item>
         <title>Set up Unity</title>
         <link>http://localhost:1313/post/lab2/setupunity/</link>
-        <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/lab2/setupunity/</guid>
         <description>&lt;img src="http://localhost:1313/images/unity.jpg" alt="Featured image of post Set up Unity" /&gt;&lt;p&gt;Today, I&amp;rsquo;ll show you the process of setting up Unity on a MacBook 💻.&lt;/p&gt;
@@ -240,439 +974,6 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;voilà-&#34;&gt;Voilà !
 &lt;/h2&gt;&lt;p&gt;Good luck, and enjoy building with Unity!&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Kinect</title>
-        <link>http://localhost:1313/post/lab4/kinect/</link>
-        <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/lab4/kinect/</guid>
-        <description>&lt;ol&gt;
-&lt;li&gt;why we use the virtual environement? (what is the purpose of the virutal -&amp;gt; is much easier to handle the each virtual ..)
-what kind of virtual envrionement?
-D:\Users\Studen\Desktop\kinect&amp;gt;.\kinect\student\Scripts\activate&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;(student) D: \Users\Student\Desktop\kinect&amp;gt;&lt;/p&gt;
-&lt;p&gt;(student) this means we are in the virtual envrionment&lt;/p&gt;
-&lt;p&gt;virtual -&amp;gt; create the folder / cmd / python -m venv .bonjour( . for hidden folder) / to activate: ..bonjour\Scripts\activate&lt;/p&gt;
-&lt;p&gt;number of sensor -&amp;gt; number of kinect
-store in the data folder / images and depth&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;run
-python real_time.py
-: if you want to detect each face -&amp;gt; we can modify the code to draw a bounding box ror sth , detect the people faces or ,..&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;sdk -&amp;gt; kinect for windows : sample projects
-before, just check kinect toolkit /developper toolkit
-kinect toolkit and kinect sdk v1.8&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;kinect fusion basics -&amp;gt; recontruct the walls, laptop, keyboard,.. we can even check the texture&lt;/li&gt;
-&lt;li&gt;kinect head scanning -&amp;gt; create mesh -&amp;gt; obj and check in the unity&lt;/li&gt;
-&lt;li&gt;depth basic -&amp;gt; black : really far away&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>Lecture 7 - Ideate</title>
-        <link>http://localhost:1313/post/ideate/ideate/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/ideate/ideate/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Prototype</title>
-        <link>http://localhost:1313/post/prototype/prototype/</link>
-        <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/prototype/prototype/</guid>
-        <description>&lt;h2 id=&#34;prototype&#34;&gt;Prototype
-&lt;/h2&gt;&lt;p&gt;How you can apply the same thing this kind of prototype&lt;/p&gt;
-&lt;p&gt;Heuristic evaluation - this should be done by experting fields by experts
-lab experiment/ Field study/ Survey -&amp;gt; are we missing any other research methods? in physics the &amp;ldquo;똘뜨스?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;create some kind of hypothesis / it should be testable -&amp;gt; how bad or how good it is. importany to know about is variable.&lt;/p&gt;
-&lt;p&gt;difference bewtween two variables woth some examples ?&lt;/p&gt;
-&lt;p&gt;독립변수, 종속변수&lt;/p&gt;
-&lt;p&gt;for example, imagine we work for gain the money.
-in this case the independent variable is the amount of work because this variable can change ourselves.
-the dependent variable is the salary. because the amount of the money we can earn is depends on the amount of work.&lt;/p&gt;
-&lt;p&gt;independent variable -&amp;gt;
-dependent variable -&amp;gt;
-control variable -&amp;gt; which affects the dependent variables&lt;/p&gt;
-&lt;p&gt;control variable -&amp;gt; ex. I drop a ball from certain height, i measure the bouncing height. (bouncing height -&amp;gt; dependent variable / certain  height -&amp;gt; indepent variable / ball(itself) or the floor -&amp;gt; control variable. )&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>HCI Researcher</title>
-        <link>http://localhost:1313/post/hciresearcher/researcher/</link>
-        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/hciresearcher/researcher/</guid>
-        <description>&lt;img src="http://localhost:1313/images/researcher.png" alt="Featured image of post HCI Researcher" /&gt;&lt;h1 id=&#34;hci-researcher--young-ho-kimhttpyounghokimnet&#34;&gt;HCI Researcher : &lt;a class=&#34;link&#34; href=&#34;http://younghokim.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Young-Ho Kim&lt;/a&gt;
-&lt;/h1&gt;&lt;h2 id=&#34;current-role-and-expertise&#34;&gt;Current Role and Expertise
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Young-Ho Kim&lt;/strong&gt; is a &lt;strong&gt;Lead Research Scientist at NAVER AI Lab&lt;/strong&gt; and a prominent researcher in the field of &lt;strong&gt;HCI&lt;/strong&gt;. His work spans across multiple domains, including &lt;strong&gt;Personal Health Informatics&lt;/strong&gt;, &lt;strong&gt;Ubiquitous Computing (UbiComp)&lt;/strong&gt;, and &lt;strong&gt;Personal Data Visualization&lt;/strong&gt;. By integrating his knowledge of &lt;strong&gt;computer science&lt;/strong&gt; and &lt;strong&gt;visual communication design&lt;/strong&gt;, Kim focuses on designing systems that enhance human-data interaction, especially in the context of &lt;strong&gt;self-tracking technologies&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;research-focus&#34;&gt;Research Focus
-&lt;/h2&gt;&lt;p&gt;His &lt;strong&gt;current research&lt;/strong&gt; emphasizes the development of &lt;strong&gt;flexible self-tracking systems&lt;/strong&gt; that adapt to the needs, contexts, and preferences of individuals. His goal is to empower users to make informed decisions and behavioral changes through better data interaction. His approach often involves combining &lt;strong&gt;AI&lt;/strong&gt; and &lt;strong&gt;Natural Language Processing (NLP)&lt;/strong&gt; technologies, particularly &lt;strong&gt;Large Language Models (LLMs)&lt;/strong&gt;, to create &lt;strong&gt;intelligent self-trackers&lt;/strong&gt;. These systems help users better understand and reflect on their behaviors and health data in everyday contexts.&lt;/p&gt;
-&lt;h2 id=&#34;recent-research-projects&#34;&gt;Recent Research Projects
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;CareCall&lt;/strong&gt;: A project designed to use LLMs for public health interventions. In this system, conversational AI assists socially isolated individuals by conducting regular check-up calls. The system not only gathers health metrics but also provides emotional support through empathetic conversations. The findings from this project highlight both the benefits and challenges of using LLM-driven systems in real-world public health contexts, such as balancing user expectations and handling the limitations of AI in personalization and memory.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Textoshop&lt;/strong&gt;: A novel tool that applies concepts from image editing to text manipulation. It allows users to engage in flexible and creative text editing by treating words and sentences similarly to how designers manipulate visual elements in software like Photoshop.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;notable-contributions-and-impact-on-hci&#34;&gt;Notable Contributions and Impact on HCI
-&lt;/h2&gt;&lt;p&gt;Kim&amp;rsquo;s work has significantly impacted how &lt;strong&gt;AI and human-centered design&lt;/strong&gt; are integrated into real-world applications. By designing systems that bridge the gap between humans and data, he has contributed to making &lt;strong&gt;self-tracking technologies&lt;/strong&gt; more accessible and adaptable to various user needs. His contributions to &lt;strong&gt;public health technology&lt;/strong&gt;—especially in using AI to enhance social and emotional well-being—highlight the evolving role of &lt;strong&gt;HCI&lt;/strong&gt; in addressing both technical and social challenges.&lt;/p&gt;
-&lt;h3 id=&#34;source&#34;&gt;Source
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Understanding the Benefits and Challenges of Deploying Conversational AI Leveraging Large Language Models for Public Health Intervention&amp;rdquo;&lt;/strong&gt; (2023)&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.org/doi/10.1145/3544548.3581503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;CareCall project paper&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Textoshop: Interactions Inspired by Drawing Software to Facilitate Text Editing&amp;rdquo;&lt;/strong&gt; (2024)&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2409.17088&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Textoshop project paper&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;achievements&#34;&gt;Achievements
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Best Paper Award&lt;/strong&gt; at CHI 2023&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Best of CHI Honorable Mention&lt;/strong&gt; in 2021&lt;/li&gt;
-&lt;li&gt;Recipient of the &lt;strong&gt;International Postdoc Fellowship&lt;/strong&gt; from the National Research Foundation of Korea (2019)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h2&gt;&lt;p&gt;Young-Ho Kim&amp;rsquo;s work at the forefront of &lt;strong&gt;HCI research&lt;/strong&gt; continues to shape how we think about user interaction with data and technology. His contributions to &lt;strong&gt;flexible self-tracking systems&lt;/strong&gt; and &lt;strong&gt;AI-driven health interventions&lt;/strong&gt; exemplify the power of integrating &lt;strong&gt;advanced AI&lt;/strong&gt; with &lt;strong&gt;human-centered design&lt;/strong&gt;, making significant strides in both public health and everyday technology interactions.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Input Devices and Interaction Paradigm</title>
-        <link>http://localhost:1313/post/devices/inputdevices/</link>
-        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/devices/inputdevices/</guid>
-        <description>&lt;img src="http://localhost:1313/images/leap.jpg" alt="Featured image of post Input Devices and Interaction Paradigm" /&gt;&lt;h1 id=&#34;the-leap-motion-controller&#34;&gt;The Leap Motion Controller
-&lt;/h1&gt;&lt;p&gt;The &lt;strong&gt;Leap Motion Controller&lt;/strong&gt;, introduced in 2013, was a &lt;strong&gt;gesture-based input device&lt;/strong&gt; that aimed to revolutionize how we interact with computers by allowing users to control on-screen elements using &lt;strong&gt;hand and finger movements&lt;/strong&gt;. Unlike traditional input devices like the mouse or keyboard, Leap Motion provided a &lt;strong&gt;touch-free, 3D interaction&lt;/strong&gt; experience. It was designed to track the movement of users’ hands in real-time, capturing detailed motions within an interaction space of about 8 cubic feet.&lt;/p&gt;
-&lt;h3 id=&#34;classification-gesture-based-user-interface&#34;&gt;Classification: Gesture-Based User Interface
-&lt;/h3&gt;&lt;p&gt;The Leap Motion falls under the category of &lt;strong&gt;Gesture-Based User Interface&lt;/strong&gt;. This type of user interface allows users to interact with a computer through body movements. Specifically, hand and finger gestures. This is a part of &lt;strong&gt;Natural User Interfaces&lt;/strong&gt;, which focus on intuitive and natural interaction techniques.&lt;/p&gt;
-&lt;h2 id=&#34;why-the-leap-motion-failed-to-succeed&#34;&gt;Why the Leap Motion Failed to Succeed
-&lt;/h2&gt;&lt;p&gt;While Leap Motion was exciting in its innovation and garnered significant media attention upon launch, it ultimately did not achieve widespread adoption. Several reasons contribute to its failure to succeed:&lt;/p&gt;
-&lt;h3 id=&#34;1-limited-use-cases&#34;&gt;1. &lt;strong&gt;Limited Use Cases&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Although the Leap Motion device was revolutionary in concept, it struggled to find compelling real-world applications. Its primary use cases were limited to &lt;strong&gt;gaming, 3D modeling&lt;/strong&gt;, and a few experimental applications. The niche appeal of these areas limited the audience. Most users still found traditional input methods (like the mouse and keyboard) more convenient and efficient for daily tasks.&lt;/p&gt;
-&lt;h3 id=&#34;2-accuracy-and-tracking-issues&#34;&gt;2. &lt;strong&gt;Accuracy and Tracking Issues&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;While Leap Motion promised precise hand tracking, many users reported &lt;strong&gt;inconsistent accuracy&lt;/strong&gt; and &lt;strong&gt;latency&lt;/strong&gt; issues, especially when their hands moved too quickly or left the designated interaction zone. This inconsistency frustrated users and made it difficult to rely on for precise tasks, such as &lt;strong&gt;3D design&lt;/strong&gt; or &lt;strong&gt;professional workflows&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;3-lack-of-developer-support&#34;&gt;3. &lt;strong&gt;Lack of Developer Support&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The success of input devices heavily depends on third-party developer support to create applications and software that leverage the technology. In Leap Motion’s case, there was a lack of &lt;strong&gt;sufficient developer support&lt;/strong&gt; to build a robust ecosystem of applications. Many developers found the Leap Motion SDK challenging to work with, and without compelling applications, users had little incentive to adopt the device.&lt;/p&gt;
-&lt;h3 id=&#34;4-competition-with-vr-and-ar-technologies&#34;&gt;4. &lt;strong&gt;Competition with VR and AR Technologies&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;At the time of its launch, &lt;strong&gt;Virtual Reality (VR)&lt;/strong&gt; and &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; were becoming more popular, with devices like the &lt;strong&gt;Oculus Rift&lt;/strong&gt; and &lt;strong&gt;Microsoft HoloLens&lt;/strong&gt; capturing the attention of both developers and users. Leap Motion tried to pivot toward VR, offering integration with VR headsets, but it was too late to compete effectively in the growing immersive tech space.&lt;/p&gt;
-&lt;h2 id=&#34;could-it-succeed-in-the-future&#34;&gt;Could It Succeed in the Future?
-&lt;/h2&gt;&lt;p&gt;Though the Leap Motion Controller did not succeed in its initial form, the technology behind it could find new life in the future with advancements in &lt;strong&gt;machine learning&lt;/strong&gt; and &lt;strong&gt;computer vision&lt;/strong&gt;. Gesture-based interfaces are becoming increasingly important in &lt;strong&gt;augmented reality (AR)&lt;/strong&gt; and &lt;strong&gt;virtual reality (VR)&lt;/strong&gt; environments, where hands-free interaction is critical.&lt;/p&gt;
-&lt;p&gt;For instance, Leap Motion&amp;rsquo;s acquisition by &lt;strong&gt;Ultrahaptics&lt;/strong&gt; in 2019 (now &lt;strong&gt;Ultraleap&lt;/strong&gt;) suggests there is still interest in developing &lt;strong&gt;touchless interaction technologies&lt;/strong&gt;. By combining Leap Motion&amp;rsquo;s gesture recognition technology with &lt;strong&gt;haptic feedback systems&lt;/strong&gt;, there is potential for future devices that offer more immersive and precise touchless experiences in &lt;strong&gt;healthcare&lt;/strong&gt;, &lt;strong&gt;industrial design&lt;/strong&gt;, or &lt;strong&gt;remote collaboration&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h3&gt;&lt;p&gt;The Leap Motion Controller was a visionary product that failed to achieve widespread success due to a lack of compelling use cases, tracking issues, and insufficient developer support. However, with the growing demand for &lt;strong&gt;gesture-based interaction&lt;/strong&gt; in VR/AR environments, and the potential for improved accuracy through new technologies, the underlying concepts of Leap Motion may still play a key role in future human-computer interaction paradigms.&lt;/p&gt;
-&lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>Ultimate Display by Ivan Sutherland </title>
-        <link>http://localhost:1313/post/readivan/ultimatedisplay/</link>
-        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/readivan/ultimatedisplay/</guid>
-        <description>&lt;img src="http://localhost:1313/images/ivan.jpg" alt="Featured image of post Ultimate Display by Ivan Sutherland " /&gt;&lt;h1 id=&#34;reflections-on-ivan-sutherlands-the-ultimate-display&#34;&gt;Reflections on Ivan Sutherland&amp;rsquo;s &amp;ldquo;The Ultimate Display&amp;rdquo;
-&lt;/h1&gt;&lt;p&gt;In his seminal work &lt;strong&gt;&amp;ldquo;The Ultimate Display&amp;rdquo;&lt;/strong&gt; (1965), Ivan Sutherland laid the foundation for what we now recognize as virtual and augmented reality (VR/AR). His visionary ideas foreshadowed many technologies that are prevalent today, and he also introduced concepts that continue to guide future developments in human-computer interaction and immersive experiences.&lt;/p&gt;
-&lt;h2 id=&#34;current-realizations-of-sutherlands-vision&#34;&gt;Current Realizations of Sutherland’s Vision
-&lt;/h2&gt;&lt;h3 id=&#34;1-virtual-reality-vr-and-augmented-reality-ar&#34;&gt;1. Virtual Reality (VR) and Augmented Reality (AR)
-&lt;/h3&gt;&lt;p&gt;One of Sutherland&amp;rsquo;s most notable predictions was the creation of &lt;strong&gt;virtual worlds indistinguishable from reality&lt;/strong&gt;. He envisioned a computer-generated environment that could simulate reality with such fidelity that users would be unable to tell the difference between the virtual and the real. Today, &lt;strong&gt;VR headsets&lt;/strong&gt; like the &lt;strong&gt;Oculus Rift&lt;/strong&gt;, &lt;strong&gt;HTC Vive&lt;/strong&gt;, and &lt;strong&gt;PlayStation VR&lt;/strong&gt; offer immersive environments where users can interact with 3D worlds. &lt;strong&gt;Augmented Reality (AR)&lt;/strong&gt; systems, like those seen in &lt;strong&gt;Microsoft’s HoloLens&lt;/strong&gt; and mobile apps such as &lt;strong&gt;Pokémon Go&lt;/strong&gt;, overlay digital information onto the real world, blending the virtual with the physical.&lt;/p&gt;
-&lt;h3 id=&#34;2-haptic-feedback-and-tactile-displays&#34;&gt;2. Haptic Feedback and Tactile Displays
-&lt;/h3&gt;&lt;p&gt;Sutherland also imagined the possibility of interacting with virtual objects in a way that mimicked their real-world counterparts, suggesting that &amp;ldquo;a chair displayed in such a room would be good enough to sit in.&amp;rdquo; This idea has come to life through &lt;strong&gt;haptic technology&lt;/strong&gt; and &lt;strong&gt;force feedback systems&lt;/strong&gt;, which allow users to “feel” virtual objects. Today’s &lt;strong&gt;haptic gloves&lt;/strong&gt; and &lt;strong&gt;vests&lt;/strong&gt; can simulate touch, texture, and resistance, enhancing the immersive experience in virtual worlds.&lt;/p&gt;
-&lt;h3 id=&#34;3-interactive-graphics-and-real-time-simulation&#34;&gt;3. Interactive Graphics and Real-Time Simulation
-&lt;/h3&gt;&lt;p&gt;Sutherland&amp;rsquo;s work directly influenced the development of &lt;strong&gt;interactive computer graphics&lt;/strong&gt;. He envisioned dynamic environments where users could manipulate objects in real-time. Modern computer graphics, powered by &lt;strong&gt;game engines&lt;/strong&gt; such as &lt;strong&gt;Unreal Engine&lt;/strong&gt; and &lt;strong&gt;Unity&lt;/strong&gt;, allow for the creation of highly interactive and realistic simulations. Video games, 3D modeling software, and even training simulations for fields like medicine and aviation use these technologies.&lt;/p&gt;
-&lt;h2 id=&#34;what-could-become-reality-in-the-future&#34;&gt;What Could Become Reality in the Future?
-&lt;/h2&gt;&lt;h3 id=&#34;1-full-sensory-immersion&#34;&gt;1. Full Sensory Immersion
-&lt;/h3&gt;&lt;p&gt;Sutherland hinted at the possibility of stimulating all human senses in virtual environments, suggesting that a truly ultimate display would engage &lt;strong&gt;sight, sound, touch, and possibly even taste and smell&lt;/strong&gt;. While current VR systems focus primarily on visual and auditory experiences, the future could see the development of technology that simulates all senses. &lt;strong&gt;Olfactory displays&lt;/strong&gt; (devices that emit smells) and &lt;strong&gt;gustatory technology&lt;/strong&gt; (taste simulation) are still in early research stages, but with advancements in neuroscience and sensory technology, a fully immersive multisensory virtual world may become possible.&lt;/p&gt;
-&lt;h3 id=&#34;2-brain-computer-interfaces-bci&#34;&gt;2. Brain-Computer Interfaces (BCI)
-&lt;/h3&gt;&lt;p&gt;Another aspect of Sutherland&amp;rsquo;s vision was the direct interaction between the human brain and computers. While he did not explicitly predict &lt;strong&gt;brain-computer interfaces (BCI)&lt;/strong&gt;, his ideas about creating seamless interaction between humans and machines suggest that this could be the next step. Current research into &lt;strong&gt;BCI technology&lt;/strong&gt;, such as &lt;strong&gt;Neuralink&lt;/strong&gt; by Elon Musk, explores the potential of controlling computers and virtual environments using only thoughts. This could lead to a future where users can fully immerse themselves in virtual worlds without the need for physical hardware.&lt;/p&gt;
-&lt;h3 id=&#34;3-shared-virtual-worlds-and-digital-communities&#34;&gt;3. Shared Virtual Worlds and Digital Communities
-&lt;/h3&gt;&lt;p&gt;Sutherland&amp;rsquo;s ultimate display also hinted at the potential for &lt;strong&gt;shared virtual experiences&lt;/strong&gt;, where multiple users could interact with each other in a virtual space. This concept is becoming a reality with the advent of &lt;strong&gt;the metaverse&lt;/strong&gt;, a digital universe where users can socialize, work, and play in a shared, persistent environment. Companies like &lt;strong&gt;Meta (formerly Facebook)&lt;/strong&gt; and &lt;strong&gt;Epic Games&lt;/strong&gt; are investing heavily in this area, aiming to create a connected virtual world where people can live out alternative realities together.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
-&lt;/h2&gt;&lt;p&gt;Ivan Sutherland’s &lt;strong&gt;“The Ultimate Display”&lt;/strong&gt; was groundbreaking in its vision of a future where humans and computers interact in ways that were unimaginable at the time. Many of his predictions have become reality, including virtual environments, interactive graphics, and haptic feedback systems. His vision continues to inspire the next generation of researchers and technologists, pushing the boundaries of &lt;strong&gt;VR&lt;/strong&gt;, &lt;strong&gt;AR&lt;/strong&gt;, and &lt;strong&gt;BCI&lt;/strong&gt; technologies.&lt;/p&gt;
-&lt;p&gt;As we move forward, it’s clear that Sutherland’s concept of a fully immersive, multisensory, and interactive digital world remains the ultimate goal of HCI, and his work will continue to shape the future of the field.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;http://worrydream.com/refs/Sutherland%20-%20The%20Ultimate%20Display.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;The Ultimate Display by Ivan Sutherland&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>http://localhost:1313/page/about/</link>
-        <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/page/about/</guid>
-        <description>&lt;p&gt;Hello,&lt;/p&gt;
-&lt;p&gt;Welcome to my blog !&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m Jiwon KANG 🇰🇷&lt;/p&gt;
-&lt;p&gt;For those who are not familiar with Korean names, my name is pronounced by combining the letter &amp;lsquo;&lt;strong&gt;G&lt;/strong&gt;&amp;rsquo; and the number &amp;lsquo;&lt;strong&gt;1&lt;/strong&gt;&amp;rsquo;, like &lt;strong&gt;G1&lt;/strong&gt; 😉&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m currently in Master 2 of VAR in Institut Polytechnique de Paris 👩‍💻&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Affordances</title>
-        <link>http://localhost:1313/post/affordances/affordances/</link>
-        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/affordances/affordances/</guid>
-        <description>&lt;img src="http://localhost:1313/images/affordance.jpg" alt="Featured image of post Affordances" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=https://medium.com/@akadiyala/role-of-affordances-in-digital-transformation-and-internet-of-things-fa2896970480 style=&#34;color: gray;&#34;&gt; Anant Kadiyala &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Affordance gives users a visual hint on what actions they can take.&lt;/p&gt;
-&lt;p&gt;For example, when we see a button, we instinctively want to press it, or when we see a switch, we feel like pulling it. On an app or website, a rectangular box with a border makes us think we can click and type into it. These cues play into human psychology.&lt;/p&gt;
-&lt;p&gt;Thus, affordance is a crucial element of visual user interfaces. The clearer the visual cues are, the less ambiguity there is for the user to understand what action is expected.&lt;/p&gt;
-&lt;p&gt;In mobile environments, the importance of affordance becomes even more pronounced, as the small screen size and limited space make it harder for affordance to be as visually obvious. Therefore, clear affordance is critical to ensure smooth user interaction on mobile devices.&lt;/p&gt;
-&lt;h2 id=&#34;good-case---traffic-lights-that-show-the-remaining-time&#34;&gt;Good case - Traffic lights that show the remaining time
-&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/trafficlight.jpg&#34; alt=&#34;Traffic light&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://busan.fnnews.com/news/202004071520322481&#34; style=&#34;color: gray;&#34;&gt;Busan News&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;1. Clear Information Display&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Traffic lights that show the remaining time provide users with clear information on how much time is left before the signal changes. Pedestrians can easily determine whether they have enough time to cross the street, and drivers can predict when the signal will switch. This intuitive display helps users make more informed and safer decisions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. Behavior Guidance&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The countdown timer allows both pedestrians and drivers to act accordingly. Pedestrians can choose to cross quickly if there is enough time, or wait for the next signal if time is running out. This guides user behavior and enhances traffic safety by reducing risky actions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3. Meeting User Expectations&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In addition to simply showing red or green lights, the countdown timer allows users to predict signal changes more accurately. This design meets user expectations by providing precise information, reducing stress at intersections, and improving overall traffic flow.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;bad-case---keyboard&#34;&gt;Bad case - Keyboard
-&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/keyboard.jpg&#34; alt=&#34;Keyboard&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: https://www.clien.net/service/board/park/16744923&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The placement of a power button above the delete key on a keyboard is a bad example of affordance.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. Risk of Accidental Use&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;When the power button is located too close to the delete key, users are more likely to press it accidentally, potentially shutting down the system unintentionally. The functions are too distinct to be placed so closely.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. Functional Mismatch&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The delete key is frequently used, whereas the power button is not. Placing such an important function near a less frequently used key increases the risk of errors and reduces the overall usability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3. Contrary to User Expectations&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Users do not expect two very different functions to be positioned so closely together. This placement disrupts the intuitive understanding of how the keyboard should work.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;solutions&#34;&gt;&lt;em&gt;Solutions&lt;/em&gt;
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Relocate the Power Button&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The most straightforward solution is to move the power button to a location further away from frequently used keys like the delete key. For example, the power button could be placed at the right-top corner of the keyboard, near the function keys or in a separate, more isolated area where it’s less likely to be pressed by accident.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. Add a Confirmation Step&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implementing a confirmation step when the power button is pressed would prevent accidental shutdowns. For instance, instead of instantly shutting down the system, the button could trigger a prompt asking the user to confirm the action.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>Dark Design Patterns</title>
-        <link>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</link>
-        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/dark-design-patterns/darkdesignpattern/</guid>
-        <description>&lt;img src="http://localhost:1313/images/darkpatterndesign.jpg" alt="Featured image of post Dark Design Patterns" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://polytechnic.purdue.edu/newsroom/dark-patterns-user-experience-design-manipulates-consumers&#34; style=&#34;color: gray;&#34;&gt;By John O&#39;Malley &lt;/a&gt;&lt;/p&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/darkpattern.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://uxknowledgebase.com/dark-patterns-3b41ed7a690e&#34; style=&#34;color: gray;&#34;&gt;By Krisztina Szerovay&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Dark patterns&lt;/strong&gt; are UI/UX design techniques intentionally crafted to exploit human psychology and trick users into doing things they don’t necessarily want to do. The British UX designer &lt;strong&gt;Harry Brignull&lt;/strong&gt;, who first coined the term, described dark patterns as follows&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;“A carefully crafted user interface designed to trick users into performing actions such as signing up for insurance or signing up for recurring bills.”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In other words, dark patterns refer to UI/UX that is cleverly and intentionally designed to elicit certain actions from users, whether they want to or not. These designs often serve business goals, such as increasing subscriptions or data collection, but they do so at the expense of the user’s autonomy, leading to unintended actions like accidental purchases or subscriptions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;types-of-dark-patterns-design&#34;&gt;Types of Dark Patterns Design
-&lt;/h3&gt;&lt;p&gt;Here are five types of dark patterns commonly seen&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/nagging.jpg&#34; alt=&#34;Nagging dark pattern example&#34; width=&#34;30%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.researchgate.net/figure/Example-of-nagging-behavior-on-Instagram-where-a-modal-dialogue-provides-no-opportunity_fig1_322916969&#34; style=&#34;color: gray;&#34;&gt;ResearchGate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Nagging&lt;/strong&gt; occurs when an app or website repeatedly interrupts the user’s progress with prompts or messages, draining their time and attention. These interruptions can make the user feel pressured or annoyed, leading them to eventually agree to the message or request—even if it’s not what they want—just to move forward.&lt;/li&gt;
-&lt;li&gt;If the interruptions happen frequently, the user might decide that giving in to the prompt is easier than continuing to dismiss it. This pattern is commonly seen in requests to subscribe to premium services, allow notifications, or share personal data, and it can result in a frustrating user experience.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/obstruction.jpg&#34; alt=&#34;Obstruction dark pattern example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.deceptive.design/types/obstruction&#34; style=&#34;color: gray;&#34;&gt;Norwegian Consumer Council, 2018&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Obstruction&lt;/strong&gt; involves intentionally making certain tasks difficult or confusing for the user. It artificially complicates the steps required to perform actions that the user might want to avoid, such as canceling a service, deleting an account, or disabling ads. Designers create complex menu structures, lengthy procedures, and multiple confirmation steps to increase the likelihood that the user will give up.&lt;/li&gt;
-&lt;li&gt;For example, subscribing to a service may be as simple as one click, but canceling that same service might involve navigating through a series of confusing steps, or even contacting customer support. By increasing the effort required to complete the task, users are more likely to give up and continue their subscription, even if they originally intended to cancel.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Sneaking&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/sneaking.jpg&#34; alt=&#34;Sneaking dark pattern example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/dark-patterns-024&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Sneaking&lt;/strong&gt; occurs when important information, such as additional fees or terms, is hidden from the user until the last possible moment. This pattern is often used to make a product or service appear cheaper or more attractive than it actually is, only revealing the true cost or consequences just before the user commits.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For example, an accomodation booking site may show a price at a discounted price, but hidden fees like cleaning costs is only added at the checkout stage. This tactic leaves the user feeling deceived and frustrated because they weren’t provided with full transparency from the beginning.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Interface Interference&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/interfaceinterference.jpg&#34; alt=&#34;Interface Interference example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.emailtooltester.com/en/blog/dark-patterns-canceling-subscription-report/&#34; style=&#34;color: gray;&#34;&gt;By Cai &amp; Roberta&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Interface interference&lt;/strong&gt; manipulates the design of user interface elements—such as buttons, links, or menus—to confuse or mislead the user. This could involve making certain options (like opting out or declining a service) difficult to see or access, or intentionally placing desired actions in locations where users are less likely to find them.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A common example is when a “Subscribe” or “Accept” button is highlighted in bright colors, while the “No Thanks” or “Decline” option is either hidden or made to blend in with the background. This visual manipulation influences the user’s decision, making them more likely to choose the option that benefits the company.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Forced Action&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/forcedaction.jpg&#34; alt=&#34;Forced action example&#34; width=&#34;50%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://blog.raidboxes.io/en/security/dark-patterns/&#34; style=&#34;color: gray;&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Forced Action&lt;/strong&gt; refers to situations where the user is required to perform a specific action in order to continue using a service or complete a task. This pattern typically forces users to agree to terms, share personal information, or sign up for a service they may not want, simply to proceed with what they were doing.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For instance, a user might be required to create an account or subscribe to a newsletter before they can continue using a free app or access content. This design forces users to take an action they don’t necessarily want to take, making them feel trapped or cornered.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-        </item>
-        <item>
-        <title>Gestalt Law</title>
-        <link>http://localhost:1313/post/gestalt-laws/gestaltlaw/</link>
-        <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/post/gestalt-laws/gestaltlaw/</guid>
-        <description>&lt;img src="http://localhost:1313/images/gestalt.jpg" alt="Featured image of post Gestalt Law" /&gt;&lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://medium.com/ringcentral-ux/gestalt-principles-learn-how-to-influence-perception-83112932d0bc&#34; style=&#34;color: gray;&#34;&gt;Gestalt Principles&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Gestalt&lt;/strong&gt; is a German word meaning &amp;lsquo;form&amp;rsquo; or &amp;lsquo;shape.&lt;/p&gt;
-&lt;p&gt;It refers to how people perceive visual elements in a given situation. Generally, we compare visual patterns and past experiences to make sense of what we see. We often perceive these elements as a single whole, rather than as separate parts. By connecting the elements, recognizing familiar shapes, sharing information, and filling in the gaps, we make sense of the overall picture.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;1-law-of-proximity&#34;&gt;1. Law of Proximity
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/proximity.jpg&#34; alt=&#34;proximity&#34; width=&#34;70%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Proximity&lt;/strong&gt; descrives the phenomenon in which element that are close to each other are perceived and felt as a group.&lt;/p&gt;
-&lt;p&gt;For example, in the left image, the dots don&amp;rsquo;t appear to be grouped. However, in the right image, the dots are closer together making them appear as three distinct groups. This &lt;strong&gt;proximity&lt;/strong&gt; can help in organizing related content by placing them close to each other.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;2-law-of-similarity&#34;&gt;2. Law of Similarity
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/similarity.jpg&#34; alt=&#34;similarity&#34; width=&#34;60%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Similarity&lt;/strong&gt; means that objects with similar shpes, sizes, colors, or other attributes are perceived as part of the same group.&lt;/p&gt;
-&lt;p&gt;In this example, all shapes are squares, but the difference in color causes our brain to group the green squares together and the gray squares together, even though they share the same shape. This shows how color similarity plays a key role in organizing visual elements into groups.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;3-law-of-closure&#34;&gt;3. Law of Closure
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/closure.jpg&#34; alt=&#34;closure&#34; width=&#34;60%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Closure&lt;/strong&gt; refers to the tendency to perceive incomplete shapes as whole or complete. Our brain fills in the missing parts, allowing us to recognize an entire form even when elements are missing.&lt;/p&gt;
-&lt;p&gt;In the image, some parts of the shapes are missing, but our brain automatically fills in the gaps, making us perceive the incomplete shapes as a complete form. This principle is commonly seen in logos or icons where parts of the design are missing, yet we still recognize the full shape.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;4-law-of-figure-ground&#34;&gt;4. Law of Figure-Ground
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/figureground.jpg&#34; alt=&#34;figure-ground&#34; width=&#34;60%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Figure-Ground&lt;/strong&gt; describes how we distinguish an object (the figure) from its surrounding background (the ground). Our focus shifts between the object and the background, depending on what we are focusing on at any given moment.&lt;/p&gt;
-&lt;p&gt;In this image, depending on where we focus, we may see either the foreground shapes as the figure or the background. This principle is often used in visual illusions, where the brain toggles between seeing two different images depending on whether it focuses on the figure or the ground.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;5-law-of-continuity&#34;&gt;5. Law of Continuity
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/continuity.jpg&#34; alt=&#34;continutiy&#34; width=&#34;60%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://www.toptal.com/designers/ui/gestalt-principles-of-design&#34; style=&#34;color: gray;&#34;&gt;By Cameron Chapman&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Continuity&lt;/strong&gt; states that elements arranged on a line or curve are perceived as related or continuous. This principle explains how our eyes follow the smoothest path when interpreting visual elements.&lt;/p&gt;
-&lt;p&gt;In this image, the red and gray dots form continuous curves. Even though they are separate dots, our brain perceives the curves as a single continuous path, demonstrating how continuity helps us organize visual elements in a flowing pattern.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;6-law-of-common-region&#34;&gt;6. Law of Common-region
-&lt;/h3&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/commonregion.jpg&#34; alt=&#34;common-region&#34; width=&#34;60%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://app.uxcel.com/lessons/law-of-common-region-899&#34; style=&#34;color: gray;&#34;&gt;Uxcel&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;strong&gt;Law of Common-region&lt;/strong&gt; states that elements located within the same boundary are perceived as part of a group. A visual boundary such as a box or a color background can create this perception of grouping, even if the elements are not physically close.&lt;/p&gt;
-&lt;p&gt;In this image, the circles inside the box are perceived as a group because they share a common region (the box). Even though the circles outside the box are the same size, shape, and color, they are seen as separate because they are not within the same boundary.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;applications-of-gestalt-laws-in-daily-life&#34;&gt;Applications of Gestalt laws in daily life
-&lt;/h1&gt;&lt;h2 id=&#34;1-confusing-stairs&#34;&gt;&lt;em&gt;1. Confusing stairs&lt;/em&gt;
-&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/gl_ex1.jpg&#34; alt=&#34;confusingstairs&#34; width=&#34;70%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: &lt;a href=&#34;https://brightside.me/articles/15-designs-that-can-confuse-our-common-sense-809304/&#34; style=&#34;color: gray;&#34;&gt;Bright Side&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;problem&#34;&gt;Problem
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Continuity&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;This pattern has consistent stripes, which causes our eyes to fail in distinguishing where the stairs end and begin, making the surface appear like a continuous plane. In situations where step differences need to be recognized, this pattern can create visual confusion, which poses a safety risk.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Law of Figure-Ground&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;There is a lack of clear distinction between the figure (the stairs) and the background. As a result, it becomes harder to perceive the shape and depth of the stairs, and users may struggle to identify the height changes of the steps.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;solution&#34;&gt;Solution
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Clear Boundary Markings&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Adding a different colored stripe to the edges of each step can help clearly distinguish the boundary of the stairs. This will break the continuity and allow the steps to be seen as distinct units.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Enhancing Contrast&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;To better separate the background and foreground, stronger color contrast can be applied to the steps. For example, using a brighter color on the edges of the stairs will help clearly define the steps, making it easier to perceive the changes in height.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;2-confusing-buttons-on-yes24&#34;&gt;&lt;em&gt;2. Confusing Buttons on YES24&lt;/em&gt;
-&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/yes24.png&#34; alt=&#34;confusing buttons yes24&#34; width=&#34;40%&#34;&gt;
-  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Image Source: YES24&lt;/p&gt;
-&lt;/div&gt;
-*YES24 is a popular online bookstore in South Korea, where users can purchase physical books, eBooks, and other products.*
-&lt;h3 id=&#34;problem-1&#34;&gt;Problem
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Law of Similarity&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;NPay Purchase&lt;/strong&gt; and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons look similar in color, which can confuse users. Since both buttons serve different functions but appear visually similar, users may accidentally choose the wrong payment option. Because Naver&amp;rsquo;s branding is strongly associated with green, the green color of the NPay button helps signify that it is a Naver-related payment method. However, the other buttons are also visually similar, which may lead to mistaken selections.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Law of Proximity&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons are placed very close to each other, which can make it difficult for users to quickly differentiate between actions. When buttons with different functions are positioned without sufficient spacing, they are perceived as part of a single group, leading to potential confusion and misclicks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;solution-1&#34;&gt;Solution
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Color Differentiation&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Keep the &lt;strong&gt;NPay button&lt;/strong&gt; green to signify its association with Naver, and use a different color for other purchase options, such as &lt;strong&gt;One-Click Purchase&lt;/strong&gt;. This will allow users to easily distinguish between payment methods based on color, reducing the chances of accidental selections.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Spacing Adjustments&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Increase the spacing between the &lt;strong&gt;Buy&lt;/strong&gt;, &lt;strong&gt;Add to Cart&lt;/strong&gt;, &lt;strong&gt;NPay&lt;/strong&gt;, and &lt;strong&gt;One-Click Purchase&lt;/strong&gt; buttons to create a clearer separation of actions. By adding more space, each button will stand out as a distinct option, making it easier for users to select the correct action without confusion.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         <item>
