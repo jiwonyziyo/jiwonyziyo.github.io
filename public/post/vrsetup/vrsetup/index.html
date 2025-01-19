@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Implementing the Roll-a-Ball Game in VR In this blog post, we will apply the Roll-a-Ball game to a VR environment.\n1. Initial Setup Adjusting the Playboard In a VR environment, the playboard will continuously fall. To prevent this:\nAdd a Plane to provide a stable base. Place the playboard on a Table to ensure it remains at a reachable height. Initial Setup\n2. Installing Required Plugins To develop for VR, we need to install the following Unity plugins:\n">
+<title>VR Development - Roll A Ball</title>
+
+<link rel='canonical' href='http://localhost:1313/post/vrsetup/vrsetup/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="VR Development - Roll A Ball">
+<meta property='og:description' content="Implementing the Roll-a-Ball Game in VR In this blog post, we will apply the Roll-a-Ball game to a VR environment.\n1. Initial Setup Adjusting the Playboard In a VR environment, the playboard will continuously fall. To prevent this:\nAdd a Plane to provide a stable base. Place the playboard on a Table to ensure it remains at a reachable height. Initial Setup\n2. Installing Required Plugins To develop for VR, we need to install the following Unity plugins:\n">
+<meta property='og:url' content='http://localhost:1313/post/vrsetup/vrsetup/'>
+<meta property='og:site_name' content='Jiwon KANG'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='HCI-Lab' /><meta property='article:published_time' content='2025-01-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-19T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="VR Development - Roll A Ball">
+<meta name="twitter:description" content="Implementing the Roll-a-Ball Game in VR In this blog post, we will apply the Roll-a-Ball game to a VR environment.\n1. Initial Setup Adjusting the Playboard In a VR environment, the playboard will continuously fall. To prevent this:\nAdd a Plane to provide a stable base. Place the playboard on a Table to ensure it remains at a reachable height. Initial Setup\n2. Installing Required Plugins To develop for VR, we need to install the following Unity plugins:\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/sticker_hu8134136761807756024.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jiwon KANG</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hci/" >
+                HCI
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/vrsetup/vrsetup/">VR Development - Roll A Ball</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 19, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="implementing-the-roll-a-ball-game-in-vr">Implementing the Roll-a-Ball Game in VR
+</h3><p>In this blog post, we will apply the <strong>Roll-a-Ball</strong> game to a VR environment.</p>
+<hr>
+<h3 id="1-initial-setup">1. Initial Setup
+</h3><h4 id="adjusting-the-playboard">Adjusting the Playboard
+</h4><p>In a VR environment, the playboard will continuously fall. To prevent this:</p>
+<ul>
+<li>Add a <strong>Plane</strong> to provide a stable base.</li>
+<li>Place the playboard on a <strong>Table</strong> to ensure it remains at a reachable height.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="/images/14.png" width="50%">
+  <p style="font-size: 12px; color: gray;">Initial Setup</p>
+</div>
+<hr>
+<h3 id="2-installing-required-plugins">2. Installing Required Plugins
+</h3><p>To develop for VR, we need to install the following Unity plugins:</p>
+<h4 id="openxr-plugin-installation">OpenXR Plugin Installation
+</h4><ol>
+<li>Go to <strong>Window</strong> &gt; <strong>Package Manager</strong>.</li>
+<li>Change <strong>Packages</strong> to &ldquo;Unity Registry.&rdquo;</li>
+<li>Search for <strong>OpenXR Plugin</strong> and install it.
+<ul>
+<li>Unity will restart automatically after installation.</li>
+</ul>
+</li>
+<li>After installation, navigate to <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>XR Plug-in Management</strong> &gt; <strong>OpenXR</strong>.
+<ul>
+<li>Ensure that the <strong>OpenXR feature group</strong> is enabled.</li>
+<li>Set the appropriate interaction profile, such as <strong>Oculus Touch Controller Profile</strong>.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/2.png" width="50%">
+  <p style="font-size: 12px; color: gray;">OpenXR Plugin</p>
+</div>
+<h4 id="xr-interaction-toolkit-installation">XR Interaction Toolkit Installation
+</h4><ol>
+<li>Follow the same steps as above to install <strong>XR Interaction Toolkit.</strong></li>
+<li>Download the <strong>Starter Assets</strong> package.</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/1.png" width="50%">
+  <p style="font-size: 12px; color: gray;">XR Interaction toolkit</p>
+</div>
+<hr>
+<h3 id="3-project-settings">3. Project Settings
+</h3><ol>
+<li>Navigate to <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>XR Plug-in Management.</strong></li>
+<li>Check the <strong>Oculus</strong> option.
+<ul>
+<li>If a warning icon (!) appears, click <strong>Fix All</strong> to resolve it.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/3.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Project Setting</p>
+</div>
+<hr>
+<h3 id="4-setting-up-xr-interaction-toolkit">4. Setting Up XR Interaction Toolkit
+</h3><h4 id="applying-starter-assets">Applying Starter Assets
+</h4><ol>
+<li>Go to <strong>Assets</strong> &gt; <strong>Samples</strong> &gt; <strong>XR Interaction Toolkit</strong> &gt; <strong>2.2.0</strong> &gt; <strong>Starter Assets.</strong></li>
+<li>Remove all default presets from <strong>ActionBasedContinuousMoveProvider.default.</strong></li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/4.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Starter Assets</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin-right: 10px; text-align: center;">
+    <img src="/images/5.png" width="100%">
+    <p style="font-size: 12px; color: gray;"></p>
+  </div>
+  <div style="text-align: center;">
+    <img src="/images/6.png"  width="100%">
+    <p style="font-size: 12px; color: gray;"></p>
+  </div>
+</div>
+<hr>
+<h3 id="5-adding-and-configuring-xr-origin">5. Adding and Configuring XR Origin
+</h3><h4 id="configuring-xr-origin">Configuring XR Origin
+</h4><ol>
+<li>Add <strong>XR Origin (Action Based)</strong> to the Hierarchy.
+<ul>
+<li>Ensure you select the one labeled <em>(Action Based)</em> to include the camera and controllers for both hands.</li>
+</ul>
+</li>
+<li>Delete the existing <strong>Main Camera</strong> from the Hierarchy.</li>
+<li>Add the following components to <strong>XR Origin:</strong>
+<ul>
+<li><strong>Character Controller</strong></li>
+<li><strong>Character Controller Driver</strong></li>
+</ul>
+</li>
+<li>Set <strong>Tracking Origin Mode</strong> to <strong>Floor</strong> in the XR Origin component.</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/7.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">XR Origin</p>
+</div>
+<hr>
+<h3 id="6-setting-up-the-locomotion-system">6. Setting Up the Locomotion System
+</h3><h4 id="adding-locomotion-system">Adding Locomotion System
+</h4><ol>
+<li>Add <strong>Locomotion System (Action Based)</strong> from <strong>XR &gt; Locomotion System (Action Based)</strong> in the Hierarchy.</li>
+<li>Drag it into <strong>XR Origin&rsquo;s Character Controller Driver</strong> as the <strong>Locomotion Provider.</strong> (check the image of <strong>XR Origin</strong>)</li>
+<li>In the Inspector panel, disable or remove:
+<ul>
+<li><strong>Teleportation Provider</strong></li>
+<li><strong>Snap Turn Provider</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="configuring-movement">Configuring Movement
+</h4><ol>
+<li>Add <strong>Continuous Move Provider</strong> and <strong>Continuous Turn Provider.</strong></li>
+<li>Disable <strong>Use Reference</strong> for:
+<ul>
+<li><strong>Right Hand Move Action</strong> in Continuous Move Provider.</li>
+<li><strong>Left Hand Turn Action</strong> in Continuous Turn Provider.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/8.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Locomotion System</p>
+</div>
+<hr>
+<h3 id="7-creating-the-hand-controller">7. Creating the Hand Controller
+</h3><h4 id="hand-controller-prefab">Hand Controller Prefab
+</h4><ol>
+<li>Create an <strong>Empty GameObject</strong> and rename it to <strong>HandController.</strong></li>
+<li>Add a <strong>Cube</strong> and a <strong>Cylinder</strong> as children:
+<ul>
+<li><strong>Cube (Handle)</strong>
+<ul>
+<li>Position: (0, 0, -0.11)</li>
+<li>Scale: (0.04, 0.04, 0.1)</li>
+</ul>
+</li>
+<li><strong>Cylinder (Pad)</strong>
+<ul>
+<li>Position: (0, 0, -0.05)</li>
+<li>Scale: (0.07, 0.024, 0.07)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Remove the colliders from both objects.</li>
+<li>In the <strong>Mesh Renderer</strong>, set <strong>Cast Shadows</strong> to <strong>Off.</strong></li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/10.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Hand Controller</p>
+</div>
+<h4 id="configuring-the-right-hand-controller">Configuring the Right Hand Controller
+</h4><ol>
+<li>In the Inspector, remove or disable the following components:
+<ul>
+<li>XR Ray Interactor</li>
+<li>Line Renderer</li>
+<li>XR Interactor Line Visual</li>
+</ul>
+</li>
+<li>Add an empty GameObject named <strong>ModelParent</strong> as a child of <strong>RightHand Controller</strong> and assign it to the XR Controller&rsquo;s <strong>Model</strong> field.</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/11.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Right Hand Controller</p>
+</div>
+<ol start="3">
+<li>Since we need to grab the playboard, we need to add a collider.
+<ul>
+<li>In Add component, add a <strong>Sphere Collider</strong>, check <strong>isTrigger</strong>, and set the radius to 0.5.</li>
+<li>Also add <strong>XR direct interaction</strong>.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/12.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Right Hand Controller Inspector</p>
+</div>
+<hr>
+<h3 id="8-adding-interaction-to-the-playboard">8. Adding Interaction to the Playboard
+</h3><ol>
+<li>Select the <strong>Playboard</strong> and add the <strong>XR Grab Interactable</strong> component.</li>
+<li>Create an empty GameObject named <strong>AttachPointL</strong> under the Playboard.</li>
+<li>Assign <strong>AttachPointL</strong> to the <strong>Attach Transform</strong> field of the XR Grab Interactable component.</li>
+</ol>
+<div style="text-align: center;">
+  <img src="/images/13.png"  width="50%">
+  <p style="font-size: 12px; color: gray;">Playboard</p>
+</div>
+<hr>
+<h3 id="9-testing-and-final-results">9. Testing and Final Results
+</h3><p>Once all configurations are complete, connect your <strong>Oculus</strong> headset to the computer and run the game to ensure everything works as expected. Below is the final result of our VR development:</p>
+<div style="text-align: center;">
+  <video width="600" controls>
+    <source src="/videos/vrvideo.mp4" type="video/mp4">
+  </video>
+</div>
+<hr>
+<p>By following these steps, you can successfully adapt your Roll-a-Ball game to VR !!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hci-lab/">HCI-Lab</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/post/lab4/kinect/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/kinectimage.png" loading="lazy" data-key="" data-hash="/images/kinectimage.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Kinect</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/lab3/unity3dapplication/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/rollaballimage.png" loading="lazy" data-key="" data-hash="/images/rollaballimage.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">My First Unity Project - Roll a ball</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/lab1/setupblog/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/hugo.jpg" loading="lazy" data-key="" data-hash="/images/hugo.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Set up Blog</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/post/lab2/setupunity/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/images/unity.jpg" loading="lazy" data-key="" data-hash="/images/unity.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Set up Unity</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Jiwon KANG
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -6,7 +6,15 @@
         <description>Recent content in HCI-Lab on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hci-lab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VR Development - Roll A Ball</title>
+        <link>http://localhost:1313/post/vrsetup/vrsetup/</link>
+        <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/vrsetup/vrsetup/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Kinect</title>
         <link>http://localhost:1313/post/lab4/kinect/</link>
         <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
@@ -173,7 +181,7 @@
 &lt;/h4&gt;&lt;p&gt;I added two types of collectible cubes: &lt;code&gt;PickUpGreenParents&lt;/code&gt; and &lt;code&gt;PickUpOrangeParents&lt;/code&gt;. Each of them affects the score differently:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Green Pick-Ups&lt;/strong&gt;: When the player collects these, the score increases by &lt;strong&gt;+1&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: These are trickier! Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;
