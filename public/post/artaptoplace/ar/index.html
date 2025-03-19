@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="In this project, Tap to Place, allows users to place 3D objects on real-world surfaces using their phone’s camera. The app detects the floor, places objects, and enables users to scale &amp; move them dynamically.\n1. Project Overview Technology Used: AR Foundation, Unity, C#\nCore Features:\nSurface Detection: Uses the phone camera to recognize real-world flat surfaces. Tap to Place: Tap on a detected surface to place a 3D object. Scale &amp; Move: Pinch-to-zoom to resize and drag to reposition objects. 2. How It Works a. Surface Detection The app uses AR Plane Detection to identify floors. AR Raycasting helps determine where the 3D object should be placed. void DetectSurface(Vector2 touchPosition) { if (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon)) { Pose hitPose = hitResults[0].pose; PlaceObject(hitPose); } } b. Placing 3D Objects A prefab is instantiated at the detected position. void PlaceObject(Pose spawnPosition) { if (spawnedObject == null) { spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation); } } c. Scaling &amp; Moving the Object Pinch Gesture to scale the object. Drag Gesture to move it around the surface. void ScaleObject(float scaleFactor) { spawnedObject.transform.localScale *= scaleFactor; } 3. Setting Up AR Foundation in Unity 1️⃣ Install AR Foundation\n">
+<title>AR app - Tap To Place</title>
+
+<link rel='canonical' href='http://localhost:1313/post/artaptoplace/ar/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="AR app - Tap To Place">
+<meta property='og:description' content="In this project, Tap to Place, allows users to place 3D objects on real-world surfaces using their phone’s camera. The app detects the floor, places objects, and enables users to scale &amp; move them dynamically.\n1. Project Overview Technology Used: AR Foundation, Unity, C#\nCore Features:\nSurface Detection: Uses the phone camera to recognize real-world flat surfaces. Tap to Place: Tap on a detected surface to place a 3D object. Scale &amp; Move: Pinch-to-zoom to resize and drag to reposition objects. 2. How It Works a. Surface Detection The app uses AR Plane Detection to identify floors. AR Raycasting helps determine where the 3D object should be placed. void DetectSurface(Vector2 touchPosition) { if (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon)) { Pose hitPose = hitResults[0].pose; PlaceObject(hitPose); } } b. Placing 3D Objects A prefab is instantiated at the detected position. void PlaceObject(Pose spawnPosition) { if (spawnedObject == null) { spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation); } } c. Scaling &amp; Moving the Object Pinch Gesture to scale the object. Drag Gesture to move it around the surface. void ScaleObject(float scaleFactor) { spawnedObject.transform.localScale *= scaleFactor; } 3. Setting Up AR Foundation in Unity 1️⃣ Install AR Foundation\n">
+<meta property='og:url' content='http://localhost:1313/post/artaptoplace/ar/'>
+<meta property='og:site_name' content='Jiwon KANG'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-01-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-30T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="AR app - Tap To Place">
+<meta name="twitter:description" content="In this project, Tap to Place, allows users to place 3D objects on real-world surfaces using their phone’s camera. The app detects the floor, places objects, and enables users to scale &amp; move them dynamically.\n1. Project Overview Technology Used: AR Foundation, Unity, C#\nCore Features:\nSurface Detection: Uses the phone camera to recognize real-world flat surfaces. Tap to Place: Tap on a detected surface to place a 3D object. Scale &amp; Move: Pinch-to-zoom to resize and drag to reposition objects. 2. How It Works a. Surface Detection The app uses AR Plane Detection to identify floors. AR Raycasting helps determine where the 3D object should be placed. void DetectSurface(Vector2 touchPosition) { if (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon)) { Pose hitPose = hitResults[0].pose; PlaceObject(hitPose); } } b. Placing 3D Objects A prefab is instantiated at the detected position. void PlaceObject(Pose spawnPosition) { if (spawnedObject == null) { spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation); } } c. Scaling &amp; Moving the Object Pinch Gesture to scale the object. Drag Gesture to move it around the surface. void ScaleObject(float scaleFactor) { spawnedObject.transform.localScale *= scaleFactor; } 3. Setting Up AR Foundation in Unity 1️⃣ Install AR Foundation\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/sticker_hu8134136761807756024.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jiwon KANG</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ar/" >
+                AR
+            </a>
+        
+            <a href="/categories/unity/" >
+                Unity
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/artaptoplace/ar/">AR app - Tap To Place</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 30, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>In this project, <strong>Tap to Place</strong>, allows users to place <strong>3D objects on real-world surfaces</strong> using their phone’s camera. The app detects the floor, places objects, and enables users to <strong>scale &amp; move them dynamically</strong>.</p>
+<hr>
+<h2 id="1-project-overview">1. <strong>Project Overview</strong>
+</h2><p><strong>Technology Used:</strong> <strong>AR Foundation, Unity, C#</strong><br>
+<strong>Core Features:</strong></p>
+<ul>
+<li><strong>Surface Detection</strong>: Uses the phone camera to recognize real-world flat surfaces.</li>
+<li><strong>Tap to Place</strong>: Tap on a detected surface to place a 3D object.</li>
+<li><strong>Scale &amp; Move</strong>: Pinch-to-zoom to resize and drag to reposition objects.</li>
+</ul>
+<hr>
+<h2 id="2-how-it-works">2. <strong>How It Works</strong>
+</h2><h3 id="a-surface-detection">a. <strong>Surface Detection</strong>
+</h3><ul>
+<li>The app uses <strong>AR Plane Detection</strong> to identify floors.</li>
+<li><strong>AR Raycasting</strong> helps determine where the 3D object should be placed.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> DetectSurface(Vector2 touchPosition)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon))
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Pose hitPose = hitResults[<span style="color:#ae81ff">0</span>].pose;
+</span></span><span style="display:flex;"><span>        PlaceObject(hitPose);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="b-placing-3d-objects">b. <strong>Placing 3D Objects</strong>
+</h3><ul>
+<li>A <strong>prefab</strong> is instantiated at the detected position.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> PlaceObject(Pose spawnPosition)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (spawnedObject == <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="c-scaling--moving-the-object">c. <strong>Scaling &amp; Moving the Object</strong>
+</h3><ul>
+<li><strong>Pinch Gesture</strong> to scale the object.</li>
+<li><strong>Drag Gesture</strong> to move it around the surface.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> ScaleObject(<span style="color:#66d9ef">float</span> scaleFactor)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    spawnedObject.transform.localScale *= scaleFactor;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="3-setting-up-ar-foundation-in-unity">3. <strong>Setting Up AR Foundation in Unity</strong>
+</h2><p>1️⃣ <strong>Install AR Foundation</strong></p>
+<ul>
+<li>Go to <strong>Unity Package Manager</strong> → Install <strong>AR Foundation &amp; ARCore XR Plugin (Android) / ARKit XR Plugin (iOS)</strong></li>
+</ul>
+<p>2️⃣ <strong>Setup AR Session</strong></p>
+<ul>
+<li>Add <strong>AR Session</strong> and <strong>AR Session Origin</strong> to the scene.</li>
+</ul>
+<p>3️⃣ <strong>Enable Plane Detection</strong></p>
+<ul>
+<li>Attach an <strong>AR Plane Manager</strong> component to detect surfaces.</li>
+</ul>
+<p>4️⃣ <strong>Implement Raycasting</strong></p>
+<ul>
+<li>Use <strong>ARRaycastManager</strong> to find valid placement points.</li>
+</ul>
+<hr>
+<h2 id="4-future-improvements">4. <strong>Future Improvements</strong>
+</h2><p>🔹 Object rotation using touch gestures.<br>
+🔹 Multi-object placement for more interactive scenes.<br>
+🔹 Save and reload placed objects using persistent AR.</p>
+<hr>
+<h2 id="5-testing">5. Testing
+</h2><div style="text-align: center;">
+  <video width="600" height="600" controls>
+    <source src="/videos/ARProject_JiwonKANG.mov" type="video/mp4">
+  </video>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Jiwon KANG
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

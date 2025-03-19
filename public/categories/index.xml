@@ -6,7 +6,39 @@
         <description>Recent content in Categories on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AR</title>
+        <link>http://localhost:1313/categories/ar/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/ar/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MRTK</title>
+        <link>http://localhost:1313/categories/mrtk/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/mrtk/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>TranversalProject</title>
+        <link>http://localhost:1313/categories/tranversalproject/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/tranversalproject/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Unity</title>
+        <link>http://localhost:1313/categories/unity/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/unity/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>HCI</title>
         <link>http://localhost:1313/categories/hci/</link>
         <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>

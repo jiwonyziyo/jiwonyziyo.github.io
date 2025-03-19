@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Uniy on Jiwon KANG</title>
+        <link>http://localhost:1313/tags/uniy/</link>
+        <description>Recent content in Uniy on Jiwon KANG</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/uniy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MRTK Project - Trolley Race Adventure</title>
+        <link>http://localhost:1313/post/mrtk/mrtk/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrtk/mrtk/</guid>
+        <description>&lt;h1 id=&#34;-mrtk-project-trolley-race-adventure&#34;&gt;🚀 MRTK Project: Trolley Race Adventure
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Jiwon Kang &amp;amp; Sara Naranjo&lt;br&gt;
+&lt;strong&gt;Project Type:&lt;/strong&gt; HoloLens 2 AR Game&lt;br&gt;
+&lt;strong&gt;Tech Stack:&lt;/strong&gt; MRTK3, Unity, TextMeshPro&lt;/p&gt;
+&lt;h2 id=&#34;-game-overview&#34;&gt;🎮 Game Overview
+&lt;/h2&gt;&lt;p&gt;Trolley Race Adventure is an immersive HoloLens 2 game where players race trolleys on dynamic tracks. The goal is to &lt;strong&gt;collect good items (cherries 🍒) to earn points&lt;/strong&gt; while &lt;strong&gt;avoiding bad items (bananas 🍌) that slow you down&lt;/strong&gt; and reach the finish line as quickly as possible.&lt;/p&gt;
+&lt;h3 id=&#34;-controls&#34;&gt;✅ Controls
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Steering:&lt;/strong&gt; Press buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed Control:&lt;/strong&gt; Use keyboard arrow keys (↑/↓) to adjust speed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-game-assets&#34;&gt;🎨 Game Assets
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; Unity Asset Store&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trolleys (Playable Characters)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Circuit (Gameplay Levels)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Items (Cherries 🍒 / Bananas 🍌)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-vehicle-selection&#34;&gt;🚗 Vehicle Selection
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Players choose a trolley before starting the game using a &lt;strong&gt;slider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The selected trolley spawns when the game starts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-level-design&#34;&gt;🏁 Level Design
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Level 1 (Easy):&lt;/strong&gt; Fewer collectible and avoidable objects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 2 (Hard):&lt;/strong&gt; More objects on the track&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-to-play&#34;&gt;🕹 How to Play
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Select a vehicle → Choose a level → Click the Start button&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control movement:&lt;/strong&gt; Use buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adjust speed:&lt;/strong&gt; Use the keyboard arrow keys&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collect cherries (+points), avoid bananas (-points)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Finish the track and view the scoreboard&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-scoring-system&#34;&gt;📊 Scoring System
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Good Items (Cherries 🍒):&lt;/strong&gt; Increase points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bad Items (Bananas 🍌):&lt;/strong&gt; Decrease points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TextMeshPro UI&lt;/strong&gt; updates scores dynamically&lt;/li&gt;
+&lt;li&gt;The final score appears after completing the level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mrtk3-components-used&#34;&gt;🛠 MRTK3 Components Used
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Feature&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;MRTK3 Component&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Vehicle Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Slider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Level Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dropdown&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Turning &amp;amp; Start Game&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Button&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;In-game Instructions&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dialog&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;UI Scaling&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Bounds Control&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Game Settings&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Near Menu&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-conclusion--future-improvements&#34;&gt;🔥 Conclusion &amp;amp; Future Improvements
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Achievements:&lt;/strong&gt;&lt;br&gt;
+✅ Successfully integrated AR gameplay with MRTK3&lt;br&gt;
+✅ Designed an interactive UI for a better player experience&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Future Enhancements:&lt;/strong&gt;&lt;br&gt;
+🔹 Implement voice commands for controls&lt;br&gt;
+🔹 Introduce more complex level designs&lt;br&gt;
+🔹 Add obstacle-based challenges (mud zones, random objects)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;testing&#34;&gt;Testing
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/MRTK.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

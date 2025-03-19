@@ -6,13 +6,342 @@
         <description>Recent content in Posts on Jiwon KANG</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 19 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AR app - Tap To Place</title>
+        <link>http://localhost:1313/post/artaptoplace/ar/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/artaptoplace/ar/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MRTK Project - Trolley Race Adventure</title>
+        <link>http://localhost:1313/post/mrtk/mrtk/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrtk/mrtk/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Jiwon Kang &amp;amp; Sara Naranjo&lt;br&gt;
+&lt;strong&gt;Project Type:&lt;/strong&gt; HoloLens 2 AR Game&lt;/p&gt;
+&lt;h2 id=&#34;1-game-overview&#34;&gt;1. Game Overview
+&lt;/h2&gt;&lt;p&gt;Trolley Race Adventure is an immersive HoloLens 2 game where players race trolleys on dynamic tracks. The goal is to &lt;strong&gt;collect good items (cherries 🍒) to earn points&lt;/strong&gt; while &lt;strong&gt;avoiding bad items (bananas 🍌) that slow you down&lt;/strong&gt; and reach the finish line as quickly as possible.&lt;/p&gt;
+&lt;h3 id=&#34;2-controls&#34;&gt;2. Controls
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Steering:&lt;/strong&gt; Press buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed Control:&lt;/strong&gt; Use keyboard arrow keys (↑/↓) to adjust speed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-game-assets&#34;&gt;3. Game Assets
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; Unity Asset Store&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trolleys (Playable Characters)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Circuit (Gameplay Levels)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Items (Cherries 🍒 / Bananas 🍌)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-vehicle-selection&#34;&gt;4. Vehicle Selection
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Players choose a trolley before starting the game using a &lt;strong&gt;slider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The selected trolley spawns when the game starts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-level-design&#34;&gt;5. Level Design
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Level 1 (Easy):&lt;/strong&gt; Fewer collectible and avoidable objects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 2 (Hard):&lt;/strong&gt; More objects on the track&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-how-to-play&#34;&gt;6. How to Play
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Select a vehicle → Choose a level → Click the Start button&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control movement:&lt;/strong&gt; Use buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adjust speed:&lt;/strong&gt; Use the keyboard arrow keys&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collect cherries (+points), avoid bananas (-points)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Finish the track and view the scoreboard&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-scoring-system&#34;&gt;7. Scoring System
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Good Items (Cherries 🍒):&lt;/strong&gt; Increase points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bad Items (Bananas 🍌):&lt;/strong&gt; Decrease points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TextMeshPro UI&lt;/strong&gt; updates scores dynamically&lt;/li&gt;
+&lt;li&gt;The final score appears after completing the level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-mrtk3-components-used&#34;&gt;8. MRTK3 Components Used
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Feature&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;MRTK3 Component&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Vehicle Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Slider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Level Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dropdown&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Turning &amp;amp; Start Game&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Button&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;In-game Instructions&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dialog&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;UI Scaling&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Bounds Control&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Game Settings&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Near Menu&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-conclusion--future-improvements&#34;&gt;9. Conclusion &amp;amp; Future Improvements
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Achievements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Successfully integrated AR gameplay with MRTK3&lt;/li&gt;
+&lt;li&gt;Designed an interactive UI for a better player experience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Future Enhancements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement voice commands for controls&lt;/li&gt;
+&lt;li&gt;Introduce more complex level designs&lt;/li&gt;
+&lt;li&gt;Add obstacle-based challenges (mud zones, random objects)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-testing&#34;&gt;10. Testing
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/MRTK.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Tranversal Project - VR gamified theraphy app development</title>
+        <link>http://localhost:1313/post/transversalproject/transeversalproject/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/transversalproject/transeversalproject/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>VR Development - Roll A Ball</title>
         <link>http://localhost:1313/post/vrsetup/vrsetup/</link>
         <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/post/vrsetup/vrsetup/</guid>
-        <description></description>
+        <description>&lt;h3 id=&#34;implementing-the-roll-a-ball-game-in-vr&#34;&gt;Implementing the Roll-a-Ball Game in VR
+&lt;/h3&gt;&lt;p&gt;In this blog post, we will apply the &lt;strong&gt;Roll-a-Ball&lt;/strong&gt; game to a VR environment.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-initial-setup&#34;&gt;1. Initial Setup
+&lt;/h3&gt;&lt;h4 id=&#34;adjusting-the-playboard&#34;&gt;Adjusting the Playboard
+&lt;/h4&gt;&lt;p&gt;In a VR environment, the playboard will continuously fall. To prevent this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a &lt;strong&gt;Plane&lt;/strong&gt; to provide a stable base.&lt;/li&gt;
+&lt;li&gt;Place the playboard on a &lt;strong&gt;Table&lt;/strong&gt; to ensure it remains at a reachable height.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/14.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Initial Setup&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-installing-required-plugins&#34;&gt;2. Installing Required Plugins
+&lt;/h3&gt;&lt;p&gt;To develop for VR, we need to install the following Unity plugins:&lt;/p&gt;
+&lt;h4 id=&#34;openxr-plugin-installation&#34;&gt;OpenXR Plugin Installation
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Go to &lt;strong&gt;Window&lt;/strong&gt; &amp;gt; &lt;strong&gt;Package Manager&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Change &lt;strong&gt;Packages&lt;/strong&gt; to &amp;ldquo;Unity Registry.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Search for &lt;strong&gt;OpenXR Plugin&lt;/strong&gt; and install it.
+&lt;ul&gt;
+&lt;li&gt;Unity will restart automatically after installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;After installation, navigate to &lt;strong&gt;Edit&lt;/strong&gt; &amp;gt; &lt;strong&gt;Project Settings&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Plug-in Management&lt;/strong&gt; &amp;gt; &lt;strong&gt;OpenXR&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;Ensure that the &lt;strong&gt;OpenXR feature group&lt;/strong&gt; is enabled.&lt;/li&gt;
+&lt;li&gt;Set the appropriate interaction profile, such as &lt;strong&gt;Oculus Touch Controller Profile&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/2.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;OpenXR Plugin&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;xr-interaction-toolkit-installation&#34;&gt;XR Interaction Toolkit Installation
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Follow the same steps as above to install &lt;strong&gt;XR Interaction Toolkit.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Download the &lt;strong&gt;Starter Assets&lt;/strong&gt; package.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/1.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;XR Interaction toolkit&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-project-settings&#34;&gt;3. Project Settings
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Edit&lt;/strong&gt; &amp;gt; &lt;strong&gt;Project Settings&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Plug-in Management.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Check the &lt;strong&gt;Oculus&lt;/strong&gt; option.
+&lt;ul&gt;
+&lt;li&gt;If a warning icon (!) appears, click &lt;strong&gt;Fix All&lt;/strong&gt; to resolve it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/3.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Project Setting&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-setting-up-xr-interaction-toolkit&#34;&gt;4. Setting Up XR Interaction Toolkit
+&lt;/h3&gt;&lt;h4 id=&#34;applying-starter-assets&#34;&gt;Applying Starter Assets
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Go to &lt;strong&gt;Assets&lt;/strong&gt; &amp;gt; &lt;strong&gt;Samples&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Interaction Toolkit&lt;/strong&gt; &amp;gt; &lt;strong&gt;2.2.0&lt;/strong&gt; &amp;gt; &lt;strong&gt;Starter Assets.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remove all default presets from &lt;strong&gt;ActionBasedContinuousMoveProvider.default.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/4.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Starter Assets&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/5.png&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/6.png&#34;  width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-adding-and-configuring-xr-origin&#34;&gt;5. Adding and Configuring XR Origin
+&lt;/h3&gt;&lt;h4 id=&#34;configuring-xr-origin&#34;&gt;Configuring XR Origin
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;XR Origin (Action Based)&lt;/strong&gt; to the Hierarchy.
+&lt;ul&gt;
+&lt;li&gt;Ensure you select the one labeled &lt;em&gt;(Action Based)&lt;/em&gt; to include the camera and controllers for both hands.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Delete the existing &lt;strong&gt;Main Camera&lt;/strong&gt; from the Hierarchy.&lt;/li&gt;
+&lt;li&gt;Add the following components to &lt;strong&gt;XR Origin:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Character Controller&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Character Controller Driver&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;Tracking Origin Mode&lt;/strong&gt; to &lt;strong&gt;Floor&lt;/strong&gt; in the XR Origin component.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/7.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;XR Origin&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-setting-up-the-locomotion-system&#34;&gt;6. Setting Up the Locomotion System
+&lt;/h3&gt;&lt;h4 id=&#34;adding-locomotion-system&#34;&gt;Adding Locomotion System
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;Locomotion System (Action Based)&lt;/strong&gt; from &lt;strong&gt;XR &amp;gt; Locomotion System (Action Based)&lt;/strong&gt; in the Hierarchy.&lt;/li&gt;
+&lt;li&gt;Drag it into &lt;strong&gt;XR Origin&amp;rsquo;s Character Controller Driver&lt;/strong&gt; as the &lt;strong&gt;Locomotion Provider.&lt;/strong&gt; (check the image of &lt;strong&gt;XR Origin&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;In the Inspector panel, disable or remove:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Teleportation Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Snap Turn Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;configuring-movement&#34;&gt;Configuring Movement
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;Continuous Move Provider&lt;/strong&gt; and &lt;strong&gt;Continuous Turn Provider.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Use Reference&lt;/strong&gt; for:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Right Hand Move Action&lt;/strong&gt; in Continuous Move Provider.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Left Hand Turn Action&lt;/strong&gt; in Continuous Turn Provider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/8.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Locomotion System&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-creating-the-hand-controller&#34;&gt;7. Creating the Hand Controller
+&lt;/h3&gt;&lt;h4 id=&#34;hand-controller-prefab&#34;&gt;Hand Controller Prefab
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Create an &lt;strong&gt;Empty GameObject&lt;/strong&gt; and rename it to &lt;strong&gt;HandController.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Add a &lt;strong&gt;Cube&lt;/strong&gt; and a &lt;strong&gt;Cylinder&lt;/strong&gt; as children:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cube (Handle)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Position: (0, 0, -0.11)&lt;/li&gt;
+&lt;li&gt;Scale: (0.04, 0.04, 0.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cylinder (Pad)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Position: (0, 0, -0.05)&lt;/li&gt;
+&lt;li&gt;Scale: (0.07, 0.024, 0.07)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove the colliders from both objects.&lt;/li&gt;
+&lt;li&gt;In the &lt;strong&gt;Mesh Renderer&lt;/strong&gt;, set &lt;strong&gt;Cast Shadows&lt;/strong&gt; to &lt;strong&gt;Off.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/10.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Hand Controller&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;configuring-the-right-hand-controller&#34;&gt;Configuring the Right Hand Controller
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;In the Inspector, remove or disable the following components:
+&lt;ul&gt;
+&lt;li&gt;XR Ray Interactor&lt;/li&gt;
+&lt;li&gt;Line Renderer&lt;/li&gt;
+&lt;li&gt;XR Interactor Line Visual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add an empty GameObject named &lt;strong&gt;ModelParent&lt;/strong&gt; as a child of &lt;strong&gt;RightHand Controller&lt;/strong&gt; and assign it to the XR Controller&amp;rsquo;s &lt;strong&gt;Model&lt;/strong&gt; field.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/11.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Right Hand Controller&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Since we need to grab the playboard, we need to add a collider.
+&lt;ul&gt;
+&lt;li&gt;In Add component, add a &lt;strong&gt;Sphere Collider&lt;/strong&gt;, check &lt;strong&gt;isTrigger&lt;/strong&gt;, and set the radius to 0.5.&lt;/li&gt;
+&lt;li&gt;Also add &lt;strong&gt;XR direct interaction&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/12.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Right Hand Controller Inspector&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;8-adding-interaction-to-the-playboard&#34;&gt;8. Adding Interaction to the Playboard
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Select the &lt;strong&gt;Playboard&lt;/strong&gt; and add the &lt;strong&gt;XR Grab Interactable&lt;/strong&gt; component.&lt;/li&gt;
+&lt;li&gt;Create an empty GameObject named &lt;strong&gt;AttachPointL&lt;/strong&gt; under the Playboard.&lt;/li&gt;
+&lt;li&gt;Assign &lt;strong&gt;AttachPointL&lt;/strong&gt; to the &lt;strong&gt;Attach Transform&lt;/strong&gt; field of the XR Grab Interactable component.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/13.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Playboard&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;9-testing-and-final-results&#34;&gt;9. Testing and Final Results
+&lt;/h3&gt;&lt;p&gt;Once all configurations are complete, connect your &lt;strong&gt;Oculus&lt;/strong&gt; headset to the computer and run the game to ensure everything works as expected. Below is the final result of our VR development:&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/vrvideo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;By following these steps, you can successfully adapt your Roll-a-Ball game to VR !!&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Idea &amp; Prototype &amp; Evaluation</title>

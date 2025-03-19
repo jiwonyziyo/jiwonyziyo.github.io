@@ -1,7 +1,7 @@
 +++
 title = 'My First Unity Project - Roll a ball'
 date = 2024-10-03
-categories = ["HCI"]
+categories = ["HCI","Unity"]
 tags = ["HCI-Lab"]
 author = "jiwon"
 image = "/images/rollaballimage.png"

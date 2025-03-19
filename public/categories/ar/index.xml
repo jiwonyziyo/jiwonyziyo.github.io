@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AR on Jiwon KANG</title>
+        <link>http://localhost:1313/categories/ar/</link>
+        <description>Recent content in AR on Jiwon KANG</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/ar/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AR app - Tap To Place</title>
+        <link>http://localhost:1313/post/artaptoplace/ar/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/artaptoplace/ar/</guid>
+        <description>&lt;p&gt;In this project, &lt;strong&gt;Tap to Place&lt;/strong&gt;, allows users to place &lt;strong&gt;3D objects on real-world surfaces&lt;/strong&gt; using their phone’s camera. The app detects the floor, places objects, and enables users to &lt;strong&gt;scale &amp;amp; move them dynamically&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-project-overview&#34;&gt;1. &lt;strong&gt;Project Overview&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Technology Used:&lt;/strong&gt; &lt;strong&gt;AR Foundation, Unity, C#&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Core Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Surface Detection&lt;/strong&gt;: Uses the phone camera to recognize real-world flat surfaces.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tap to Place&lt;/strong&gt;: Tap on a detected surface to place a 3D object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scale &amp;amp; Move&lt;/strong&gt;: Pinch-to-zoom to resize and drag to reposition objects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-how-it-works&#34;&gt;2. &lt;strong&gt;How It Works&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;a-surface-detection&#34;&gt;a. &lt;strong&gt;Surface Detection&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The app uses &lt;strong&gt;AR Plane Detection&lt;/strong&gt; to identify floors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR Raycasting&lt;/strong&gt; helps determine where the 3D object should be placed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; DetectSurface(Vector2 touchPosition)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Pose hitPose = hitResults[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;].pose;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        PlaceObject(hitPose);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;b-placing-3d-objects&#34;&gt;b. &lt;strong&gt;Placing 3D Objects&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;prefab&lt;/strong&gt; is instantiated at the detected position.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; PlaceObject(Pose spawnPosition)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (spawnedObject == &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;c-scaling--moving-the-object&#34;&gt;c. &lt;strong&gt;Scaling &amp;amp; Moving the Object&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pinch Gesture&lt;/strong&gt; to scale the object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drag Gesture&lt;/strong&gt; to move it around the surface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; ScaleObject(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; scaleFactor)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    spawnedObject.transform.localScale *= scaleFactor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;3-setting-up-ar-foundation-in-unity&#34;&gt;3. &lt;strong&gt;Setting Up AR Foundation in Unity&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;1️⃣ &lt;strong&gt;Install AR Foundation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Unity Package Manager&lt;/strong&gt; → Install &lt;strong&gt;AR Foundation &amp;amp; ARCore XR Plugin (Android) / ARKit XR Plugin (iOS)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;Setup AR Session&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;strong&gt;AR Session&lt;/strong&gt; and &lt;strong&gt;AR Session Origin&lt;/strong&gt; to the scene.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;Enable Plane Detection&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Attach an &lt;strong&gt;AR Plane Manager&lt;/strong&gt; component to detect surfaces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;Implement Raycasting&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;ARRaycastManager&lt;/strong&gt; to find valid placement points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-future-improvements&#34;&gt;4. &lt;strong&gt;Future Improvements&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;🔹 Object rotation using touch gestures.&lt;br&gt;
+🔹 Multi-object placement for more interactive scenes.&lt;br&gt;
+🔹 Save and reload placed objects using persistent AR.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-testing&#34;&gt;5. Testing
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; height=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/ARProject_JiwonKANG.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Unity on Jiwon KANG</title>
+        <link>http://localhost:1313/categories/unity/</link>
+        <description>Recent content in Unity on Jiwon KANG</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AR app - Tap To Place</title>
+        <link>http://localhost:1313/post/artaptoplace/ar/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/artaptoplace/ar/</guid>
+        <description>&lt;p&gt;In this project, &lt;strong&gt;Tap to Place&lt;/strong&gt;, allows users to place &lt;strong&gt;3D objects on real-world surfaces&lt;/strong&gt; using their phone’s camera. The app detects the floor, places objects, and enables users to &lt;strong&gt;scale &amp;amp; move them dynamically&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-project-overview&#34;&gt;1. &lt;strong&gt;Project Overview&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Technology Used:&lt;/strong&gt; &lt;strong&gt;AR Foundation, Unity, C#&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Core Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Surface Detection&lt;/strong&gt;: Uses the phone camera to recognize real-world flat surfaces.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tap to Place&lt;/strong&gt;: Tap on a detected surface to place a 3D object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scale &amp;amp; Move&lt;/strong&gt;: Pinch-to-zoom to resize and drag to reposition objects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-how-it-works&#34;&gt;2. &lt;strong&gt;How It Works&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;a-surface-detection&#34;&gt;a. &lt;strong&gt;Surface Detection&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The app uses &lt;strong&gt;AR Plane Detection&lt;/strong&gt; to identify floors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AR Raycasting&lt;/strong&gt; helps determine where the 3D object should be placed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; DetectSurface(Vector2 touchPosition)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (arRaycastManager.Raycast(touchPosition, hitResults, TrackableType.PlaneWithinPolygon))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Pose hitPose = hitResults[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;].pose;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        PlaceObject(hitPose);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;b-placing-3d-objects&#34;&gt;b. &lt;strong&gt;Placing 3D Objects&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;prefab&lt;/strong&gt; is instantiated at the detected position.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; PlaceObject(Pose spawnPosition)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (spawnedObject == &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        spawnedObject = Instantiate(objectPrefab, spawnPosition.position, spawnPosition.rotation);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;c-scaling--moving-the-object&#34;&gt;c. &lt;strong&gt;Scaling &amp;amp; Moving the Object&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pinch Gesture&lt;/strong&gt; to scale the object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drag Gesture&lt;/strong&gt; to move it around the surface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; ScaleObject(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; scaleFactor)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    spawnedObject.transform.localScale *= scaleFactor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;3-setting-up-ar-foundation-in-unity&#34;&gt;3. &lt;strong&gt;Setting Up AR Foundation in Unity&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;1️⃣ &lt;strong&gt;Install AR Foundation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Unity Package Manager&lt;/strong&gt; → Install &lt;strong&gt;AR Foundation &amp;amp; ARCore XR Plugin (Android) / ARKit XR Plugin (iOS)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;Setup AR Session&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;strong&gt;AR Session&lt;/strong&gt; and &lt;strong&gt;AR Session Origin&lt;/strong&gt; to the scene.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;Enable Plane Detection&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Attach an &lt;strong&gt;AR Plane Manager&lt;/strong&gt; component to detect surfaces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;Implement Raycasting&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;ARRaycastManager&lt;/strong&gt; to find valid placement points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-future-improvements&#34;&gt;4. &lt;strong&gt;Future Improvements&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;🔹 Object rotation using touch gestures.&lt;br&gt;
+🔹 Multi-object placement for more interactive scenes.&lt;br&gt;
+🔹 Save and reload placed objects using persistent AR.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-testing&#34;&gt;5. Testing
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; height=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/ARProject_JiwonKANG.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
+        <title>Gamified VR Therapy for Mental Health</title>
+        <link>http://localhost:1313/post/transversalproject/transeversalproject/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/transversalproject/transeversalproject/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Jiwon Kang &amp;amp; Sara Naranjo&lt;br&gt;
+&lt;strong&gt;Project Type:&lt;/strong&gt; VR-Based Mental Health Therapy&lt;/p&gt;
+&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;VR-based gamified therapy environment&lt;/strong&gt; is design to help users regulate their emotions in a relaxing and interactive way. This project aims to provide small, rewarding tasks in a &lt;strong&gt;virtual environment&lt;/strong&gt; to promote &lt;strong&gt;healthy routines and stress relief&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;2-why-vr-therapy&#34;&gt;2. Why VR Therapy?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Challenges in traditional treatments:&lt;/strong&gt; Long wait times, high costs, and social stigma.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Global mental health crisis:&lt;/strong&gt; Growing concerns across different age groups.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VR as a solution:&lt;/strong&gt; &lt;strong&gt;Accessible, engaging, and low-pressure alternative&lt;/strong&gt; to conventional therapy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-project-concept&#34;&gt;3. Project Concept
+&lt;/h2&gt;&lt;p&gt;The core idea is a &lt;strong&gt;peaceful VR therapy environment set in a forest cabin&lt;/strong&gt;. Users engage in &lt;strong&gt;simple but meaningful activities&lt;/strong&gt; to promote:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Self-care&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stress relief&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Positive emotional regulation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-key-features&#34;&gt;🔑 Key Features
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Non-pressured therapeutic experience&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personalized goals&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Relaxing interactions with game elements&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-virtual-world-a-cozy-forest-cabin&#34;&gt;4. Virtual World: A Cozy Forest Cabin
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Serene Environment:&lt;/strong&gt; Birds chirping, gentle wind sounds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decor evolves based on progress:&lt;/strong&gt; A dynamic, ever-changing space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/forest.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Forest &amp; Cabin&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;5-virtual-pet&#34;&gt;5. Virtual Pet
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Designed to provide &lt;strong&gt;companionship &amp;amp; emotional support&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D Modeled in Blender&lt;/strong&gt; with realistic textures and animations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrated into Unity&lt;/strong&gt; for interaction with users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/virtualpet.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Virtual Pet&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-therapeutic-mini-games&#34;&gt;6. Therapeutic Mini-Games
+&lt;/h2&gt;&lt;h3 id=&#34;6-1-puzzle-game&#34;&gt;6-1. &lt;strong&gt;Puzzle Game&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;How it works:&lt;br&gt;
+1️⃣ Pick up a box and flip it to spill puzzle pieces.&lt;br&gt;
+2️⃣ Place each piece in the correct location.&lt;br&gt;
+3️⃣ Completing the puzzle &lt;strong&gt;triggers visual rewards &amp;amp; positive feedback&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/puzzlegame.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Puzzle Game&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/puzzle.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Puzzle&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/puzzleui.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Positive feedback&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;6-2-leaf-catcher-vr-game&#34;&gt;6-2. &lt;strong&gt;Leaf Catcher VR Game&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Players &lt;strong&gt;catch falling leaves&lt;/strong&gt; using VR-controlled baskets.&lt;/li&gt;
+&lt;li&gt;Encourages &lt;strong&gt;mindfulness and engagement&lt;/strong&gt; through simple mechanics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Developed using Blender &amp;amp; Unity, with physics-based interactions.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-key-features-of-the-vr-app&#34;&gt;7. Key Features of the VR App
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Feature&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Personalized Goals&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Users set and achieve small goals.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Non-Punitive Approach&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;No negative feedback for failure.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Dynamic Feedback&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Virtual pet’s behavior updates instantly based on user actions.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-results--future-improvements&#34;&gt;8. Results &amp;amp; Future Improvements
+&lt;/h2&gt;&lt;h3 id=&#34;-challenges-faced&#34;&gt;🔴 &lt;strong&gt;Challenges Faced&lt;/strong&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;VR Gesture Tracking Issues&lt;/strong&gt; → Need to improve controller input accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Virtual Pet Emotional Responses&lt;/strong&gt; → Implementing &lt;strong&gt;mood-based behavior changes&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-conclusion&#34;&gt;9. Conclusion
+&lt;/h2&gt;&lt;p&gt;This project successfully integrates &lt;strong&gt;VR therapy and gamification&lt;/strong&gt; to provide &lt;strong&gt;an accessible and engaging mental health support system&lt;/strong&gt;. This project opens doors for future developments in &lt;strong&gt;digital mental health interventions&lt;/strong&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>MRTK Project - Trolley Race Adventure</title>
+        <link>http://localhost:1313/post/mrtk/mrtk/</link>
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/mrtk/mrtk/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Jiwon Kang &amp;amp; Sara Naranjo&lt;br&gt;
+&lt;strong&gt;Project Type:&lt;/strong&gt; HoloLens 2 AR Game&lt;/p&gt;
+&lt;h2 id=&#34;1-game-overview&#34;&gt;1. Game Overview
+&lt;/h2&gt;&lt;p&gt;Trolley Race Adventure is an immersive HoloLens 2 game where players race trolleys on dynamic tracks. The goal is to &lt;strong&gt;collect good items (cherries 🍒) to earn points&lt;/strong&gt; while &lt;strong&gt;avoiding bad items (bananas 🍌) that slow you down&lt;/strong&gt; and reach the finish line as quickly as possible.&lt;/p&gt;
+&lt;h3 id=&#34;2-controls&#34;&gt;2. Controls
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Steering:&lt;/strong&gt; Press buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed Control:&lt;/strong&gt; Use keyboard arrow keys (↑/↓) to adjust speed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-game-assets&#34;&gt;3. Game Assets
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; Unity Asset Store&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trolleys (Playable Characters)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Circuit (Gameplay Levels)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Items (Cherries 🍒 / Bananas 🍌)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-vehicle-selection&#34;&gt;4. Vehicle Selection
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Players choose a trolley before starting the game using a &lt;strong&gt;slider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The selected trolley spawns when the game starts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-level-design&#34;&gt;5. Level Design
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Level 1 (Easy):&lt;/strong&gt; Fewer collectible and avoidable objects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 2 (Hard):&lt;/strong&gt; More objects on the track&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-how-to-play&#34;&gt;6. How to Play
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Select a vehicle → Choose a level → Click the Start button&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control movement:&lt;/strong&gt; Use buttons to turn left/right&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adjust speed:&lt;/strong&gt; Use the keyboard arrow keys&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collect cherries (+points), avoid bananas (-points)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Finish the track and view the scoreboard&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-scoring-system&#34;&gt;7. Scoring System
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Good Items (Cherries 🍒):&lt;/strong&gt; Increase points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bad Items (Bananas 🍌):&lt;/strong&gt; Decrease points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TextMeshPro UI&lt;/strong&gt; updates scores dynamically&lt;/li&gt;
+&lt;li&gt;The final score appears after completing the level&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-mrtk3-components-used&#34;&gt;8. MRTK3 Components Used
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Feature&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;MRTK3 Component&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Vehicle Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Slider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Level Selection&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dropdown&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Turning &amp;amp; Start Game&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Button&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;In-game Instructions&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Dialog&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;UI Scaling&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Bounds Control&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Game Settings&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Near Menu&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-conclusion--future-improvements&#34;&gt;9. Conclusion &amp;amp; Future Improvements
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Achievements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Successfully integrated AR gameplay with MRTK3&lt;/li&gt;
+&lt;li&gt;Designed an interactive UI for a better player experience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Future Enhancements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement voice commands for controls&lt;/li&gt;
+&lt;li&gt;Introduce more complex level designs&lt;/li&gt;
+&lt;li&gt;Add obstacle-based challenges (mud zones, random objects)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-testing&#34;&gt;10. Testing
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/MRTK.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>VR Development - Roll A Ball</title>
+        <link>http://localhost:1313/post/vrsetup/vrsetup/</link>
+        <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/vrsetup/vrsetup/</guid>
+        <description>&lt;h3 id=&#34;implementing-the-roll-a-ball-game-in-vr&#34;&gt;Implementing the Roll-a-Ball Game in VR
+&lt;/h3&gt;&lt;p&gt;In this blog post, we will apply the &lt;strong&gt;Roll-a-Ball&lt;/strong&gt; game to a VR environment.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-initial-setup&#34;&gt;1. Initial Setup
+&lt;/h3&gt;&lt;h4 id=&#34;adjusting-the-playboard&#34;&gt;Adjusting the Playboard
+&lt;/h4&gt;&lt;p&gt;In a VR environment, the playboard will continuously fall. To prevent this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a &lt;strong&gt;Plane&lt;/strong&gt; to provide a stable base.&lt;/li&gt;
+&lt;li&gt;Place the playboard on a &lt;strong&gt;Table&lt;/strong&gt; to ensure it remains at a reachable height.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/14.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Initial Setup&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-installing-required-plugins&#34;&gt;2. Installing Required Plugins
+&lt;/h3&gt;&lt;p&gt;To develop for VR, we need to install the following Unity plugins:&lt;/p&gt;
+&lt;h4 id=&#34;openxr-plugin-installation&#34;&gt;OpenXR Plugin Installation
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Go to &lt;strong&gt;Window&lt;/strong&gt; &amp;gt; &lt;strong&gt;Package Manager&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Change &lt;strong&gt;Packages&lt;/strong&gt; to &amp;ldquo;Unity Registry.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Search for &lt;strong&gt;OpenXR Plugin&lt;/strong&gt; and install it.
+&lt;ul&gt;
+&lt;li&gt;Unity will restart automatically after installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;After installation, navigate to &lt;strong&gt;Edit&lt;/strong&gt; &amp;gt; &lt;strong&gt;Project Settings&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Plug-in Management&lt;/strong&gt; &amp;gt; &lt;strong&gt;OpenXR&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;Ensure that the &lt;strong&gt;OpenXR feature group&lt;/strong&gt; is enabled.&lt;/li&gt;
+&lt;li&gt;Set the appropriate interaction profile, such as &lt;strong&gt;Oculus Touch Controller Profile&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/2.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;OpenXR Plugin&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;xr-interaction-toolkit-installation&#34;&gt;XR Interaction Toolkit Installation
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Follow the same steps as above to install &lt;strong&gt;XR Interaction Toolkit.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Download the &lt;strong&gt;Starter Assets&lt;/strong&gt; package.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/1.png&#34; width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;XR Interaction toolkit&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-project-settings&#34;&gt;3. Project Settings
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Edit&lt;/strong&gt; &amp;gt; &lt;strong&gt;Project Settings&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Plug-in Management.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Check the &lt;strong&gt;Oculus&lt;/strong&gt; option.
+&lt;ul&gt;
+&lt;li&gt;If a warning icon (!) appears, click &lt;strong&gt;Fix All&lt;/strong&gt; to resolve it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/3.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Project Setting&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-setting-up-xr-interaction-toolkit&#34;&gt;4. Setting Up XR Interaction Toolkit
+&lt;/h3&gt;&lt;h4 id=&#34;applying-starter-assets&#34;&gt;Applying Starter Assets
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Go to &lt;strong&gt;Assets&lt;/strong&gt; &amp;gt; &lt;strong&gt;Samples&lt;/strong&gt; &amp;gt; &lt;strong&gt;XR Interaction Toolkit&lt;/strong&gt; &amp;gt; &lt;strong&gt;2.2.0&lt;/strong&gt; &amp;gt; &lt;strong&gt;Starter Assets.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remove all default presets from &lt;strong&gt;ActionBasedContinuousMoveProvider.default.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/4.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Starter Assets&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;div style=&#34;margin-right: 10px; text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/5.png&#34; width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: center;&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/images/6.png&#34;  width=&#34;100%&#34;&gt;
+    &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-adding-and-configuring-xr-origin&#34;&gt;5. Adding and Configuring XR Origin
+&lt;/h3&gt;&lt;h4 id=&#34;configuring-xr-origin&#34;&gt;Configuring XR Origin
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;XR Origin (Action Based)&lt;/strong&gt; to the Hierarchy.
+&lt;ul&gt;
+&lt;li&gt;Ensure you select the one labeled &lt;em&gt;(Action Based)&lt;/em&gt; to include the camera and controllers for both hands.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Delete the existing &lt;strong&gt;Main Camera&lt;/strong&gt; from the Hierarchy.&lt;/li&gt;
+&lt;li&gt;Add the following components to &lt;strong&gt;XR Origin:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Character Controller&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Character Controller Driver&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;Tracking Origin Mode&lt;/strong&gt; to &lt;strong&gt;Floor&lt;/strong&gt; in the XR Origin component.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/7.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;XR Origin&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-setting-up-the-locomotion-system&#34;&gt;6. Setting Up the Locomotion System
+&lt;/h3&gt;&lt;h4 id=&#34;adding-locomotion-system&#34;&gt;Adding Locomotion System
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;Locomotion System (Action Based)&lt;/strong&gt; from &lt;strong&gt;XR &amp;gt; Locomotion System (Action Based)&lt;/strong&gt; in the Hierarchy.&lt;/li&gt;
+&lt;li&gt;Drag it into &lt;strong&gt;XR Origin&amp;rsquo;s Character Controller Driver&lt;/strong&gt; as the &lt;strong&gt;Locomotion Provider.&lt;/strong&gt; (check the image of &lt;strong&gt;XR Origin&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;In the Inspector panel, disable or remove:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Teleportation Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Snap Turn Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;configuring-movement&#34;&gt;Configuring Movement
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add &lt;strong&gt;Continuous Move Provider&lt;/strong&gt; and &lt;strong&gt;Continuous Turn Provider.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Use Reference&lt;/strong&gt; for:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Right Hand Move Action&lt;/strong&gt; in Continuous Move Provider.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Left Hand Turn Action&lt;/strong&gt; in Continuous Turn Provider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/8.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Locomotion System&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-creating-the-hand-controller&#34;&gt;7. Creating the Hand Controller
+&lt;/h3&gt;&lt;h4 id=&#34;hand-controller-prefab&#34;&gt;Hand Controller Prefab
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Create an &lt;strong&gt;Empty GameObject&lt;/strong&gt; and rename it to &lt;strong&gt;HandController.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Add a &lt;strong&gt;Cube&lt;/strong&gt; and a &lt;strong&gt;Cylinder&lt;/strong&gt; as children:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cube (Handle)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Position: (0, 0, -0.11)&lt;/li&gt;
+&lt;li&gt;Scale: (0.04, 0.04, 0.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cylinder (Pad)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Position: (0, 0, -0.05)&lt;/li&gt;
+&lt;li&gt;Scale: (0.07, 0.024, 0.07)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remove the colliders from both objects.&lt;/li&gt;
+&lt;li&gt;In the &lt;strong&gt;Mesh Renderer&lt;/strong&gt;, set &lt;strong&gt;Cast Shadows&lt;/strong&gt; to &lt;strong&gt;Off.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/10.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Hand Controller&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;configuring-the-right-hand-controller&#34;&gt;Configuring the Right Hand Controller
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;In the Inspector, remove or disable the following components:
+&lt;ul&gt;
+&lt;li&gt;XR Ray Interactor&lt;/li&gt;
+&lt;li&gt;Line Renderer&lt;/li&gt;
+&lt;li&gt;XR Interactor Line Visual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add an empty GameObject named &lt;strong&gt;ModelParent&lt;/strong&gt; as a child of &lt;strong&gt;RightHand Controller&lt;/strong&gt; and assign it to the XR Controller&amp;rsquo;s &lt;strong&gt;Model&lt;/strong&gt; field.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/11.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Right Hand Controller&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Since we need to grab the playboard, we need to add a collider.
+&lt;ul&gt;
+&lt;li&gt;In Add component, add a &lt;strong&gt;Sphere Collider&lt;/strong&gt;, check &lt;strong&gt;isTrigger&lt;/strong&gt;, and set the radius to 0.5.&lt;/li&gt;
+&lt;li&gt;Also add &lt;strong&gt;XR direct interaction&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/12.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Right Hand Controller Inspector&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;8-adding-interaction-to-the-playboard&#34;&gt;8. Adding Interaction to the Playboard
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Select the &lt;strong&gt;Playboard&lt;/strong&gt; and add the &lt;strong&gt;XR Grab Interactable&lt;/strong&gt; component.&lt;/li&gt;
+&lt;li&gt;Create an empty GameObject named &lt;strong&gt;AttachPointL&lt;/strong&gt; under the Playboard.&lt;/li&gt;
+&lt;li&gt;Assign &lt;strong&gt;AttachPointL&lt;/strong&gt; to the &lt;strong&gt;Attach Transform&lt;/strong&gt; field of the XR Grab Interactable component.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/13.png&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;Playboard&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;9-testing-and-final-results&#34;&gt;9. Testing and Final Results
+&lt;/h3&gt;&lt;p&gt;Once all configurations are complete, connect your &lt;strong&gt;Oculus&lt;/strong&gt; headset to the computer and run the game to ensure everything works as expected. Below is the final result of our VR development:&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/vrvideo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;By following these steps, you can successfully adapt your Roll-a-Ball game to VR !!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>My First Unity Project - Roll a ball</title>
+        <link>http://localhost:1313/post/lab3/unity3dapplication/</link>
+        <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/lab3/unity3dapplication/</guid>
+        <description>&lt;img src="http://localhost:1313/images/rollaballimage.png" alt="Featured image of post My First Unity Project - Roll a ball" /&gt;&lt;p&gt;Today, I’ll introduce my first Unity 3D project, the classic Roll-a-Ball game.&lt;/p&gt;
+&lt;h4 id=&#34;unity-setup&#34;&gt;Unity Setup
+&lt;/h4&gt;&lt;p&gt;If you’re interested in how to set up Unity, check out my &lt;a class=&#34;link&#34; href=&#34;https://jiwonyziyo.github.io/post/lab2/setupunity/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Set up Unity&lt;/a&gt;. I cover everything from downloading Unity Hub to configuring the environment for this project.&lt;/p&gt;
+&lt;h4 id=&#34;building-the-basics&#34;&gt;Building the Basics
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Setting the Scene:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I created a new 3D project in Unity and got started by adding a flat &lt;strong&gt;Plane&lt;/strong&gt; as the ground.&lt;/li&gt;
+&lt;li&gt;Resized it to &lt;code&gt;(2, 1, 2)&lt;/code&gt; to give our rolling ball plenty of space to move.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adding the Player:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next, I created a &lt;strong&gt;Sphere&lt;/strong&gt; object and named it &lt;strong&gt;Player&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Moved the sphere up slightly by setting the Y coordinate to &lt;code&gt;0.5&lt;/code&gt;. This gave it a realistic &amp;ldquo;standing&amp;rdquo; position on the ground.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adding the Rigidbody Component:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To enable physics interactions, I added a &lt;strong&gt;Rigidbody&lt;/strong&gt; component to the Player object. This step allows the ball to respond to forces and gravity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creating a Player Controller Script:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I added a script called &lt;strong&gt;PlayerController.cs&lt;/strong&gt; to manage the ball&amp;rsquo;s movement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; UnityEngine;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Rigidbody rb;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb = GetComponent&amp;lt;Rigidbody&amp;gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; FixedUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; moveHorizontal = Input.GetAxis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Horizontal&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; moveVertical = Input.GetAxis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Vertical&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Vector3 movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(moveHorizontal, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, moveVertical);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rb.AddForce(movement * speed);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This script got the ball rolling!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;setting-up-the-camera&#34;&gt;Setting Up the Camera
+&lt;/h4&gt;&lt;p&gt;For a more immersive experience, I wanted the camera to follow the player. Initially, I tried making the &lt;strong&gt;Main Camera&lt;/strong&gt; a child of the Player object, but that led to a weird, shaky view. So instead, I wrote a &lt;strong&gt;CameraController&lt;/strong&gt; script that allowed the camera to follow the ball smoothly, using a fixed offset.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;CameraController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; GameObject player;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Vector3 offset;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Start()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        offset = transform.position - player.transform.position;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; LateUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        transform.position = player.transform.position + offset;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-the-pick-ups-with-score-variations&#34;&gt;Adding the Pick-Ups with Score Variations
+&lt;/h4&gt;&lt;p&gt;I added two types of collectible cubes: &lt;code&gt;PickUpGreenParents&lt;/code&gt; and &lt;code&gt;PickUpOrangeParents&lt;/code&gt;. Each of them affects the score differently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Green Pick-Ups&lt;/strong&gt;: When the player collects these, the score increases by &lt;strong&gt;+1&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orange Pick-Ups&lt;/strong&gt;: Collecting an orange pick-up decreases the score by &lt;strong&gt;-1&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creating Prefabs for Green and Orange Pick-Ups&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I created one green and one orange cube, then saved them as separate prefabs: &lt;code&gt;PickUpGreenParents&lt;/code&gt; (colored green) and &lt;code&gt;PickUpOrangeParents&lt;/code&gt; (colored orange). Prefabs made it easy to duplicate and spread these objects around the scene while keeping the setup consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configuring Collider and Trigger&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each prefab was tagged with &lt;code&gt;PickUpGreenParents&lt;/code&gt; or &lt;code&gt;PickUpOrangeParents&lt;/code&gt; so I could handle them differently in the script. I also added a &lt;strong&gt;Collider&lt;/strong&gt; component to each with &amp;ldquo;Is Trigger&amp;rdquo; enabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Updating the PlayerController Script&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To manage scoring, I modified the &lt;strong&gt;PlayerController&lt;/strong&gt; script to check each collected object’s tag. Based on whether the tag was &lt;code&gt;PickUpGreenParents&lt;/code&gt; or &lt;code&gt;PickUpOrangeParents&lt;/code&gt;, the script either increased or decreased the score.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnTriggerEnter(Collider other)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUpGreenParents&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        other.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = count + &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;  &lt;span style=&#34;color:#75715e&#34;&gt;// Increases score by 1 for green&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SetCountText();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (other.gameObject.CompareTag(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PickUpOrangeParents&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        other.gameObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        count = count - &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;  &lt;span style=&#34;color:#75715e&#34;&gt;// Decreases score by 1 for orange&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SetCountText();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Using the SetCountText Method&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;I used the &lt;code&gt;SetCountText()&lt;/code&gt; method to update the score display each time a pick-up was collected, so the player sees their updated score in real-time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; SetCountText()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        countText.text = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Count: &amp;#34;&lt;/span&gt; + count.ToString();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (count &amp;gt;= &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            winTextObject.SetActive(&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;the-ui-text-hurdle-adding-the-score-and-win-text&#34;&gt;The UI Text Hurdle: Adding the Score and Win Text
+&lt;/h4&gt;&lt;p&gt;Here&amp;rsquo;s where I had a small error. I wanted to display the score and a &amp;ldquo;You Win!&amp;rdquo; message, but Unity wasn’t showing the UI objects. I realized I had forgotten to make the &lt;strong&gt;CountText&lt;/strong&gt; and &lt;strong&gt;WinTextObject&lt;/strong&gt; fields in my script public, which prevented me from linking them in the Inspector. Without these fields being public, Unity can’t display the UI elements on screen, so I was left staring at a blank display.&lt;/p&gt;
+&lt;p&gt;After making them public, I linked the &lt;strong&gt;CountText&lt;/strong&gt; and &lt;strong&gt;WinTextObject&lt;/strong&gt; objects in the Inspector. Here is the updat code !&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerController&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed = &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; TextMeshProUGUI countText;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; GameObject winTextObject;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/rollaball.png&#34; alt=&#34;Kinect&#34; width=&#34;100%&#34;&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;adding-accelerometer-input-for-mobile&#34;&gt;Adding Accelerometer Input for Mobile
+&lt;/h4&gt;&lt;p&gt;I implemented &lt;strong&gt;accelerometer-based movement&lt;/strong&gt;. This allowed the player to control the ball by tilting their device—a great way to enhance gameplay on smartphones!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enabling the Accelerometer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To use the accelerometer, I first checked if the device is a mobile device by using an &lt;code&gt;isMobileBuild&lt;/code&gt; flag. I also used &lt;code&gt;InputSystem.EnableDevice&lt;/code&gt; to activate the accelerometer input when running on mobile.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Updating Movement Logic&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;FixedUpdate&lt;/code&gt; method, I checked for accelerometer data. If it was available, I used that data for movement; otherwise, I defaulted to keyboard input (for desktop testing). Here’s the updated &lt;code&gt;FixedUpdate&lt;/code&gt; code:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; FixedUpdate()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Vector3 movement = Vector3.zero;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (isMobileBuild &amp;amp;&amp;amp; UnityEngine.InputSystem.Accelerometer.current != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Get accelerometer data for movement&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Vector3 acceleration = UnityEngine.InputSystem.Accelerometer.current.acceleration.ReadValue();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        AccText.text = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Accelerometer: &amp;#34;&lt;/span&gt; + acceleration.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;F6&amp;#34;&lt;/span&gt;);  &lt;span style=&#34;color:#75715e&#34;&gt;// Display accelerometer data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Map accelerometer data to movement (adjust axes if needed based on phone orientation)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(acceleration.x, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, acceleration.y);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Use input from the non-mobile build (keyboard/controller input)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        movement = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Vector3(movementX, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0f&lt;/span&gt;, movementY);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Apply movement force to the rigidbody&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    rb.AddForce(movement * speed);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Enable accelerometer if running on a mobile device&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (isMobileBuild &amp;amp;&amp;amp; UnityEngine.InputSystem.Accelerometer.current != &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Displaying Accelerometer Data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To help debug, I displayed the accelerometer data on the screen using a &lt;code&gt;Text&lt;/code&gt; component (&lt;code&gt;AccText&lt;/code&gt;). This allowed me to confirm the data being received and adjust the movement accordingly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;deploying-as-a-mobile-application&#34;&gt;Deploying as a Mobile Application
+&lt;/h4&gt;&lt;p&gt;After implementing accelerometer controls, I wanted to test the game on a mobile device. Since I’m using a &lt;strong&gt;MacBook and iPhone&lt;/strong&gt;, I needed &lt;strong&gt;Xcode&lt;/strong&gt; to build and deploy the app.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Xcode Requirement for iOS Testing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initially, I planned to use &lt;strong&gt;Unity Remote 5&lt;/strong&gt; for quick mobile testing. I went to &lt;strong&gt;File &amp;gt; Build Settings &amp;gt; iOS &amp;gt; Switch Platform&lt;/strong&gt; to change the platform to iOS. I also opened &lt;strong&gt;Player Settings&lt;/strong&gt; to configure my project for iOS. However, I discovered that without Xcode installed, Unity wouldn’t let me select &lt;strong&gt;iPhone&lt;/strong&gt; under &lt;strong&gt;Editor &amp;gt; Device&lt;/strong&gt; in &lt;strong&gt;Project Settings&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Installing Xcode&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To resolve this, I downloaded and installed Xcode from the App Store. This process took a while, but it’s essential for iOS development on Unity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Using Unity Remote 5 for Quick Testing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With Xcode installed, I could finally set the platform to iOS and select &lt;strong&gt;iPhone&lt;/strong&gt; under &lt;strong&gt;Editor &amp;gt; Device&lt;/strong&gt; in &lt;strong&gt;Project Settings&lt;/strong&gt;. I downloaded &lt;strong&gt;Unity Remote 5&lt;/strong&gt; on my iPhone, connected it, and could now use the remote app to test things like accelerometer movement without needing to build and deploy the app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo
+&lt;/h2&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;video width=&#34;600&#34; controls&gt;
+    &lt;source src=&#34;http://localhost:1313/videos/rollaball.mov&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
