@@ -23,11 +23,11 @@
         <description></description>
         </item>
         <item>
-        <title>TranversalProject</title>
-        <link>http://localhost:1313/categories/tranversalproject/</link>
+        <title>Transversal Project</title>
+        <link>http://localhost:1313/categories/transversal-project/</link>
         <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/tranversalproject/</guid>
+        <guid>http://localhost:1313/categories/transversal-project/</guid>
         <description></description>
         </item>
         <item>
@@ -44,6 +44,22 @@
         <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/hci/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>BCV</title>
+        <link>http://localhost:1313/categories/bcv/</link>
+        <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/bcv/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OpenCV</title>
+        <link>http://localhost:1313/categories/opencv/</link>
+        <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/opencv/</guid>
         <description></description>
         </item>
         

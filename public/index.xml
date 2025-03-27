@@ -522,6 +522,438 @@
 </description>
         </item>
         <item>
+        <title>Final Project - Basic Computer Vision</title>
+        <link>http://localhost:1313/post/bcv/bcv/</link>
+        <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/post/bcv/bcv/</guid>
+        <description>&lt;h1 id=&#34;project-goals&#34;&gt;Project Goals
+&lt;/h1&gt;&lt;h3 id=&#34;marker-based-detection&#34;&gt;Marker based detection
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Extract keypoints and descriptors from a marker image.&lt;/li&gt;
+&lt;li&gt;Match the marker with live webcam footage in real time.&lt;/li&gt;
+&lt;li&gt;Enhance robustness of matching.&lt;/li&gt;
+&lt;li&gt;Overlay marker image on detected locations&lt;/li&gt;
+&lt;li&gt;Compare performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Import the necessary libraries&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; cv2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; plt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; time
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-create-a-marker-image&#34;&gt;2. Create a marker image
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#read the image and change to grayscale for detect the marker &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imread(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;chariot.jpg&amp;#39;&lt;/span&gt;, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#show the original image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(image, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2RGB))  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Original Image&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;off&amp;#34;&lt;/span&gt;)  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/output_4_0.png&#34;  width=&#34;25%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# extract the keypoints and descriptors from image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sift &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SIFT_create()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keypoints_marker, descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(image, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#save the marker imgae with detected keypoints visualized&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drawKeypoints(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_marker, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#save the marker image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imwrite(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;marker_image_chariot_sift.jpg&amp;#39;&lt;/span&gt;, output_image) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#visualize the marker image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(output_image, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2RGB)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Marker Image with Keypoints_SIFT&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;off&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/output_5_0.png&#34;  width=&#34;25%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# extract the keypoints and descriptors from image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;orb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ORB_create()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keypoints_marker, descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; orb&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(image, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drawKeypoints(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    image,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_marker, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#save the marker image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imwrite(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;marker_image_chariot_orb.jpg&amp;#39;&lt;/span&gt;, output_image) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#visualize the marker image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(output_image, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2RGB)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Marker Image with Keypoints_ORB&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axis(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;off&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/output_6_0.png&#34;  width=&#34;25%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As we can see above, due to the difference in keypoint detection methods, the keypoints are detected differently in the marker image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ORB&lt;/strong&gt; quickly finds corners based on the FAST algorithm. Since it is designed for real-time processing, it detects a limited number of keypoints to maintain speed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SIFT&lt;/strong&gt; finds keypoints in various sizes and scales in the image. It finds strong features in all areas of the image using the &lt;strong&gt;DoG method&lt;/strong&gt;. Keypoint detection is not limited, and all possible keypoints are explored.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Considering these differences, I will choose SIFT for its ability to guarantee high matching accuracy in various environments and proceed with real-time matching.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-matching-descriptor&#34;&gt;2. Matching Descriptor
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Matching&lt;/strong&gt; is a problem of finding pairs corresponding to the same location of the same object when a set of &lt;code&gt;dc1&lt;/code&gt; extracted from an image and a set of &lt;code&gt;dc2&lt;/code&gt; extracted from a video shown by a real-time webcam are given.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Since the marker image has an object alone, a relatively reliable descriptor is detected, and since the video contains multiple objects, there are many descriptors and a lot of noise.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Brute-Force Matching (BFMatcher)&lt;/strong&gt; is a method that compares all possible matches between two sets of descriptors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I use BFMatcher with the knn matching strategy. The algorithm identifies the descriptor &lt;code&gt;dc2j&lt;/code&gt; in the real-time video that has the shortest distance to the descriptor &lt;code&gt;dc1i&lt;/code&gt; from the marker image. If the condition&lt;br&gt;
+[
+d(dc1i, dc2j) &amp;lt; T
+]
+is satisfied, the pair is considered a match.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;initialize_marker&lt;/span&gt;(marker_path):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    marker_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imread(marker_path, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;IMREAD_COLOR)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gray_marker_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(marker_image, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sift &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SIFT_create()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_marker, descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_marker_image, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Initialized marker image &amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;marker_path&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; marker_image, gray_marker_image, keypoints_marker, descriptors_marker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;marker_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;marker_image_chariot.jpg&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;marker_image, gray_marker_image, keypoints_marker, descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; initialize_marker(marker_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#make a directory for saving results&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;captures&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;makedirs(output_dir, exist_ok&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame_count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;real-time-matching&#34;&gt;Real-time matching
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#start webcam&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;VideoCapture(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#initialize Brute-Force matcher&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bf &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;BFMatcher()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#capture a frame from the webcam&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ret, frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; ret:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gray_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(frame, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#detect keypoints and descriptors in the current frame &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_frame, descriptors_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_frame, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# keypoint matching - knn matching strategy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;knnMatch(descriptors_marker, descriptors_frame, k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    good_matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m, n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; matches:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.75&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; n&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#visualize&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    frame_with_matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drawMatches(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        marker_image,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        keypoints_marker,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        frame, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        keypoints_frame, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        good_matches, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Matches&amp;#39;&lt;/span&gt;, frame_with_matches)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;waitKey(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;:  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ESC pressed. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; ord(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;):  &lt;span style=&#34;color:#75715e&#34;&gt;#capture the img by pressing &amp;#39;c&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        frame_count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        capture_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(output_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;capture_&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;frame_count&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.jpg&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imwrite(capture_path, frame_with_matches)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Captured and saved: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;capture_path&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;release()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;destroyAllWindows()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/capture_3.jpg&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We can see the matching result between the marker image and real-time video.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;However, some incorrect matches can also be observed. To address this, the &lt;code&gt;findHomography()&lt;/code&gt; function is used, which calculates the transformation matrix using the indices of selected descriptor matching pairs. This process is refined using the RANSAC algorithm.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, add a rectangle is drawn on the video to represent the transformation, aligning with the four corner points of the marker image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;compute-homography&#34;&gt;Compute Homography
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;VideoCapture(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bf &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;BFMatcher()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ret, frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; ret:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to capture frame from webcam. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gray_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(frame, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_frame, descriptors_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_frame, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;knnMatch(descriptors_marker, descriptors_frame, k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    good_matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m, n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; matches:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.75&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; n&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(m)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#compute Homography &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; len(good_matches) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        src_pts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float32([keypoints_marker[m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;queryIdx]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pt &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; good_matches])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        dst_pts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float32([keypoints_frame[m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;trainIdx]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pt &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; good_matches])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        H, mask &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;findHomography(src_pts, dst_pts, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;RANSAC, &lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; H &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            h_marker, w_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; gray_marker_image&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            corners_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float32([
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                [w_marker, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                [w_marker, h_marker],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, h_marker]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            transformed_corners &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;perspectiveTransform(corners_marker, H)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;polylines(frame, [np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;int32(transformed_corners)], isClosed&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;), thickness&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Not enough matches to calculate Homography.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    match_visual &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drawMatches(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        marker_image, keypoints_marker, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        frame, keypoints_frame, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        good_matches, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Matching Results&amp;#39;&lt;/span&gt;, match_visual)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;waitKey(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ESC pressed. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;release()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;destroyAllWindows()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/homography.jpg&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;marker-overlay&#34;&gt;Marker Overlay
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;VideoCapture(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bf &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;BFMatcher()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ret, frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; ret:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to capture frame from webcam. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gray_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(frame, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    keypoints_frame, descriptors_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_frame, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;knnMatch(descriptors_marker, descriptors_frame, k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    good_matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [m &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m, n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; matches &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.75&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; n&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; len(good_matches) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;:  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        src_pts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float32([keypoints_marker[m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;queryIdx]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pt &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; good_matches])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        dst_pts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;float32([keypoints_frame[m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;trainIdx]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pt &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; good_matches])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        H, mask &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;findHomography(src_pts, dst_pts, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;RANSAC, &lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; H &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            h_marker, w_marker, _ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; marker_image&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            warped_marker &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;warpPerspective(marker_image, H, (frame&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], frame&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;#create the overlay mask&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            marker_mask &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;warpPerspective(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ones((h_marker, w_marker, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), dtype&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uint8),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                H,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (frame&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], frame&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            )&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(bool)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            frame[marker_mask] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; warped_marker[marker_mask]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Homography calculation failed.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Not enough matches to calculate Homography.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Marker Overlay&amp;#39;&lt;/span&gt;, frame)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;waitKey(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;:  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ESC pressed. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;release()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;destroyAllWindows()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;http://localhost:1313/images/overlay_marker_image.jpg&#34;  width=&#34;50%&#34;&gt;
+  &lt;p style=&#34;font-size: 12px; color: gray;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;compare-performance--orb-vs-sift&#34;&gt;Compare performance : ORB vs SIFT
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;marker_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imread(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;chariot.jpg&amp;#39;&lt;/span&gt;, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;IMREAD_COLOR)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gray_marker_image &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(marker_image, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;orb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ORB_create()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sift &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SIFT_create()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keypoints_orb, descriptors_orb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; orb&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_marker_image, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keypoints_sift, descriptors_sift &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sift&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_marker_image, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;VideoCapture(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bf &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;BFMatcher()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Press &amp;#39;s&amp;#39; to start matching. Press &amp;#39;ESC&amp;#39; to quit.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#wait until the real-time video prepared&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ret, frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; ret:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to capture frame from webcam. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Press &amp;#39;s&amp;#39; to start&amp;#34;&lt;/span&gt;, frame)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;waitKey(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; ord(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;):  &lt;span style=&#34;color:#75715e&#34;&gt;# start by pressing &amp;#39;s&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Starting real-time matching...&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;: 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ESC pressed. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;release()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;destroyAllWindows()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        exit()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;performance_data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ret, frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; ret:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to capture frame from webcam. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gray_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cvtColor(frame, cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;COLOR_BGR2GRAY)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; algo_name, detector, descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; [(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ORB&amp;#34;&lt;/span&gt;, orb, descriptors_orb), (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SIFT&amp;#34;&lt;/span&gt;, sift, descriptors_sift)]:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        start_time &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;time()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        keypoints_frame, descriptors_frame &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; detector&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;detectAndCompute(gray_frame, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; descriptors_frame &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;or&lt;/span&gt; descriptors_marker &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches_count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;knnMatch(descriptors_marker, descriptors_frame, k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [m &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; m, n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; matches &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.75&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; n&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distance]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches_count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(good_matches)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        elapsed_time &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;time() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; start_time
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        performance_data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Algorithm&amp;#34;&lt;/span&gt;: algo_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Matches&amp;#34;&lt;/span&gt;: good_matches_count,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Processing Time (s)&amp;#34;&lt;/span&gt;: elapsed_time
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        match_visual &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drawMatches(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            marker_image, keypoints_orb &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; algo_name &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ORB&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; keypoints_sift, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            frame, keypoints_frame, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            good_matches, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Matches (&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;algo_name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)&amp;#39;&lt;/span&gt;, match_visual)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;waitKey(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ESC pressed. Exiting.&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;release()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cv2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;destroyAllWindows()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(performance_data)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Algorithm&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;               Matches  Processing Time (s)
+Algorithm                                  
+ORB           3.461538             0.016121
+SIFT       1110.538462             0.886560
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;result&#34;&gt;Result
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ORB&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On average, only about 3 matches were successfully performed.&lt;/li&gt;
+&lt;li&gt;ORB is fast, but its matching performance is likely to be poor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SIFT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On average, about 1110 matches were successfully performed.&lt;/li&gt;
+&lt;li&gt;SIFT provides strong matching performance and shows high reliability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ORB is fast but has low matching performance. However, in real-time situations, the processing speed is fast. On the other hand, SIFT provides high matching performance and reliability, but the processing speed is slow. In real-time detection situations, the processing speed can be felt to be slow.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Successfully implemented real-time matching using SIFT and &lt;code&gt;findHomography&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Verified matching accuracy by visualizing keypoints, calculating Homography for transformation, and overlaying the marker image onto the detected region.&lt;/li&gt;
+&lt;li&gt;Integrated a robust filtering mechanism to ensure only good matches are used for accurate detection.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Through this project, I gained practical experience in utilizing OpenCV for real-time image matching. I also deepened my understanding of detectors and descriptors, such as &lt;code&gt;SIFT&lt;/code&gt; and &lt;code&gt;ORB&lt;/code&gt;, and how they impact the accuracy and efficiency of image matching.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Idea &amp; Prototype &amp; Evaluation</title>
         <link>http://localhost:1313/post/ideate/ideateprototypeevaluation/</link>
         <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>

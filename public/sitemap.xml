@@ -14,6 +14,9 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/post/transversalproject/transeversalproject/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/mrtk/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -23,10 +26,7 @@
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/transversalproject/transeversalproject/</loc>
-    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/tranversalproject/</loc>
+    <loc>http://localhost:1313/categories/transversal-project/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/unity/</loc>
@@ -43,6 +43,15 @@
   </url><url>
     <loc>http://localhost:1313/post/vrsetup/vrsetup/</loc>
     <lastmod>2025-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/bcv/</loc>
+    <lastmod>2024-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/bcv/bcv/</loc>
+    <lastmod>2024-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/opencv/</loc>
+    <lastmod>2024-11-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hci-lecture/</loc>
     <lastmod>2024-10-27T00:00:00+00:00</lastmod>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Project Goals Marker based detection Extract keypoints and descriptors from a marker image. Match the marker with live webcam footage in real time. Enhance robustness of matching. Overlay marker image on detected locations Compare performance #Import the necessary libraries import cv2 import numpy as np import pandas as pd import matplotlib.pyplot as plt import os import time 2. Create a marker image #read the image and change to grayscale for detect the marker image = cv2.imread(&#39;chariot.jpg&#39;, cv2.COLOR_BGR2GRAY) #show the original image plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)) plt.title(&#34;Original Image&#34;) plt.axis(&#34;off&#34;) plt.show() ">
+<title>Final Project - Basic Computer Vision</title>
+
+<link rel='canonical' href='http://localhost:1313/post/bcv/bcv/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Final Project - Basic Computer Vision">
+<meta property='og:description' content="Project Goals Marker based detection Extract keypoints and descriptors from a marker image. Match the marker with live webcam footage in real time. Enhance robustness of matching. Overlay marker image on detected locations Compare performance #Import the necessary libraries import cv2 import numpy as np import pandas as pd import matplotlib.pyplot as plt import os import time 2. Create a marker image #read the image and change to grayscale for detect the marker image = cv2.imread(&#39;chariot.jpg&#39;, cv2.COLOR_BGR2GRAY) #show the original image plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)) plt.title(&#34;Original Image&#34;) plt.axis(&#34;off&#34;) plt.show() ">
+<meta property='og:url' content='http://localhost:1313/post/bcv/bcv/'>
+<meta property='og:site_name' content='Jiwon KANG'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-28T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Final Project - Basic Computer Vision">
+<meta name="twitter:description" content="Project Goals Marker based detection Extract keypoints and descriptors from a marker image. Match the marker with live webcam footage in real time. Enhance robustness of matching. Overlay marker image on detected locations Compare performance #Import the necessary libraries import cv2 import numpy as np import pandas as pd import matplotlib.pyplot as plt import os import time 2. Create a marker image #read the image and change to grayscale for detect the marker image = cv2.imread(&#39;chariot.jpg&#39;, cv2.COLOR_BGR2GRAY) #show the original image plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)) plt.title(&#34;Original Image&#34;) plt.axis(&#34;off&#34;) plt.show() ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/sticker_hu8134136761807756024.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Jiwon KANG</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/bcv/" >
+                BCV
+            </a>
+        
+            <a href="/categories/opencv/" >
+                OpenCV
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/bcv/bcv/">Final Project - Basic Computer Vision</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 28, 2024</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="project-goals">Project Goals
+</h1><h3 id="marker-based-detection">Marker based detection
+</h3><ul>
+<li>Extract keypoints and descriptors from a marker image.</li>
+<li>Match the marker with live webcam footage in real time.</li>
+<li>Enhance robustness of matching.</li>
+<li>Overlay marker image on detected locations</li>
+<li>Compare performance</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#Import the necessary libraries</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> cv2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span></code></pre></div><h2 id="2-create-a-marker-image">2. Create a marker image
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#read the image and change to grayscale for detect the marker </span>
+</span></span><span style="display:flex;"><span>image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#39;chariot.jpg&#39;</span>, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#show the original image</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>imshow(cv2<span style="color:#f92672">.</span>cvtColor(image, cv2<span style="color:#f92672">.</span>COLOR_BGR2RGB))  
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Original Image&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#34;off&#34;</span>)  
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/output_4_0.png"  width="25%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># extract the keypoints and descriptors from image</span>
+</span></span><span style="display:flex;"><span>sift <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>SIFT_create()
+</span></span><span style="display:flex;"><span>keypoints_marker, descriptors_marker <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(image, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#save the marker imgae with detected keypoints visualized</span>
+</span></span><span style="display:flex;"><span>output_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>drawKeypoints(
+</span></span><span style="display:flex;"><span>    image,
+</span></span><span style="display:flex;"><span>    keypoints_marker, 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>    flags<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#save the marker image</span>
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#39;marker_image_chariot_sift.jpg&#39;</span>, output_image) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#visualize the marker image</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>imshow(cv2<span style="color:#f92672">.</span>cvtColor(output_image, cv2<span style="color:#f92672">.</span>COLOR_BGR2RGB)) 
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Marker Image with Keypoints_SIFT&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#34;off&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/output_5_0.png"  width="25%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># extract the keypoints and descriptors from image</span>
+</span></span><span style="display:flex;"><span>orb <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>ORB_create()
+</span></span><span style="display:flex;"><span>keypoints_marker, descriptors_marker <span style="color:#f92672">=</span> orb<span style="color:#f92672">.</span>detectAndCompute(image, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>output_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>drawKeypoints(
+</span></span><span style="display:flex;"><span>    image,
+</span></span><span style="display:flex;"><span>    keypoints_marker, 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>    flags<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#save the marker image</span>
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>imwrite(<span style="color:#e6db74">&#39;marker_image_chariot_orb.jpg&#39;</span>, output_image) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#visualize the marker image</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>imshow(cv2<span style="color:#f92672">.</span>cvtColor(output_image, cv2<span style="color:#f92672">.</span>COLOR_BGR2RGB)) 
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Marker Image with Keypoints_ORB&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#34;off&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/output_6_0.png"  width="25%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<ul>
+<li>
+<p>As we can see above, due to the difference in keypoint detection methods, the keypoints are detected differently in the marker image.</p>
+</li>
+<li>
+<p><strong>ORB</strong> quickly finds corners based on the FAST algorithm. Since it is designed for real-time processing, it detects a limited number of keypoints to maintain speed.</p>
+</li>
+<li>
+<p><strong>SIFT</strong> finds keypoints in various sizes and scales in the image. It finds strong features in all areas of the image using the <strong>DoG method</strong>. Keypoint detection is not limited, and all possible keypoints are explored.</p>
+</li>
+<li>
+<p>Considering these differences, I will choose SIFT for its ability to guarantee high matching accuracy in various environments and proceed with real-time matching.</p>
+</li>
+</ul>
+<h2 id="2-matching-descriptor">2. Matching Descriptor
+</h2><ul>
+<li>
+<p><strong>Matching</strong> is a problem of finding pairs corresponding to the same location of the same object when a set of <code>dc1</code> extracted from an image and a set of <code>dc2</code> extracted from a video shown by a real-time webcam are given.</p>
+</li>
+<li>
+<p>Since the marker image has an object alone, a relatively reliable descriptor is detected, and since the video contains multiple objects, there are many descriptors and a lot of noise.</p>
+</li>
+<li>
+<p><strong>Brute-Force Matching (BFMatcher)</strong> is a method that compares all possible matches between two sets of descriptors.</p>
+</li>
+<li>
+<p>I use BFMatcher with the knn matching strategy. The algorithm identifies the descriptor <code>dc2j</code> in the real-time video that has the shortest distance to the descriptor <code>dc1i</code> from the marker image. If the condition<br>
+[
+d(dc1i, dc2j) &lt; T
+]
+is satisfied, the pair is considered a match.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize_marker</span>(marker_path):
+</span></span><span style="display:flex;"><span>    marker_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(marker_path, cv2<span style="color:#f92672">.</span>IMREAD_COLOR)
+</span></span><span style="display:flex;"><span>    gray_marker_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(marker_image, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    sift <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>SIFT_create()
+</span></span><span style="display:flex;"><span>    keypoints_marker, descriptors_marker <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(gray_marker_image, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Initialized marker image &#39;</span><span style="color:#e6db74">{</span>marker_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;.&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> marker_image, gray_marker_image, keypoints_marker, descriptors_marker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>marker_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;marker_image_chariot.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>marker_image, gray_marker_image, keypoints_marker, descriptors_marker <span style="color:#f92672">=</span> initialize_marker(marker_path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#make a directory for saving results</span>
+</span></span><span style="display:flex;"><span>output_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;captures&#34;</span>
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>makedirs(output_dir, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>frame_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><h3 id="real-time-matching">Real-time matching
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#start webcam</span>
+</span></span><span style="display:flex;"><span>cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#initialize Brute-Force matcher</span>
+</span></span><span style="display:flex;"><span>bf <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>BFMatcher()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#capture a frame from the webcam</span>
+</span></span><span style="display:flex;"><span>    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> ret:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    gray_frame <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(frame, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#detect keypoints and descriptors in the current frame </span>
+</span></span><span style="display:flex;"><span>    keypoints_frame, descriptors_frame <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(gray_frame, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># keypoint matching - knn matching strategy</span>
+</span></span><span style="display:flex;"><span>    matches <span style="color:#f92672">=</span> bf<span style="color:#f92672">.</span>knnMatch(descriptors_marker, descriptors_frame, k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    good_matches <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> m, n <span style="color:#f92672">in</span> matches:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> m<span style="color:#f92672">.</span>distance <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.75</span> <span style="color:#f92672">*</span> n<span style="color:#f92672">.</span>distance:
+</span></span><span style="display:flex;"><span>            good_matches<span style="color:#f92672">.</span>append(m)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#visualize</span>
+</span></span><span style="display:flex;"><span>    frame_with_matches <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>drawMatches(
+</span></span><span style="display:flex;"><span>        marker_image,
+</span></span><span style="display:flex;"><span>        keypoints_marker,
+</span></span><span style="display:flex;"><span>        frame, 
+</span></span><span style="display:flex;"><span>        keypoints_frame, 
+</span></span><span style="display:flex;"><span>        good_matches, <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>        flags<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#39;Matches&#39;</span>, frame_with_matches)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    key <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> key <span style="color:#f92672">==</span> <span style="color:#ae81ff">27</span>:  
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;ESC pressed. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> key <span style="color:#f92672">==</span> ord(<span style="color:#e6db74">&#39;c&#39;</span>):  <span style="color:#75715e">#capture the img by pressing &#39;c&#39;</span>
+</span></span><span style="display:flex;"><span>        frame_count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        capture_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(output_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;capture_</span><span style="color:#e6db74">{</span>frame_count<span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg&#34;</span>)
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>imwrite(capture_path, frame_with_matches)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Captured and saved: </span><span style="color:#e6db74">{</span>capture_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cap<span style="color:#f92672">.</span>release()
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/capture_3.jpg"  width="50%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<ul>
+<li>
+<p>We can see the matching result between the marker image and real-time video.</p>
+</li>
+<li>
+<p>However, some incorrect matches can also be observed. To address this, the <code>findHomography()</code> function is used, which calculates the transformation matrix using the indices of selected descriptor matching pairs. This process is refined using the RANSAC algorithm.</p>
+</li>
+<li>
+<p>Then, add a rectangle is drawn on the video to represent the transformation, aligning with the four corner points of the marker image.</p>
+</li>
+</ul>
+<h3 id="compute-homography">Compute Homography
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bf <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>BFMatcher()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> ret:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Failed to capture frame from webcam. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    gray_frame <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(frame, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    keypoints_frame, descriptors_frame <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(gray_frame, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    matches <span style="color:#f92672">=</span> bf<span style="color:#f92672">.</span>knnMatch(descriptors_marker, descriptors_frame, k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    good_matches <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> m, n <span style="color:#f92672">in</span> matches:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> m<span style="color:#f92672">.</span>distance <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.75</span> <span style="color:#f92672">*</span> n<span style="color:#f92672">.</span>distance:
+</span></span><span style="display:flex;"><span>            good_matches<span style="color:#f92672">.</span>append(m)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#compute Homography </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(good_matches) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>: 
+</span></span><span style="display:flex;"><span>        src_pts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float32([keypoints_marker[m<span style="color:#f92672">.</span>queryIdx]<span style="color:#f92672">.</span>pt <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> good_matches])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        dst_pts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float32([keypoints_frame[m<span style="color:#f92672">.</span>trainIdx]<span style="color:#f92672">.</span>pt <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> good_matches])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        H, mask <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>findHomography(src_pts, dst_pts, cv2<span style="color:#f92672">.</span>RANSAC, <span style="color:#ae81ff">5.0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> H <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            h_marker, w_marker <span style="color:#f92672">=</span> gray_marker_image<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>            corners_marker <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float32([
+</span></span><span style="display:flex;"><span>                [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                [w_marker, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                [w_marker, h_marker],
+</span></span><span style="display:flex;"><span>                [<span style="color:#ae81ff">0</span>, h_marker]
+</span></span><span style="display:flex;"><span>            ])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            transformed_corners <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>perspectiveTransform(corners_marker, H)
+</span></span><span style="display:flex;"><span>            frame <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>polylines(frame, [np<span style="color:#f92672">.</span>int32(transformed_corners)], isClosed<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, color<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>), thickness<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Not enough matches to calculate Homography.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    match_visual <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>drawMatches(
+</span></span><span style="display:flex;"><span>        marker_image, keypoints_marker, 
+</span></span><span style="display:flex;"><span>        frame, keypoints_frame, 
+</span></span><span style="display:flex;"><span>        good_matches, <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>        flags<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#39;Matching Results&#39;</span>, match_visual)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">27</span>: 
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;ESC pressed. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cap<span style="color:#f92672">.</span>release()
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/homography.jpg"  width="50%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<h3 id="marker-overlay">Marker Overlay
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bf <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>BFMatcher()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> ret:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Failed to capture frame from webcam. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    gray_frame <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(frame, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    keypoints_frame, descriptors_frame <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(gray_frame, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    matches <span style="color:#f92672">=</span> bf<span style="color:#f92672">.</span>knnMatch(descriptors_marker, descriptors_frame, k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    good_matches <span style="color:#f92672">=</span> [m <span style="color:#66d9ef">for</span> m, n <span style="color:#f92672">in</span> matches <span style="color:#66d9ef">if</span> m<span style="color:#f92672">.</span>distance <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.75</span> <span style="color:#f92672">*</span> n<span style="color:#f92672">.</span>distance]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(good_matches) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>:  
+</span></span><span style="display:flex;"><span>        src_pts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float32([keypoints_marker[m<span style="color:#f92672">.</span>queryIdx]<span style="color:#f92672">.</span>pt <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> good_matches])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        dst_pts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float32([keypoints_frame[m<span style="color:#f92672">.</span>trainIdx]<span style="color:#f92672">.</span>pt <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> good_matches])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        H, mask <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>findHomography(src_pts, dst_pts, cv2<span style="color:#f92672">.</span>RANSAC, <span style="color:#ae81ff">5.0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> H <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            h_marker, w_marker, _ <span style="color:#f92672">=</span> marker_image<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>            warped_marker <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>warpPerspective(marker_image, H, (frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">#create the overlay mask</span>
+</span></span><span style="display:flex;"><span>            marker_mask <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>warpPerspective(
+</span></span><span style="display:flex;"><span>                np<span style="color:#f92672">.</span>ones((h_marker, w_marker, <span style="color:#ae81ff">3</span>), dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>uint8),
+</span></span><span style="display:flex;"><span>                H,
+</span></span><span style="display:flex;"><span>                (frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>            )<span style="color:#f92672">.</span>astype(bool)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            frame[marker_mask] <span style="color:#f92672">=</span> warped_marker[marker_mask]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Homography calculation failed.&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Not enough matches to calculate Homography.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#39;Marker Overlay&#39;</span>, frame)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">27</span>:  
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;ESC pressed. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cap<span style="color:#f92672">.</span>release()
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span></code></pre></div><div style="text-align: center;">
+  <img src="/images/overlay_marker_image.jpg"  width="50%">
+  <p style="font-size: 12px; color: gray;"></p>
+</div>
+<h2 id="compare-performance--orb-vs-sift">Compare performance : ORB vs SIFT
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>marker_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(<span style="color:#e6db74">&#39;chariot.jpg&#39;</span>, cv2<span style="color:#f92672">.</span>IMREAD_COLOR)
+</span></span><span style="display:flex;"><span>gray_marker_image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(marker_image, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>orb <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>ORB_create()
+</span></span><span style="display:flex;"><span>sift <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>SIFT_create()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>keypoints_orb, descriptors_orb <span style="color:#f92672">=</span> orb<span style="color:#f92672">.</span>detectAndCompute(gray_marker_image, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>keypoints_sift, descriptors_sift <span style="color:#f92672">=</span> sift<span style="color:#f92672">.</span>detectAndCompute(gray_marker_image, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bf <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>BFMatcher()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Press &#39;s&#39; to start matching. Press &#39;ESC&#39; to quit.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#wait until the real-time video prepared</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> ret:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Failed to capture frame from webcam. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Press &#39;s&#39; to start&#34;</span>, frame)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    key <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> key <span style="color:#f92672">==</span> ord(<span style="color:#e6db74">&#39;s&#39;</span>):  <span style="color:#75715e"># start by pressing &#39;s&#39;</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Starting real-time matching...&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> key <span style="color:#f92672">==</span> <span style="color:#ae81ff">27</span>: 
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;ESC pressed. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        cap<span style="color:#f92672">.</span>release()
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span><span style="display:flex;"><span>        exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>performance_data <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> ret:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Failed to capture frame from webcam. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    gray_frame <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(frame, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> algo_name, detector, descriptors_marker <span style="color:#f92672">in</span> [(<span style="color:#e6db74">&#34;ORB&#34;</span>, orb, descriptors_orb), (<span style="color:#e6db74">&#34;SIFT&#34;</span>, sift, descriptors_sift)]:
+</span></span><span style="display:flex;"><span>        start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        keypoints_frame, descriptors_frame <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detectAndCompute(gray_frame, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> descriptors_frame <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span> <span style="color:#f92672">or</span> descriptors_marker <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            good_matches_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            matches <span style="color:#f92672">=</span> bf<span style="color:#f92672">.</span>knnMatch(descriptors_marker, descriptors_frame, k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>            good_matches <span style="color:#f92672">=</span> [m <span style="color:#66d9ef">for</span> m, n <span style="color:#f92672">in</span> matches <span style="color:#66d9ef">if</span> m<span style="color:#f92672">.</span>distance <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.75</span> <span style="color:#f92672">*</span> n<span style="color:#f92672">.</span>distance]
+</span></span><span style="display:flex;"><span>            good_matches_count <span style="color:#f92672">=</span> len(good_matches)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        elapsed_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        performance_data<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Algorithm&#34;</span>: algo_name,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Matches&#34;</span>: good_matches_count,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Processing Time (s)&#34;</span>: elapsed_time
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        match_visual <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>drawMatches(
+</span></span><span style="display:flex;"><span>            marker_image, keypoints_orb <span style="color:#66d9ef">if</span> algo_name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ORB&#34;</span> <span style="color:#66d9ef">else</span> keypoints_sift, 
+</span></span><span style="display:flex;"><span>            frame, keypoints_frame, 
+</span></span><span style="display:flex;"><span>            good_matches, <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>            flags<span style="color:#f92672">=</span>cv2<span style="color:#f92672">.</span>DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Matches (</span><span style="color:#e6db74">{</span>algo_name<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span>, match_visual)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">27</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;ESC pressed. Exiting.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cap<span style="color:#f92672">.</span>release()
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(performance_data)
+</span></span><span style="display:flex;"><span>print(df<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#34;Algorithm&#34;</span>)<span style="color:#f92672">.</span>mean())
+</span></span></code></pre></div><pre><code>               Matches  Processing Time (s)
+Algorithm                                  
+ORB           3.461538             0.016121
+SIFT       1110.538462             0.886560
+</code></pre>
+<h4 id="result">Result
+</h4><ul>
+<li>
+<p>ORB</p>
+<ul>
+<li>On average, only about 3 matches were successfully performed.</li>
+<li>ORB is fast, but its matching performance is likely to be poor.</li>
+</ul>
+</li>
+<li>
+<p>SIFT</p>
+<ul>
+<li>On average, about 1110 matches were successfully performed.</li>
+<li>SIFT provides strong matching performance and shows high reliability.</li>
+</ul>
+</li>
+<li>
+<p>ORB is fast but has low matching performance. However, in real-time situations, the processing speed is fast. On the other hand, SIFT provides high matching performance and reliability, but the processing speed is slow. In real-time detection situations, the processing speed can be felt to be slow.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion
+</h2><ol>
+<li>Successfully implemented real-time matching using SIFT and <code>findHomography</code>.</li>
+<li>Verified matching accuracy by visualizing keypoints, calculating Homography for transformation, and overlaying the marker image onto the detected region.</li>
+<li>Integrated a robust filtering mechanism to ensure only good matches are used for accurate detection.</li>
+</ol>
+<p>Through this project, I gained practical experience in utilizing OpenCV for real-time image matching. I also deepened my understanding of detectors and descriptors, such as <code>SIFT</code> and <code>ORB</code>, and how they impact the accuracy and efficiency of image matching.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Jiwon KANG
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
